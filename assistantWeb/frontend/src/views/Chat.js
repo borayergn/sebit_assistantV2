@@ -27,7 +27,10 @@ import { CollectionsBookmarkOutlined } from '@mui/icons-material';
 import { HfInference } from "@huggingface/inference";
 
 
+import Config from '../url_config.json'
+
 // 
+
 
 
 const drawerWidth = 240;
@@ -40,8 +43,6 @@ const constantChatData = {
 
 function Chat(props) {
 
-
-
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [input,setInput] = React.useState("")
@@ -49,42 +50,41 @@ function Chat(props) {
   const [chats,setChats] = React.useState("Undefined")
   const [activeButton,setActiveButton] = React.useState(0)
   const [sortOrder,setSortOrder] = React.useState(0)
-  const [prediction,setPrediction] = React.useState("Lorem ipsum")
+  const [prediction,setPrediction] = React.useState("...")
+  const [inferenceWait,setInferenceWait] = React.useState(false) //This is true if response is being waited from inference API
   
+  const handleMessageState = messages.map((message, i) => {
 
+      if (i === (messages.length - 1)){
+        message.text = prediction
+      }
+  });
 
   React.useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/chats/").then((response) => {setChats(response.data)})
-  })
+    
+    if (prediction === "..."){
+      setMessages(handleMessageState)
+    }
+  },[prediction])
 
+  React.useEffect(() => {
+    axios.get(Config.Endpoints.CHATS_URL).then((response) => {setChats(response.data)})
+  })
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
   
   function handleDeleteButton(id){
     console.log(id)
-    var deleteUrlChat = "http://127.0.0.1:8000/api/chats/"+id
-    var deleteUrlMessages = "http://127.0.0.1:8000/api/messages/"
+    var deleteUrlChat = Config.Endpoints.CHATS_URL+"/"+id
+    var deleteUrlMessages = Config.Endpoints.MESSAGES_URL
 
     
     axios.delete(deleteUrlChat).then(response => {
       console.log("Deleted post: ",id)
     })
     .catch(error => console.error(error))
-    
-    // if (id === activeButton){
-    //   setActiveButton(0)
-    //   setMessages([])
-    // }
-    
-  }
-
-  function getAllMessages(){
-    const promise = axios.get("http://127.0.0.1:8000/api/messages/")
-    const dataPromise = promise.then((response) => response.data)
-    return dataPromise
   }
 
   function handleChatActivity(id){
@@ -121,16 +121,12 @@ function Chat(props) {
     
   }
 
-  const handleInference = () => {
-    return axios.get("http://127.0.0.1:8000/api/inference")
-  }
-
   const handlePrompt = (prompt_) => {
-    return axios.post("http://127.0.0.1:8000/api/inference",{"prompt":prompt_})
+    return axios.post(Config.Endpoints.BASE_INFERENCE_URL,{"prompt":prompt_})
   }
 
   const handleUserPost = () => {
-    return axios.post("http://127.0.0.1:8000/api/messages/", {
+    return axios.post(Config.Endpoints.MESSAGES_URL+"/", {
       "content": input,
       "sort_order": sortOrder,
       "chat": activeButton,
@@ -145,20 +141,10 @@ function Chat(props) {
 
   const handleBotPost = (prompt_) => {
 
-    // var bot_response
-    // query("Can you please let us know more details about your ").then((response) => {
-    //   bot_response = JSON.stringify(response)
-    //   console.log(bot_response);
-    // });
-
-    // getInference().then((response) => {console.log(response)})
-    // axios.get("http://127.0.0.1:8000/api/inference").then((response) => {
-    //   console.log(response.data.generated_text)
-    // })
     console.log(prompt_)
     let data_p = handlePrompt(prompt_)
-    data_p.then((response) => {console.log(response.data.generated_text); setPrediction(response.data.generated_text)})
-    return axios.post("http://127.0.0.1:8000/api/messages/", {
+    data_p.then((response) => {console.log(response.data.generated_text);console.log("Response returned?");setInferenceWait(false); setPrediction(response.data.generated_text)})
+    return axios.post(Config.Endpoints.MESSAGES_URL+"/", {
       "content": prediction,
       "sort_order": sortOrder,
       "chat": activeButton,
@@ -170,23 +156,26 @@ function Chat(props) {
       sender: responseBot.data["sender"]
     }));
   };
+
   function patchChatName(name){
     
-      axios.patch(("http://127.0.0.1:8000/api/chats/"+activeButton+"/"),{chat_name : name.text})
+      axios.patch((Config.Endpoints.CHATS_URL+"/"+activeButton+"/"),{chat_name : name.text})
       .then(response => console.log(response.data))
       .catch(error => console.error(error.response.data));
-    
+
   }
   const handleSendMessage = async () => {
 
       const userMessage = await handleUserPost();
-      
+      setInferenceWait(true)
       const botMessage = await handleBotPost(userMessage.text);
+      console.log("Prediction State:",prediction)
+      console.log("botMessage.text",botMessage.text)
+
+      
 
       if (sortOrder===0)
         patchChatName(userMessage)
-
-
       
       // Update the messages state with both user and bot messages
       setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
@@ -196,23 +185,15 @@ function Chat(props) {
 
   function getActiveChat(){
     let messagesPromise = getMessages()
-    let activeChatUrl = "http://127.0.0.1:8000/api/chats/"+activeButton
+    let activeChatUrl = Config.Endpoints.CHATS_URL+"/"+activeButton
     let activeChatPromise = axios.get(activeChatUrl)
 
     return activeChatPromise
-
-    //console.log(activeChatPromise.then((response) => {console.log(response.data)}))
-
-    // messagesPromise.then(data => {
-      
-    //     if(data[key])
-      
-    // })
   }
 
 
   function getMessages(){
-    const promise = axios.get("http://127.0.0.1:8000/api/messages/")
+    const promise = axios.get(Config.Endpoints.MESSAGES_URL)
     const dataPromise = promise.then((response) => response.data)
  
     return dataPromise
@@ -248,7 +229,7 @@ function Chat(props) {
       <Container sx = {{height : 100}}>
         <Toolbar sx = {{alignItems : "center" ,display : "flex",flexDirection : "column",justifyContent : "center" , height : 100 }}><Button variant='outlined' sx = {{color : 'secondary.main', height : 55 , width : 180 , whiteSpace : "nowrap"}}><Typography sx = {{fontSize : 12, letterSpacing:5 , textAlign : "left"}}>Create New</Typography>         
           <IconButton sx={{color : "secondary.main",}} size = "small" onClick={() => {
-                  axios.post("http://127.0.0.1:8000/api/chats/",constantChatData).then((response)=>{
+                  axios.post(Config.Endpoints.CHATS_URL+"/",constantChatData).then((response)=>{
                   handleChatActivity(response.data["id"])
                   })
                   }}>

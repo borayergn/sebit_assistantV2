@@ -1,0 +1,893 @@
+source,concept,description
+TQuAD Dataset,Kemaleddin ibn Yunus lakabı dışında hangi isimlerle bilinir?,İbn-i Yunus ve Mewsilî
+TQuAD Dataset,Kemaleddin ibn Yunus nerede doğmuştur?,Musul
+TQuAD Dataset,Kemaleddin ibn Yunus nerede ölmüştür?,Musul
+TQuAD Dataset,Kemaleddin ibn Yunus'ın doğum yılı nedir?,1156
+TQuAD Dataset,Kemaleddin ibn Yunus hangi yıl vefat etmiştir?,1241
+TQuAD Dataset,Kemaleddin ibn Yunus'un tam adı nedir?,Musa bin Yunus bin Muhammed bin Men’a
+TQuAD Dataset,Kemaleddin ibn Yunus'un lakabı nedir?,Kemaleddin
+TQuAD Dataset,Kemaleddin ibn Yunus ilk eğitimini kimin yanında almıştır?,Şeyh Yunus Rızauddin
+TQuAD Dataset,Kemaleddin ibn Yunus'un babası kimdir?,Şeyh Yunus Rızauddin
+TQuAD Dataset,"Kemaleddin ibn Yunus, Bağdat'ta nerede okumaya devam etmiştir?",Nizamiye Medreseleri
+TQuAD Dataset,"Kemaleddin ibn Yunus, Nizamiye Medreseleri'nde kiminden ders almıştır?",Şerafeddin el-Tusî
+TQuAD Dataset,Kemaleddin ibn Yunus Batlamyus'un hangi eserini  öğrenmiştir?,Almagest
+TQuAD Dataset,Kemaleddin ibn Yunus Musul'a geri dönerek nerede dersler verdi?,Emir Zeyneddin Camii
+TQuAD Dataset,Kemaleddin ibn Yunus'un ders verdiği cami hangi isimle anılır?,Kemaliyye Medresesi
+TQuAD Dataset,Pardus ülkemizde hangi kuruluş tarafından geliştirilmekte olan bir işletim sistemidir?,TÜBİTAK
+TQuAD Dataset,Pardus’un planlanması hangi yıldan itibaren yapılmaya başlamıştır?,2003
+TQuAD Dataset,Pardus’un adının geldiği ve aynı zamanda Anadolu Parsı’nın bilimsel adı olan isim nedir?,Panthera pardus 
+TQuAD Dataset,Pardus’un 2013 yılı itibariyle sürümleri hangi tabanda yayınlanmıştır?,Debian 
+TQuAD Dataset,Pardus’un oluşum sürecinde başta özellikle ne dağıtımı olması araştırılmıştır?,Linux
+TQuAD Dataset,Pardus’un oluşum süreci araştırmalarının sonrasında hangi lisanslama yönetimini mümkün olduğu kadar çok kullanan bir dağıtım olması kararlaştırılmıştır?,GPL
+TQuAD Dataset,Pardus’un 2004 yılı başlarında hayata geçirilen projelerinde çalışacak en uygun kişiler nerelerden seçilmişlerdir?,Türkiye'nin dört bir yanından
+TQuAD Dataset,Pardus’un 2004 yılı başlarında hayata geçirilen projelerinde çalışacak en uygun kişiler hangi kuruluşun çatısı altında toplanmışlardır?,TÜBİTAK/UEKAE 
+TQuAD Dataset,Pardus’un ilk çalışan ürünün yayımlanma tarihi nedir?,1 Şubat 2005
+TQuAD Dataset,1 Şubat 2005’te yayımlanan Pardus’un ilk çalışan ürünün adı nedir?,Pardus Çalışan CD 1.0
+TQuAD Dataset,Pardus'un ağ üzerinden ilk kurulabilir sürümü hangi isimle ağ üzerinden paylaşılmıştır?,Pardus 1.0
+TQuAD Dataset,Pardus'un ilk kurulabilir sürümü hangi tarihte ağ üzerinden paylaşılmıştır?,27 Aralık 2005'te
+TQuAD Dataset,Pardus'un 2011.2 sürümüne kadar kullandığı paket yönetim sisteminin adı nedir?,PİSİ
+TQuAD Dataset,2011 yılının son aylarından itibaren  bakımı yapılmayan Pardus sürümü hangisidir?,Pardus 2011
+TQuAD Dataset,2 Mart 2012'de Pardus projesinin resmi sitesinden yapılan duyuruda hangi çalışmanın ismi geçmektedir?,Pardus’un Yarını Çalıştayı
+TQuAD Dataset,19 Haziran 2012’de Pardus projesinin hedefleri için yapılan açıklamayı kimler düzenlemişlerdir?,ULAKBİM Başkanı Dr. Ahmet Kaplan ve Pardus Proje Yöneticisi Abdullah Erol 
+TQuAD Dataset,19 Haziran 2012’de Pardus projesinin yöneticisi olarak hangi isim paylaşılmıştır?,Abdullah Erol 
+TQuAD Dataset,19 Haziran 2012’de Pardus projesinin toplantısında Pardus’un hangi projedeki akıllı tahtalarda kulanılacağı açıklanmıştır?,FATİH
+TQuAD Dataset,19 Haziran 2012’de Pardus projesinin toplantısında hangi dağıtımın FATİH Projesindeki akıllı tahtalarda kullanılacağı açıklanmıştır?,Pardus
+TQuAD Dataset,25 Ocak 2013'te yayımlanan Pardus sürümün adı nedir?,Pardus 2013 Anadolu Parsı
+TQuAD Dataset,2013 yılı ve sonrasında Pardus’un kullandığı tabanın adı nedir?,Debian
+TQuAD Dataset,Pardus 2013 sürümü sonrası bulundurduğu 3 ayrı sürümün adları nelerdir?,"Kurumsal, Sunucu ve Fatih"
+TQuAD Dataset,Pardus 2013 sonrası  kurum ve kuruluşların ihtiyaçları için hazırlanan sürümünün adı nedir?,Kurumsal
+TQuAD Dataset,Pardus 2013 sonras Fatih sürümü nerelerde kullanmak amacıyla hazırlanmıştır?,FATİH Projesindeki akıllı tahtalarda
+TQuAD Dataset,Pardus’un 2013 sürümünden sonra bireysel kullanıma yönelik olan  Pardus Topluluk Sürümü ne tarafından paylaşılmıştır?,TÜBİTAK'tan bağımsız bir topluluk
+TQuAD Dataset,Pardus’un TÜBİTAK'tan bağımsız bir topluluk ile geliştirilen sürümünün adı nedir?,Pardus Topluluk Sürümü
+TQuAD Dataset,Pardus Topluluk Sürümü için indirme bağlantıları nerede sağlanmaktadır?,Pardus'un resmi web sayfasında
+TQuAD Dataset,Pardus’un Google Summer of Code'a katıldığı yıllar nelerdir?,2008 ve 2009
+TQuAD Dataset,Google Summer of Code'a katılan ilk yerli tasarı nedir?,Pardus
+TQuAD Dataset,Pardus’un CeBIT Eurasia Bilişim Fuarı’na katıldığı yıllar nelerdir?,"2006, 2008, 2009, 2010, 2011,2013 ve 2014 "
+TQuAD Dataset,Pardus’un  ICT SummitT Now Bilişim Zirvesi'ne katıldığı yıl nedir?,2014
+TQuAD Dataset,Hangi organizasyonlara Gümüş sponsorluk ile destek sağlanıp Pardus standı açılmıştır?,BİLİŞİM’2014 TBD 31. Ulusal Bilişim Kurultayı ve CITEX’2014 Ankara Bilişim Fuarı
+TQuAD Dataset,Samarqandi nerede yaşamıştır ?,Semerkant'ta
+TQuAD Dataset,Samarqandi'nin mesleği nedir ?,doktor
+TQuAD Dataset,Semerkandi hayatını hangi ülkede kaybetmiştir ?,Afganistan
+TQuAD Dataset,en-Nücûmü'z-Zâhire fî Mülûki Mısr ve'l-Kâhire adlı eseri Türkçe'ye kim çevirmiştir?, Kemal Paşazâde
+TQuAD Dataset,İbn Tağrıberdî'nin Nil suları ile ilgili verdiği bilgiler sebebiyle aldığı ünvan nedir?,“Nil nehri tarihçisi”
+TQuAD Dataset,en-Nücûmü'z-Zâhire fî Mülûki Mısr ve'l-Kâhire adlı eser ne anlatmaktadır?,"Mısır tarihini, 641 yılındaki fetihten itibaren sekizbuçuk asırlık dönemini"
+TQuAD Dataset,Havâdisü'd-Duhûr fî Mede'l-Eyyâm ve'ş-Şuhûr içinde hangi yıldan itibaren olaylara yer verilmiştir?,1436 
+TQuAD Dataset,Havâdisü'd-Duhûr fî Mede'l-Eyyâm ve'ş-Şuhûr adlı eserin İstanbul'daki yazması hangi kütüphanededir?,Ayasofya Kütüpahnesi’ndedir
+TQuAD Dataset,Akdeniz Üniversitesi hangi illerdeki yüksek öğretim kurumlarını kapsamaktadır?,"Antalya, Burdur ve Isparta"
+TQuAD Dataset,Akdeniz Üniversitesi'nin Türkiye'deki devlet üniversiteleri arasındaki sıralaması nedir?,7
+TQuAD Dataset,Akdeniz Üniversitesi kim tarafından kurulmuştur?,Turgut Özal ve Cumhurbaşkanı Kenan Evren
+TQuAD Dataset,Akdeniz Üniversitesi ne zaman kurulmuştur?,20 Temmuz 1982'de
+TQuAD Dataset,Feza Günergun nerede doğmuştur?,İstanbul
+TQuAD Dataset,Feza Günergun hangi yılda doğmuştur?,1956 
+TQuAD Dataset,Feza Günergun nerelidir?,Türk 
+TQuAD Dataset,"Feza Günergun, Japon Araştırmaları Enstitüsün'de ne zaman çalışmıştır?",1997 
+TQuAD Dataset,Feza Günergun profesör ünvanını kaç yılında almıştır?,1998 
+TQuAD Dataset,"Feza Günergun ""Bilim Tarihi Doçenti"" ünvanını kaç yılında almıştır?",1993 
+TQuAD Dataset,Feza Günergun hangi tarihte yardımcı doçent olmuştur?,1987 
+TQuAD Dataset,"Feza Günergun, İstanbul Üniversitesi Edebiyat Fakültesi Felsefe Bölümü Bilim Tarihi Anabilim Dalı'nda araştırma görevlisi olarak görevine ne zaman başlamıştır?",1985 
+TQuAD Dataset,"Feza Günergun, M.Sc.Dr. unvanını hangi çalışması ile almıştır?","""14-17. Yüzyıllarda Anorganik Kimyasal İlaçlar"""
+TQuAD Dataset,"Feza Günergun, M.Sc.Dr. unvanını ne zaman almıştır?",1984 yılında
+TQuAD Dataset,"Feza Günergun, ""14-17. Yüzyıllarda Anorganik Kimyasal İlaçlar"" konulu doktora çalışmasını nerede yapmıştır?",İstanbul Üniversitesi İstanbul Tıp Fakültesi Tıp Tarihi ve Deontoloji Anabilim Dalı'nda
+TQuAD Dataset,"Feza Günergun, İstanbul Üniversitesi Kimya Mühendisliği Fakültesi'nden hangi yılda mezun olmuştur?",1980 
+TQuAD Dataset,Feza Günergun İstanbul Üniversitesi'nin hangi fakültesinden mezun olmuştur?,Kimya Mühendisliği Fakültesi
+TQuAD Dataset,Feza Günergun hangi üniversitede okumuştur?,İstanbul Üniversitesi 
+TQuAD Dataset,Feza Günergun hangi lisede okumuştur?,Notre Dame de Sion Fransız Lisesi
+TQuAD Dataset,Feza Günergun'un anne-babasının adları nelerdir?,Asuman Baytop ve Turhan Baytop
+TQuAD Dataset,Feza Günergun'un babasının mesleği nedir?,botanikçi
+TQuAD Dataset,Feza Günergun'un annesinin mesleği nedir?,botanikçi
+TQuAD Dataset,"Feza Günergun, BİMDOK Yönetim Kurulu üyeliği görevini hangi yıllar arasında yürütmüştür?",1994 - 1998
+TQuAD Dataset,"Feza Günergun, İstanbul Üniversitesi Bilim Tarihi Müze ve Dokümantasyon Merkezi Yönetim Kurulu üyeliği görevine hangi yılda başlamıştır?",1994 
+TQuAD Dataset,"Feza Günergun, Uluslararası Bilim Tarihi ve Felsefesi Birliği'nin ""Bilim ve Teknoloji Tarihi Komisyonu"" başkan yardımcılığı görevini hangi yıllar arasında yürütmüştür?",1994 - 2001 
+TQuAD Dataset,"Feza Günergun, Uluslararası Bilim Tarihi ve Felsefesi Birliği'nin ""Bilim ve Teknoloji Tarihi Komisyonu"" başkan yardımcılığı görevine hangi yılda başlamıştır?",1994 
+TQuAD Dataset,"Feza Günergun, Türk Bilim Tarihi Kurumu Genel Sekreterliği görevine hangi yılda başlamıştır?",1989 
+TQuAD Dataset,"Feza Günergun, Türk Bilim Tarihi Kurumu Genel Sekreterliği görevini hangi yıllar arasında yürütmüştür?",1989 - 2000 
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevi Araştırma ve Uygulama Merkezi hangi fakülte bünyesinde kurulmuştur?,Fen Fakültesi
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevi Araştırma ve Uygulama Merkezi'nin kurulma amacı nedir?, Fen Fakültesi bünyesinde kurulan Astronomi ve Uzay Bilimleri Bölümü'nün araştırma ve gözlemlerinde kullanılması 
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevinin ne gibi amaçları vardır?,Gerek yurt dışından alınan gerekse İstanbul Üniversitesi Gözlemevi'nde elde edilen verileri kullanarak ve gerekli bilgisayar programlarını yazarak araştırmalar yapıp yayınlamak
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevi hangi amaçla açılmıştır?,Fen Fakültesi bünyesinde kurulan Astronomi ve Uzay Bilimleri Bölümü'nün araştırma ve gözlemlerinde kullanılması amacıyla
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevi kaç yılında açılmıştır?,1933 yılında
+TQuAD Dataset,Gözlemevi binası hangi mimari akım içinde değerlendirilmektedir?, rasyonel-modernist akım
+TQuAD Dataset,Gözlemevi inşasında kimin çizimleri kullanılmıştır?,mimar Arif Hikmet Holtay'ın
+TQuAD Dataset,Gözlemevi hangi yıllar arasında inşa edilmiştir?, 1934-1936
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevi'ndeki yenileştirme çalışmaları kaç yılında başlamıştır?,2009 
+TQuAD Dataset,İstanbul Üniversitesi Gözlemevi ana binası kaç yılında yapılmıştır?,1933
+TQuAD Dataset,Gözlemevi ana binasına hangi malzemelerle takviye ve iyileştirme yapılmıştır?,karbon fiberlerle ve çeliklerle
+TQuAD Dataset,Gözlemevi ana binasındaki yenileştirme çalışmaları hangi tarihte tamamlanmıştır?,8 Temmuz 2013
+TQuAD Dataset,Gözlemevi ana binası hangi proje çerçevesinde yenileştirilmiştir?,yenileştirme çalışmaları projesi
+TQuAD Dataset,bu saatte hareket ettirici güç nedir?,ağırlık
+TQuAD Dataset,çarkın geriye doğtu dönmesine engel olan ve bir sarkaç hareketi kazandıran düzenek neyin sayesinde gerçekleşir?,civa
+TQuAD Dataset,çarkın geriye dönmesine engel olan ve sarkaç harketi kazandıran civa nerede bulunur?,çarkın içinde
+TQuAD Dataset,Bu çarkın dönmesi neyin üzerine tanışır?,usturlap
+TQuAD Dataset,Civalı saati «compartmented cylindrical clepsydra» olarak nitelendiren kişi kimdir?,Bedini
+TQuAD Dataset,kitabı yayınlandıktan kısa bir süre sonra bu saatin tarifi ve resmi Salomon de Caus (1615)’un hareket kuvvetlerinin temelleri'nden birisi olarak yayınlanan kişi kimdir?,Parisio
+TQuAD Dataset,bu saatin kaç parçalık silindir taslağı sadece yarıya kadar civa yerine su ile doldurulmuştur?,12
+TQuAD Dataset,«Gölgeler Bilgisi Hakkında Risale»'de güneş saati tarif eden kişiler kimlerdir?,EbūʿAbdallāh Muḥammed b. İbrāhīm er-Raḳḳām
+TQuAD Dataset,EbūʿAbdallāh Muḥammed b. İbrāhīm er-Raḳḳām Gölgeler Bilgisi Hakkında Risale'nin kaçıncı bölümünde yüzer pusulayla bağlantılı bir güneş saati tarifi vermektedir?,44.
+TQuAD Dataset,EbūʿAbdallāh Muḥammed b. İbrāhīm er-Raḳḳām hangi dönemde Granada'da faaliyet göstermiştir?,Nasiriler
+TQuAD Dataset,EbūʿAbdallāh Muḥammed b. İbrāhīm er-Raḳḳām Nasiriler döneminde nerede bilgin olarak faaliet göstermiştir?,Granada
+TQuAD Dataset,ahşap diske hâkkedilmiş güneş saati için kuzeygüney yönünü ayarlamaya yarayan hangi taştır?,manyetik taş
+TQuAD Dataset,Önay Sözer kaç yılında doğmuştur?,1936
+TQuAD Dataset,Önay Sözer hangi fakülteden mezun olmuştur?,Hukuk Fakültesi
+TQuAD Dataset,Önay Sözer kaç yılında asistanlık görevine başlamıştır?,1961
+TQuAD Dataset,Önay Sözer kaç yılında doçentlik ünvanını almıştır?,1973
+TQuAD Dataset,Önay Sözer kaç yılından bu yana Sistematik Felsefe ve Mantık Anabilim Dalında Profesörlük yapmıştır?,1992
+TQuAD Dataset,Fenike alfabesini hangi uygarlık bulmuştur?,Firigya uygarlığı
+TQuAD Dataset,Firigyalıların oluşturduğu ana tanrıça kültü'nün ismi nedir?,Kybele
+TQuAD Dataset,Hindlilerin oluşturduğu ve İran ekolünden gelen bilginlerin Arapçaya çevirdiği eserin adı nedir?,Siddhanta
+TQuAD Dataset,Ali bin Abbas İran'ın hangi eyaletinde doğmuştur?,Cündişapur
+TQuAD Dataset,Ali bin Abbas ünlü bir fizikçi olmaya hangi Büveyhoğulları hanedanı zamanında başlamıştır?,Büveyhoğulları hanedanından Adudüddevle
+TQuAD Dataset,Büveyhoğulları hanedanından Adududdevle nerede ve ne zaman Ali bin Abbas'ın çalıştığı iki hastane açmıştır?,Şiraz'da ve 994 yılında Bağdat'ta
+TQuAD Dataset,Muhibbe Darga hangi iki alanda dünyanın en önemli uzmanları arasındadır?,hiyeroglif ve çivi yazısı
+TQuAD Dataset,Hitit kaynaklarını kullanarak yazdığı en önemli eserinin adı nedir?,Eski Anadolu Kadını
+TQuAD Dataset,Yetkililer Hürjet projesinin Türkiye'de hangi sanayi dalında oldukça önemli olduğunu görmektedir?,havacılık sanayisi
+TQuAD Dataset,Hürjet projesinin hangi bir diğer proje ile arasında bir sanayi geçişi sağlanacağı belirtilmiştir?,Milli Muharip Uçak Projesi
+TQuAD Dataset,Piri Reis'in Osmanlı İmparatorluğu'nun Akdeniz Hakimiyetini sağlamak için yaptığı seferlerin başlangıç noktası neresidir?,Gelibolu
+TQuAD Dataset,Gelibolu'da yetişen Piri Reis'in yanında denizciliğe başladığı amcasının adı nedir?,Kemal Reis
+TQuAD Dataset,Piri Reis Gelibolu'da dünya haritasını kaç yılında hazırlamıştır?,1513
+TQuAD Dataset,Piri Reis Yavuz Sultan Selim’in 1516–1517 yıllarındaki hangi seferine katılmıştır?,Mısır
+TQuAD Dataset,Piri Reis hangi nehirin kollarının haritasını çizmiştir?,Nil
+TQuAD Dataset,Piri Reis 1547'de ne olarak tayin edilmiştir?,Hint Kaptanı
+TQuAD Dataset,Piri Reis kaç yılında Hint Kaptanı olarak tayin edilmiştir?,1547
+TQuAD Dataset,Piri Reis nerede katledilmiştir?,Mısır
+TQuAD Dataset,Farabi kaç yılında doğmuştur?,870
+TQuAD Dataset,Farabi eğitim ve öğretimini hangi iki şehirde tamamlamıştır?,Bağdat ve Harran
+TQuAD Dataset,Farabi bir diğer hocası Ebû Bekr ibn el-Serrâc’tan hangi iki dersi almıştır?,Arapça ve Arap dilbilgisi
+TQuAD Dataset,Farabi eserlerinde hangi iki probleme öncelikli olarak yer vermiştir?,dil ve mantık
+TQuAD Dataset,Rönesans döneminin en büyük gelişmesi nedir?,baskı tekniği
+TQuAD Dataset,Bilginin gelişiminde hangi iki buluş çok önemli yer tutmaktadır?,baskı ve gravür
+TQuAD Dataset,Fuat Sezgin kaç yılında doğmuştur?,1924
+TQuAD Dataset,Fuat Sezgin ortaokulu hangi ilde tamamlamıştır?,Erzurum
+TQuAD Dataset,Fuat Sezgin kaç yılında İstanbul'a gelmiştir?,1943
+TQuAD Dataset,Alman şarkiyatçının adı nedir?,Helmut Ritter
+TQuAD Dataset,Alman ordusu kaç yılında Bulgaristan sınırına ilerlemiştir?,1943
+TQuAD Dataset,"Fuat Sezgin, gün içerisinde kaç saat Arapça çalışmıştır?",17 saat
+TQuAD Dataset,Fuat Sezgin'in evlendiği kişi kimdir?,Ursula Sezgin
+TQuAD Dataset,Fuat Sezgin'in kızının ismi nedir?,Hilal
+TQuAD Dataset,"Fuat Sezgin'in kızı olan Hilal,kaç yılında dünyaya gelmiştir?",1970
+TQuAD Dataset,"Fuat Sezgin,Arap İslam Bilimleri Tarihi olarak bilinen eserini kaç yılında yayınlamıştır?",1967
+TQuAD Dataset,"Fuat Sezgin'in Arap İslam Bilimleri Tarihi,eseri kaç ciltten oluşmaktadır?",17
+TQuAD Dataset,İslam bilim aletlerinin modellerini yapan fizikçi kimdir?,Eilhard Wiedemann
+TQuAD Dataset,Eilhard Wiedman kaç yılında İslam bilim aletlerinin modellerini yapmaya başlamıştır?,1900
+TQuAD Dataset,Eilhard Wiedman İslam Bilim Tarihi Müzesini nerede kurmuştur?,Frankfurt
+TQuAD Dataset,Turkcell Türkiye'de ne kadar yatırım yapmayı hedeflemiştir?,18 milyar Lira
+TQuAD Dataset,Turkcell hangi frekanslar üzerinden hizmet vermektedir?,"GSM 900, UMTS2100, LTE800, LTE900, LTE1800, LTE2100, LTE2600"
+TQuAD Dataset,Turkcell ne tür bir şirkettir?,iletişim operatör
+TQuAD Dataset,Turkcell'in merkezi hangi ülkededir?,Türkiye
+TQuAD Dataset,Turkcell'in elde ettiği en yüksek çeyrek geliri ne kadardır?,3 milyar TL
+TQuAD Dataset,Turkcell Üçüncü Nesil A Lisansı ihalesini ne kadar bedele kazanmıştır?,358 milyon €
+TQuAD Dataset,Turkcell'in operatör markasıyla çıkarmış olduğu telefonlar kim tarafından üretilmiştir?,büyük bir kısmı ZTE tarafından
+TQuAD Dataset,Turkcell hangi firmaların telefonlarını kendi markası altında satmaktadır?,ZTE ve Huawei
+TQuAD Dataset,ZTE ve Huawei firmaları hangi ülke merkezlidir?,Çin
+TQuAD Dataset,Turkcell T50 ile birlikte hangi saati tanıtmıştır?,Turkcell T-Fit
+TQuAD Dataset,Türkiye'nin 4G teknolojisine sahip ilk telefonu nedir?,Turkcell T50
+TQuAD Dataset,Turkcell kaç yıllık lisansa sahiptir?,25 yıllık
+TQuAD Dataset,Turkcell T.C. Ulaştırma Bakanlığı'ndan GSM lisansını ne zaman almıştır?,27 Nisan 1998
+TQuAD Dataset,Turkcell ne zaman hizmete başlamıştır?,Şubat 1994'te
+TQuAD Dataset,Turkcell HSDPA ile DC-HSUPA teknolojileri sayesinde 3G şebekesinde ne kadar veri yükleme hızı sağlamıştır?,"11,5 Mbps’a varan"
+TQuAD Dataset,Turkcell HSDPA ile DC-HSUPA teknolojileri sayesinde 3G şebekesinde ne kadar veri indirme hızı sağlamıştır?,"63,3 Mbps’a varan"
+TQuAD Dataset,2015 ilk çeyreği ölçümlerine göre Türkiye'deki Turkcell kullanıcılarının oranı nedir?,"yüzde 47,6"
+TQuAD Dataset,Turkcell hisselerini İstanbul borsasında hangi tarih itibariyle satışa çıkarmıştır?,11 Temmuz 2000
+TQuAD Dataset,Turkcell Ukrayna'da kaç abone sahibidir?,10.6 milyon
+TQuAD Dataset,Kaan Terzioğlu Turkcell Genel Müdürü görevine ne zaman başlamıştır?,26 Mart 2015
+TQuAD Dataset,Turkcell Genel Müdürü görevine Süreyya Ciliv sonrasında kim atanmıştır?,Kaan Terzioğlu
+TQuAD Dataset,Süreyya Ciliv hangi tarihte Turkcell Genel Müdürü görevinden ayrılmıştır?,31 Ocak 2015
+TQuAD Dataset,Süreyya Ciliv hangi tarihte Turkcell Genel Müdürü olarak atanmıştır?,9 Ocak 2007
+TQuAD Dataset,Turkcell üç taşıyıcılı mobil internet teknolojisi sayesinde 3G ile ne kadar gönderme hızına ulaşmıştır? ,"11,5 Mbps"
+TQuAD Dataset,Turkcell üç taşıyıcılı mobil internet teknolojisi sayesinde 3G ile ne kadar indirme hızına ulaşmıştır?,"63,3 Mbps"
+TQuAD Dataset,Turkcell 3G teknolojisinde Türkiye nüfusunun ne kadarını kapsamı altına almıştır? ,"%91,21'ini"
+TQuAD Dataset,Turkcell 2G/EDGE teknolojisinde Türkiye nüfusunun ne kadarını kapsamı altına almıştır?,"%99,81'ini"
+TQuAD Dataset,Turkcell TV+ IPTV hizmetine ne zaman dönüşmüştür?,2015 yılı itibarıyla
+TQuAD Dataset,Türkiye'deki ilk IPTV hizmeti hangi şirket tarafından verilmiştir?,Türk Telekom
+TQuAD Dataset,Turkcell TV+ nedir?,"bilgisayar, tablet, telefon ve televizyondan izlenebilen, internet üzerinden yayın yapan dijital TV platfromudur"
+TQuAD Dataset,Türkiye'nin ilk yerli ve milli mobil tabanlı arama motoru hangisidir?,Yaani
+TQuAD Dataset,Turkcell Fintur şirketinin hisselerinin ne kadarına sahiptir?,"%41,45'ine"
+TQuAD Dataset,Turkcell Astelit şirketinin hisselerinin ne kadarına sahiptir?,%100
+TQuAD Dataset,Turkcell BeST'in hisselerini ne zaman almıştır?,2008'de
+TQuAD Dataset,Turkcell Almanya'da hangi markayla hizmet vermektedir?,Turkcell Europe
+TQuAD Dataset,Süreyya Ciliv 2009 yılında hangi ödülü almıştır?, World Communication Awards'ta 2009 yılının CEO'su ödülü
+TQuAD Dataset,Turkcell 2002 Dünya İletişim Ödülleri’nde birinciliği hangi servis ile almıştır?,GPRSLand
+TQuAD Dataset,Rauf Saygın’ın aldığı görevler nelerdir?,Adli Tıp Kurumu Başkanlığı’nda Kurul Üyesi
+TQuAD Dataset,Rauf Saygın akademik ünvanlarını hangi yıllarda almıştır?,1963’te
+TQuAD Dataset,Rauf Saygın lisans eğitimini hangi üniversitede tamamlamıştır?,İstanbul Üniversitesi
+TQuAD Dataset,Rauf Saygın hangi alanda lisans eğitimi almıştır?,Tıp
+TQuAD Dataset,Rauf Saygın’ın doğum tarihi nedir?,1914
+TQuAD Dataset,Rauf Saygın nerede doğmuştur?,İstanbul’da
+TQuAD Dataset,Rauf Saygın TÜSAD’da hangi görevleri üstlenmiştir?, ilk yönetim kurulunda ikinci başkan olarak görev almıştır
+TQuAD Dataset,Rauf Saygın TÜSAD’da kimlerle çalışmıştır?,Prof. Dr. Meliha Terzioğlu ve ileri gelen akademisyenlerle
+TQuAD Dataset,Rauf Saygın kaç yılında ölmüştür?,2003 yılında
+TQuAD Dataset,Rauf Saygın YÖK görevini hangi yıllar arasında sürdürmüştür?,1983
+TQuAD Dataset,İbn Kesir’in kaynak bir eser olarak tabir edilen eserinin adı nedir?,El Bidaye ve'n Nihaye
+TQuAD Dataset,İbn Kesir’in çalışma alanları nelerdir?,"muhaddis, müfessir ve tarihçi"
+TQuAD Dataset,İbn Kesir’in uyruğu nedir?,Suriyeli
+TQuAD Dataset,İbn Kesir hangi tarihler arasında yaşamıştır?,1301 - 1373
+TQuAD Dataset,İbn Kesir’in El Bidaye ve’n Nihaye adlı eseri dilimize hangi isimle çevrilmiştir?,Büyük İslam Tarihi
+TQuAD Dataset,İbn Kesir’in meşhur öğrencileri kimlerdir?,Hafız Ebu'l-Mehâsin el-Hüseynî
+TQuAD Dataset,İbn Kesir hangi medreselerde çalışmıştır?,Hecibiye Medresesi 
+TQuAD Dataset,İbn Kesir ne zaman meşhur Eşrefiyye Dâr'ul Hadis'i hocalığına geçmiştir?,Subki'nin ölümünden sonra
+TQuAD Dataset,İbn Kesir kimlerden icazet almıştır?,"Karafi, Debbusi, Urani ve Huteni gibi bilginlerden"
+TQuAD Dataset,el-Mizzi’nin eserinin adı nedir?,Tehzîbü'l Kemal
+TQuAD Dataset,İbn Kesir’in kayınbabası kimdir?,el-Mizzi
+TQuAD Dataset,İbn Kesir kaç yaşında vefat etmiştir?,72 yaşında
+TQuAD Dataset,İbn Kesir nerede vefat etmiştir?,Şam'da
+TQuAD Dataset,Fedailu'l Kur'an adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,Şerhu'l-Buhari adlı tamamlanmamış eser kime aittir?,İbn Kesir
+TQuAD Dataset,Müsnedu'ş Şeyhayn adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,el Ahkam ala Ebvabi't Tenbih adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,Menakıb-u İmam eş Şafiî adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,Edillet'üt Tenbih fi Fıkhi'ş Şafiîyye adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,Ehadisu't Tevhid ve'r Redd Ala'ş Şirk adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,el-Hedyü ve's-Sünen fi. Ahadisi'l-Mesânîd ve's-Sünen adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,et-Tekmîl fı'Ma'rifeti's-Sikât ve'd-Duafâ ve'1-Mecâhîl adlı eser kime aittir?,İbn Kesir
+TQuAD Dataset,İbn Kesir dini eğitimini kimlerden almıştır?,İbn Teymiyye
+TQuAD Dataset,İbn Kesir Suriye’nin hangi köyünde dünyaya gelmiştir?,Şam yakınlarındaki Busra'ya bağlı Micdel veya Mecdel köyünde 
+TQuAD Dataset,İbn Kesir’in babası kaç yılında vefat etmiştir?,1303'de 
+TQuAD Dataset,İbn Kesir’in doğum adı nedir?,Ebu'l-Fida İsmail İmadu'd-Din îbn Ömer îbn Kesîr İbn Davud îbn Kesîr el-Dımaşkî el-Kureyşî'
+TQuAD Dataset,TOBB ETÜ ne zaman kurulmuştur?,2003
+TQuAD Dataset,TOBB ETÜ nerede kurulmuştur?,Ankara
+TQuAD Dataset,TOBB ETÜ nasıl bir üniversitedir?,vakıf üniversitesidir
+TQuAD Dataset,TOBB ETÜ hangi vakıf tarafından kurulmuştur?,Türkiye Odalar ve Borsalar Eğitim ve Kültür Vakfı
+TQuAD Dataset,TOBB ETÜ diğer üniversitelere göre ne ile farklıdır?,Ortak Eğitim programı
+TQuAD Dataset,TOBB ETÜ 2004-2005 eğitim-öğretim yılında kaç öğrenciyle başlamıştır?,270
+TQuAD Dataset,TOBB ETÜ 2004-2005 eğitim-öğretim yılında kaç fakülte açmıştır?,3
+TQuAD Dataset,TOBB ETÜ 2004-2005 eğitim-öğretim yılında açtığı fakülteler hangileridir?,"Mühendislik Fakültesi, İktisadi ve İdari Bilimler Fakültesi, Fen Edebiyat Fakültesi"
+TQuAD Dataset,"TOBB ETÜ, 2000'den sonra kurulan üniversiteler sıralamasında kaçıncı olmuştur?",1
+TQuAD Dataset,"TOBB ETÜ, tüm vakıf üniversiteleri sıralamasında nerededir?",en iyi ilk 5 üniversite arasında
+TQuAD Dataset,2000 yılından sonra kaç tane üniversite kurulmuştur?,51
+TQuAD Dataset,2000 Yılından Sonra Kurulan Üniversiteler Genel Sıralaması'nı URAP ne zaman yapmıştır?,2013
+TQuAD Dataset,Times Higher Education'ın World University Rankings sıralamasında kaç tane Türk üniversitesi vardır?,18
+TQuAD Dataset,Times Higher Education'ın World University Rankings sıralamasındaki en genç Türk üniversitesi hangisidir?,TOBB ETÜ
+TQuAD Dataset,Times Higher Education'ın World University Rankings hangi ülke kökenlidir?,İngiliz
+TQuAD Dataset,TOBB Ekonomi ve Teknoloji Üniversitesi’nin kurulması ne zamana dayanır?,2000'li yıllar
+TQuAD Dataset,2000'li yıllarda Türkiye'nin durumu nasıldır?,büyük çapta bunalımlar yaşadığı bir dönemdir
+TQuAD Dataset,TOBB ETÜ'nün Türkiye'deki amacı nedir?,Türkiye’nin dünyaca tanınan bir araştırma ve akademik anlamda bilim üssü olmayı hedeflemektedir
+TQuAD Dataset,T-155 Panter'i hangi ülke geliştirmiştir?,Türkiye
+TQuAD Dataset,T-155 Panter'in seri üretimi ne zaman başlamıştır?,2000
+TQuAD Dataset,T-155 Panter Türkiye'de nerede üretilmiştir?,Makina ve Kimya Endüstrisi Kurumu
+TQuAD Dataset,Türkiye 2012 yılında kaç panter teslim almıştır?,255
+TQuAD Dataset,Türkiye toplamda kaç panter teslim alacaktır?,400
+TQuAD Dataset,T-155 Panter Türkiye dışında hangi ülkeye satılmıştır?,Pakistan
+TQuAD Dataset,Pakistan'da kaç tane T-155 Panter vardır?,72
+TQuAD Dataset,Pakistan ilk 12 adet T-155 Panter'i hangi yıllar arasında almıştır?,2008-2009
+TQuAD Dataset,Pakistan 60 adet T-155 Panter'i hangi yıllar arasında almıştır?,2011 ile 2013 arasında
+TQuAD Dataset,Pakistan 2008-2009 yılları arasında kaç Panter almıştır?,12
+TQuAD Dataset,Pakistan 2011-2013 yılları arasında kaç Panter almıştır?,60
+TQuAD Dataset,Türkiye hangi yılda 255 tane Panter teslim almıştır?,2012
+TQuAD Dataset,Boğaziçi Üniversitesi'nin eski adı nedir?,Robert Kolej
+TQuAD Dataset,Okan Ersoy 1967 yılında hangi üniversiteden mezun olmuştur??,Boğaziçi Üniversitesi
+TQuAD Dataset,Okan Ersoy Boğaziçi Üniversitesi'nde hangi bölümden mezun olmuştur?,Elektrik Mühendisliği
+TQuAD Dataset,Okan Ersoy Boğaziçi Üniversitesi'nden ne zaman mezun olmuştur?,1967
+TQuAD Dataset,Okan Ersoy Boğaziçi Üniversitesi'nden sonra hangi üniversiteye gitmiştir?,Kaliforniya Üniversitesi
+TQuAD Dataset,Kaliforniya Üniversitesi Kaliforniya'nın hangi şehrindedir?,Los Angeles
+TQuAD Dataset,Okan Ersoy'un araştırma konuları nelerdir?,"Yapay sinir ağları, Sinyal işleme, Enformasyon, Bilgi işlem, Görüntü işleme, Taramalı elektron mikroskobu"
+TQuAD Dataset,Okan Ersoy M.S ve Ph.D. derecelerini hangi yıllarda almıştır?,1968 ve 1972
+TQuAD Dataset,Kitabının kısaltılmış hali kaç parçaharita halinde saklanmıştır?,72
+TQuAD Dataset,Dünya haritası neyden yapılmıştır?,Gümüşten
+TQuAD Dataset,Haritaların nasıl oluşturduğu hakkında kabül edilen varsayım nedir?,Ptoleme’nin  dünya  haritasını  model  olarak  önünde  bulundurmuş
+TQuAD Dataset,Miller'in dünya haritası yayınlamasının sebebi nedir?,parçaharitaların  bize  kadar  ulaşmış  kopyalarını  ve  aynı  zamanda  parçaharitaları  birleştirmek
+TQuAD Dataset,Miller dünya haritasını nerede yayınlamıştır?,kitabında
+TQuAD Dataset,Miller dünya haritasının hangi şekilde olması gerektiğine inanmıştır?,dikdörtgen
+TQuAD Dataset,Miller orijinali yeniden elde etmek için kaç adet dikdörten parçaharita kullanmıştır?,70
+TQuAD Dataset,Bu yüzyılda nelere duyulan ilgi artmıştır?,"filolojide  bilimsel  alanların  terminolojisine,  yabancı  dillere  ve  Arapça’daki  yabancı  dil  unsurlarının  araştırmasına "
+TQuAD Dataset,Bahsedilen ilgi ne kadar bir süre zarvı için geçerlidir?,yüzyıl
+TQuAD Dataset,Bahsedilen kitapta başka hangi konulardan bahsedilmektedir?,savaş  tekniği  alanında  kaydedilen  ilerlemelerden 
+TQuAD Dataset,Kitabı Claude Canen hangi yılda ilgili uzmanlara sunmuştur? ,1948
+TQuAD Dataset,Devasa yay nasıl bir yapıya sahiptir?,birbirine  yapıştırılmış  çok  sayıdaki  ahşap  ve  boy-  nuz  plaka  katlarından
+TQuAD Dataset,Silahların geliştirilmesi hangi yüzyıllarda gerçekleşmiştir?,7./13.  ve  8./14.
+TQuAD Dataset,Fuat Sezgin nerede doğmuştur?,Bitlis'te
+TQuAD Dataset,Fuat Sezgin liseyi nerede bitirmiştir?,Erzurum'da
+TQuAD Dataset,Fuat Sezgin kaç yılında İstanbul'a gelmiştir?,1943'te
+TQuAD Dataset,Fuat Sezgin ne üzerine doktora yapmıştır?,Arap Dili ve Edebiyatı
+TQuAD Dataset,"Fuat Sezgin, Şarkiyat Enstitüsü'nde hangi alanlarda öğrenim görmüştür?",İslami bilimler ve orientalistik
+TQuAD Dataset,"Fuat Sezgin, Şarkiyat Enstitüsü'nde kimin yanında öğrenim görmüştür?",Hellmut Ritter'in
+TQuAD Dataset,Fuat Sezgin'in doktora tezinin ismi nedir?,Buhari'nin Kaynakları
+TQuAD Dataset,Fuat Sezgin'in tezine göre Buhari'nin sözlü hadisleri kaçıncı yüzyıl öncesine kadar yazılı kaynaklara dayanmaktadır?,7. yüzyıla
+TQuAD Dataset,Fuat Sezgin'in Buhari'nin Kaynakları Hakkında Araştırmalar adındaki takdim tezi kaç yılında yayınlamıştır?,1956'da
+TQuAD Dataset,Fuat Sezgin hangi enstitüde doçent olmuştur?,İslam Araştırmaları Enstitüsü'nde
+TQuAD Dataset,Fuat Sezgin İslam Araştırmaları Enstitüsü'nde kimle tanışmıştır?,Zeki Velidi Togan
+TQuAD Dataset,Fuat Sezgin kaç yılında profesör olmuştur?,1966
+TQuAD Dataset,Fuat Sezgin hangi üniversitede profesör olmuştur?,Frankfurt Üniversitesi'nde
+TQuAD Dataset,Fuat Sezgin ikinci doktora tezini kaç yılında yazmıştır?,1965'te
+TQuAD Dataset,Fuat Sezgin ikinci doktora tezini hangi üniversiteye sunmuştur?,Frankfurt Üniversitesi
+TQuAD Dataset,Fuat Sezgin kim ile evlenmiştir?,Ursula Sezgin
+TQuAD Dataset,Fuat Sezgin'in kızı kaç yılında dünyaya gelmiştir?,1970'te
+TQuAD Dataset,Fuat Sezgin'in kızının ismi nedir?,Hilal
+TQuAD Dataset,Fuat Sezgin Arap-İslam Bilim Tarihi'nin ilk cildini kaç yılında tamamlamıştır?,1967'de
+TQuAD Dataset,Fuat Sezgin kaç dili çok iyi derecede biliyordu?,27
+TQuAD Dataset,Prof. Dr. Fuat Sezgin İslam Bilim Tarihi Araştırmaları Vakfı kaç yılında kurulmuştur?,2010'da
+TQuAD Dataset,Prof. Dr. Fuat Sezgin İslam Bilim Tarihi Enstitüsü hangi üniversite bünyesinde kurulmuştur?,Fatih Sultan Mehmet Vakıf Üniversitesi
+TQuAD Dataset,Prof. Dr. Fuat Sezgin İslam Bilim Tarihi Enstitüsü kaç yılında faaliyetlerini başlamıştır?,2013
+TQuAD Dataset,"İstanbul İslam, Bilim ve Teknoloji Müzesi hangi tarihte açılmıştır?",25 Mayıs 2008
+TQuAD Dataset,"İstanbul İslam, Bilim ve Teknoloji Müzesi'nin açılışını kim yapmıştır?",Recep Tayyip Erdoğan
+TQuAD Dataset,Halife Me'mun döneminde hazırlanan harita kaçıncı yüzyılda yapılmıştır?,8. yüzyılda
+TQuAD Dataset,Müslüman bilim adamı Takiyeddin hangi yıl iki saat yapmıştır?,1555'te
+TQuAD Dataset,Fuat Sezgin Takiyeddin'in 1555'te yaptığı iki saati yeniden yaptırabilmek için kaç yıl uğraşmıştır?,yedi yıl
+TQuAD Dataset,"Fuat Sezgin, Suudi Arabistan Kral Faysal Vakfı'nın İslami bilimler ödülünü kaç yılında almıştır?",1978
+TQuAD Dataset,"Fuat Sezgin, J.W.Goethe Üniversitesi'ne bağlı Arap-İslam Bilimleri Tarihi Enstitüsü'nü kaç yılında kurmuştur?",1982
+TQuAD Dataset,"Fuat Sezgin, J.W.Goethe Üniversitesi'ne bağlı Arap-İslam Bilimleri Tarihi Müzesi'ni kaç yılında kurmuştur?",1983'te
+TQuAD Dataset,Fuat Sezgin müzede bulunan objeleri tanıtmak ve İslam kültür çevresindeki bilimsel gelişmeyi göstermek için hazırladığı katoloğu kaç yılında yayınlamıştır?,2003
+TQuAD Dataset,Müze kataloğun hangi dillerde yayımlanması için hazırlıklar yapılmıştır?,"Arapça, İngilizce ve Türkçesi"
+TQuAD Dataset,Fuat Sezgin Uluslararası Kral Faysal Ödülünü hangi tarihte almıştır?,1 Mart 1979'da
+TQuAD Dataset,Fuat Sezgin Türkiye Yazarlar Birliği Üstün Hizmet Ödülünü hangi yıl almıştır?,1999
+TQuAD Dataset,Fuat Sezgin Almanya hükümeti tarafından Federal Hizmet Madalyasına kaç yılında layık görülmüştür?,1982
+TQuAD Dataset,Fuat Sezgin Almanya hükümeti tarafından Üstün Hizmet Büyük Madalyasına kaç yılında layık görülmüştür?,2001
+TQuAD Dataset,Fuat Sezgin kaç yaşında hayatını kaybetmiştir?,94
+TQuAD Dataset,Fuat Sezgin hangi tarihte hayatını kaybetmiştir?,30 Haziran 2018
+TQuAD Dataset,Halil Nadaroğlu İstanbul Yüksek İktisat ve Ticaret Mektebi'ni hangi yıl bitirmiştir?,1946
+TQuAD Dataset,Halil Nadaroğlu 1963 ve 1969 yılları arasında hangi eğitim kurumunda akademisyenlik yapmıştır?,İstanbul İktisadi ve Ticari İlimler Akademisi'nde
+TQuAD Dataset,Halil Nadaroğlu 1969 yılında hangi eğitim kurumunda profesör ünvanını almıştır?,İstanbul İktisadi ve Ticari İlimler Akademisi'nde
+TQuAD Dataset,Türk maliyeci Halil Nadaroğlu YÖK üyeliğini hangi yıllar arasında yürütmüştür?,1993-1997
+TQuAD Dataset,Halil Nadaroğlu hangi yıllar arasında Bakanlar kurulu kontenjanında görev yapmıştır?,1993-1997
+TQuAD Dataset,Halil Nadaroğlu'nun 1992-1993 yıllarında dekanlık görevini yürüttüğü eğitim kurumu hangisidir?,Marmara Üniversitesi İktisadi ve İdari Bilimler Fakültesi
+TQuAD Dataset,Halil Nadaroğlu'nun kurucu üyeliğini yaptığı derneğin ismi nedir?,Burgazada'yı Güzelleştirme ve Kalkındırma Derneği
+TQuAD Dataset,Halil Nadaroğlu Adalar Vakfı'nda hangi görevi yürütmüştür?,Yönetim Kurulu Başkanlığı
+TQuAD Dataset,Kamu Maliyesi alanında çalışmış olan Halil Nadaroğlu hangi yabancı dile hakimdir?,Fransızca
+TQuAD Dataset,Ebû Bekr er-Râzî hangi kaynakta geniş boğazlı iki kabı göstermiştir?,Kitāb Sırr el-Esrār’ının Latince versiyonunun araçlar tablosunda
+TQuAD Dataset,Arapça'da kınnîna olarak isimlendirilen geniş boğazlı laboratuvar kabınının Arapça karşılığı nedir?,Cannina
+TQuAD Dataset,Ülkü Azrak kaç yılında doğmuştur?,1933
+TQuAD Dataset,Ülkü Azrak nerede doğmuştur?,İstanbul
+TQuAD Dataset,Ülkü Azrak'ın 1956 yılında mezun olduğu eğitim kurumu neresidir?,İstanbul Üniversitesi Hukuk Fakültesi
+TQuAD Dataset,Ülkü Azrak doçentliğine hangi yıl başlamıştır?,1970
+TQuAD Dataset,Ülkü Azrak doçentliğini nerede yapmıştır?,İstanbul Üniversitesi Hukuk Fakültesi İdare Hukuku kürsüsünde
+TQuAD Dataset,İstanbul Üniversitesi Siyasal Bilgiler Fakültesi hangi yılda kurulmuştur?,1979
+TQuAD Dataset,Ülkü Azrak hangi yıl profesör ünvanını almıştır?,1982
+TQuAD Dataset,Ülkü Azrak hangi yıllar arasında Cumhurbaşkanı Ahmet Necdet Sezer tarafından YÖK üyeliğinde görevlendirilmiştir?,2001-2005
+TQuAD Dataset,Ülkü Azrak'ın YÖK üyeliği yaptığı dönemin cumhurbaşkanı kimdir?,Ahmet Necdet Sezer
+TQuAD Dataset,Ülkü Azrak hangi yıllar arasında İstanbul İktisadi ve Ticari İlimler Akademisi ve Marmara Üniversitesi'nde çalışmıştır?,1982
+TQuAD Dataset,Ülkü Azrak'ün dekanlık görevini yürütmüş olduğu eğitim kurumu hangisidir?,İstanbul Üniversitesi Siyasal Bilgiler Fakültesi 
+TQuAD Dataset,Ülkü Azrak hangi yıllar arasında İstanbul Üniversitesi'nde dekan olarak görev yapmıştır?,1995-1998
+TQuAD Dataset,Ülkü Azrak'ın ?,2000
+TQuAD Dataset,Ülkü Azrak'ün dekanlık görevini yürütmüş olduğu eğitim kurumu hangisidir?,İstanbul Üniversitesi Siyasal Bilgiler Fakültesi 
+TQuAD Dataset,Uluğ Bey kaç yılında doğmuştur?,1393
+TQuAD Dataset,Uluğ Bey kaç nerede doğmuştur?,Sultaniye
+TQuAD Dataset,Uluğ Bey'in asıl adı nedir?,Muhammed Taragay
+TQuAD Dataset,Uluğ Bey rasathaneyi nereye yaptırmıştır?,Semerkant'ta
+TQuAD Dataset,Uluğ Bey'in medresesinde kim başkanlık yapmıştır?,Kadızade Rumi
+TQuAD Dataset,Deniz Harp Okulu ne zaman kurulmuştur?,1773 yılında
+TQuAD Dataset,Kim Deniz Harp Okulu kurmuştur? ,Cezayirli Gazi Hasan Paşa
+TQuAD Dataset,Deniz Harp Okulu'nun ilk olarak hangi adla kurulmuştur?,Mühendishane-i Bahr-i Hümayun
+TQuAD Dataset,Deniz Harp Okulu ordumuzun hangi kuvvetine muhrip subay yetiştirir?, Türk Deniz Kuvvetleri'ne
+TQuAD Dataset,DHO'daki bölümler nelerdir?," endüstri, elektrik-elektronik, bilgisayar, makine, iletişim, uluslararası ilişkiler ve gemi inşa mühendisliği"
+TQuAD Dataset, DHO'da subaylar hangı komutanlığın birliklerinde görev yapmak için yetiştirilmektedir?,Deniz Kuvvetleri Komutanlığı 
+TQuAD Dataset,Hangiokul yetiştirdiği subayları Deniz Kuvvetleri Komutanlığına verir?, Deniz Harp Okulu
+TQuAD Dataset,Deniz Harp Okulunun eski cumhurbaşkanı olan mezunu kimdir?,Fahri Korutürk
+TQuAD Dataset,Deniz Harp Okulunun eski başbakan olan mezunu kimdir?,Rauf Orbay
+TQuAD Dataset,Semicirculus magnus azimuthalis aletinde demir azimut çapı kaç metredir?,"2,5 metredir"
+TQuAD Dataset,Cisimlerinin meridyen dairesindeki  yüksekliklerini bulmaya yarayan aletin adı nedir?,Çift Bacaklı Alet
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nı kullanmak için düşünülen askeri kuvvet nedir?,Kara Kuvvetleri Komutanlığı
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, test kabul aşamasını müteakip nereye girdi?",envantere
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın TSK'da operasyonel olarak kullanıma girdiği sene kaçtır?,2015
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın tam yüklü testinde ulaştığı yükseklil kaçtır?,"27,030 feet"
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın 5 ve 6 Ağustos'ta olan testlerinde hangi yüksekliğe çıkmıştır?,"18,000 feet"
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı'nın 18,000 feette katettiği mesafe kaç kmdir?",4040km
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı'nın 4040 km yol aldığı testinde kaç saat, kaç dakika havada kalmıştır?",24 Saat 34 Dakika
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın kazandığı rekor hangi alandadır?,irtifa ve kendi klasmanında uçuş süresi
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın rekor kazandığı araçlar hangi araçlar arasındadır?,Milli hava araçları
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, hangi tarihte atış testine girmiştir?",17 Aralık 2015
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın atış testinde hangi firmanın füzeleri kullanılmıştır?,Roketsan
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı testte kaç adet füze atmıştır?,2 adet
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın başarı oranı atış testinde yüzde kaçtır?,%100
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, keşif ve gözetleme yaparken neleri başarabileceğini göstermiştir?",anlık olarak ortaya çıkan hedefleri vurabileceğini
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracının model numarası nedir?,BAYRAKTAR TB2
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, hangi tarihte yepyeni bir sayfadır?",Türk havacılık tarihi
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı hangi standartlar göz önünde bulundurularak geliştirilmiştir?,askeri ve sivil havacılık standartlarına
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'na 3 tane bulunan bilgisayar nedir?,yedekli uçuş kontrol bilgisayarı
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'na bulunan kontrol bilgisayarı hariç diğer bilgisayar nedir?,görev bilgisayarı
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nda hangi sistemler vardır?,"INS-GNSS Sistemi, servo aktüatör sistemleri, pitot statik sistem, güç sistemi, hava veri kayıt sistemi"
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'ndaki sistemler hangi iki kategoridedir?,elektronik ve yazılım bileşenli
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'ndaki elektronik ve yazılımsal sistemlerin hangi özelliği onu ilk yapar?,milli ve özgün
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nı geliştiren mühendislerin milliyeti nedir?,Türk
+TQuAD Dataset,Proje kapsamında milli olan tasarımlar nelerdir?,"platform, elektronik donanım ve yazılım"
+TQuAD Dataset,%93 lük oran neyü temsil etmektedir?,Sanayi Katılım oranı
+TQuAD Dataset,Yüksek sanayi katılım oranı kaçtır?,%93
+TQuAD Dataset,Taktik İnsansız Hava Aracı Sistemi Geliştirme hangi usule dayanarak başladı?,rekabet usulüne
+TQuAD Dataset,Taktik İnsansız Hava Aracı Sistemi Geliştirme programında rekabet usulü ne demektir?,herhangi bir Ar-Ge desteği olmaksızın
+TQuAD Dataset,Taktik İnsansız Hava Aracı Sistemi Geliştirme programı sonucu üretilenler ne zaman resmi heyetin karşısında testler yapılmıştır?,Eylül-Ekim 2009 tarihlerinde
+TQuAD Dataset,Taktik İnsansız Hava Aracı Sistemi Geliştirme programı testleri sırasında hangi özellikler test edilmiştir?,"tam otomatik taksi, kalkış, uçuş, iniş, frenleme ve tekrar hangara dönüş gibi özellikler"
+TQuAD Dataset,2010 Ocak ayında gerçekleştirilen hangi kurul 12 uçak için görüşmeleri başlatmıştır?,Savunma Sanayi İcra Kurulu
+TQuAD Dataset,Savunma Sanayi İcra Kurul'u sonrası kaç adet İHA sistemi için görüşme başlatıldı?,2 Adet
+TQuAD Dataset,Savunma Sanayi İcra Kurul'unda kaç sene sonra sözleşme olmuştur?,2 yıl sonra
+TQuAD Dataset,Sözleşme sonrası ne zaman program takvimi başlamıştır?,2012 Ocak içerisinde
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın seri üretim aşamasına yönelik yapılan çalışmalar nelerdir?,"Elektronik, Yazılım, Tasarım, Test, Üretim vb."
+TQuAD Dataset,Taktik İnsansız Hava Aracı'nın ön tasarımını ne zaman tamamlamışlar?,Ağustos 2012 içerisinde
+TQuAD Dataset,İnsansız Hava Aracı'nın askeri ve sivil standartlara göre oluşturulmasındaki ana sebep nedir?,sivil hava sahamızda da uçabilecek güvenilirlik ve teknik yeterliliğe sahip olması
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın sivil hava sahasında uçması için nelere sahip olmalıdır?,güvenilirlik ve teknik yeterliliğe
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın ilk prototiplerinden sonra ne yapılmıştır?,uçuş testleri
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'ın uçuş test tarihi nedir?,Mart 2014
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın seri imalatı hangi metodladır?,partiler halinde
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, ne kadar yükselebilmeli?","18,000 feet"
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, ne kadar uzaklığa haber gönderebilmeli?",150km
+TQuAD Dataset,Bayraktar Taktik İnsansız Hava Aracı'nın kullanımı nerede olacaktır?,TSK bünyesinde
+TQuAD Dataset,"Bayraktar Taktik İnsansız Hava Aracı, kalite açısından nasıl tasarlandı? ",isterlerin çok üstünde
+TQuAD Dataset,Şükrullah nasıl ün yapmıştır?,Behcetü't Tevârîh adlı tarih kitabının yazarı olarak ün yapmıştır
+TQuAD Dataset,Şükrullah hakkında kebul edilen nedir?,Doğumunun 1388'de Amasya'da olduğu kabul edilmektedir
+TQuAD Dataset,Şükrullah'ın adının tamamı nedir?,Tüm adı Şükrüllah bin İmâm Şihâbeddîn Ahmed bin İmâm Zeyneddîn Zekîdir
+TQuAD Dataset,Şükrullah Osmanlı'da hangi sınıfa mensuptur?,Osmanlı ilmiye sınıfına mensuptur
+TQuAD Dataset,Şükrullah Osmanlı hizmetinde kaç yıl çalışmış?,22 yıl Osmanlı Devleti hizmetinde çalışmıştir
+TQuAD Dataset,Şükrullah Osmanlı'da hangi padişahlar döneminde çalışmıştır?,II. Murad ve II. Mehmed dönemlerinde
+TQuAD Dataset,Şükrullah hangi padişah döneminde elçi olarak gönderilmiştir?,II. Murad döneminde
+TQuAD Dataset,Şükrullah ne zaman vefat etmiştir?,1488 yılında
+TQuAD Dataset,Şükrullah hangi şehirde vefat etmiştir?,İstanbul'da vefat etmiştir
+TQuAD Dataset,Şükrullah'ın mezarı nerededir?,Mezarı İstanbul Şeyh Vefâ Camisi'nde bulunmaktadır
+TQuAD Dataset,Şükrullâh Behcetü't Tevârîh isimli eserini yazmayı ne zaman tamamlamıştır?,1459'da tamamlamış
+TQuAD Dataset,Şükrullâh Behcetü't Tevârîh isimli eserini hangi paşaya sunmuştur?,II. Mehmed'in sadrazamı Veli Mahmud Paşa'ya sunmuştur
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eser hangi dilde yazılmıştır?,Farsça olarak yazılan bu eser
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eser'in Türkçe'ye çevrildiği sene hangi senedir?,1530 senesinde Türkçeye çevrilmiştir
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eser kaç kısımdan oluşur?,Behcetü't Tevârîh on üç kısımdan oluşmuştur
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eserde hedeflenen şey nedir?,dünya tarihinin anlatılması hedeflenmiştir
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eserin sekizinci kısmı hangi konudan bahseder?,Eserin sekizinci kısmı II. Mehmed'in tahta çıkmasından 1451'e kadarki Osmanlı tarihinden bahsetmektedir
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eser hangi Osmanlı tarihçileri tarafından kaynak olarak kullanıldı?,"özellikle Karamani Mehmet Paşa, Sarıca Kemal, Ruhi Çelebi, Mehmet Zaim, kaynak olarak kullanılmıştır"
+TQuAD Dataset,Şükrullâh'ın yazdığı Behcetü't Tevârîh isimli eser hangi yıllarda Türkçe'ye çevrilerek neşredilmiştir?,1939-49'da iki defa Türkçe’ye çevrilerek neşredilmiştir
+TQuAD Dataset,Yusuf Yağcı nerede doğmuştur?,Bursa'da doğdu
+TQuAD Dataset,Yusuf Yağcı kaç yılında doğmuştur?,1952'de
+TQuAD Dataset,Yusuf Yağcı yüksek lisansını hangi üniversitede yapmıştır?,Liverpool Üniversitesi'nde yaptı
+TQuAD Dataset,Yusuf Yağcı doktorasını hangi üniversitede yapmıştır?,Liverpool Üniversitesi'nde yaptı
+TQuAD Dataset,Yusuf Yağcı nerede doçentik ve profesörlük yaptı?,İTÜ'de
+TQuAD Dataset,Yusuf Yağcı'nın üye olduğu kuruluşlar hangileridir?,"Yağcı, TÜBA asli üyesi ve Türk Kimya Derneği şeref üyesidir"
+TQuAD Dataset,Yusuf Yağcı TÜBİTAK Bilim Ödülü'nü hangi yıl almıştır?,1994 yılında
+TQuAD Dataset,Yusuf Yağcı'nın aldığı ödüller nelerdir?,"TÜBİTAK bilim ödülü almıştır. Ayrıca, Türkiye Kimya Derneği Şeref Ödülü (2002), Elsevier Scopus Ödülü (2007), Japonya Polimer Derneği Uluslararası Bilim Ödülü (2008), Elginkan Vakfı Teknoloji Ödülü (2008), Bilim ve Teknoloji Birliği Kurulu (COMSTECH) 2010 Yılı Kimya Şeref Ödüllerini de almıştır"
+TQuAD Dataset,Yusuf Yağcı'nın kaç adet bilimsel makalesi vardır?,400'ün üzerinde uluslararası bilimsel makalesi
+TQuAD Dataset,Yusuf Yağcı'nın kaç tane patenti vardır?,5 patenti
+TQuAD Dataset,Yusuf Yağcı'nın kaç tane uluslararası kitabı vardır?,6 uluslararası kitabı vardır
+TQuAD Dataset,Yusuf Yağcı kaç tane master tezini yönetmiştir?,50
+TQuAD Dataset,Yusuf Yağcı kaç tane doktora tezini yönetmiştir?,18
+TQuAD Dataset,Fahire Battalgazi'nin Soyadı Kanunu'ndan önceki adı nedir?,Fahire Akif Hanım
+TQuAD Dataset,Fahire Battalgazi 1943'ten önceki çalışmalarını hangi soyadı kullanarak yazmıştır?,Battalgil
+TQuAD Dataset,Fahire Battalgazi 1937 yılından itibaren kimin derslerini vermeye başlamıştır?,A. Naville'in verdiği dersleri
+TQuAD Dataset, Fahire Battalgazi hayvanat doçentliğine tayin edilmeden önceki görevi nedir?,Müderris Muavini
+TQuAD Dataset,Fahire Battalgazi 1927'nin Ağustos ayında nereye nakledilmiştir?,Hayvanat Enstitüsü asistanlığına
+TQuAD Dataset,Fahira Battalgazi'nin 1926'dan 1927'ye kadar çalıştığı görev nedir?,Tercan Kazası İlk Mektep Başmuallimliği
+TQuAD Dataset,Fahira Battalgazi Şam'da gördüğü orta öğretimi nerede yapmıştır?,Bezmi Alem Lisesi'nde
+TQuAD Dataset,Fahire Battalgazi'nin babası kimdir?,Etem Akif Bey
+TQuAD Dataset,Fahire Battalgazi ne zaman doğmuştur?,1902'de
+TQuAD Dataset,Gözlemevi merkez binasında hangi bölümler yer almaktadır ?,"kütüphane, atölye, sınıf ve konferans salonu"
+TQuAD Dataset,60 cm Cassegrain teleskopu hangi üniversiteler tarafından imzalanan protokol dahilinde oluşturulmuştur ?,Çanakkale Onsekiz Mart Üniversitesi ile İstanbul Üniversitesi
+TQuAD Dataset,Çanakkale Onsekiz Mart Üniversitesi Astrofizik Araştırma Merkezi (ÇAAM) ve Ulupınar Gözlemevinde bilimsel amaçlarla hangi alet kullanılmaktadır ? ,teleskop
+TQuAD Dataset,Çanakkale Onsekiz Mart Üniversitesi Astrofizik Araştırma Merkezi niçin kurulmuştur ?,Astrofizik alanında etkinlikler planlamak ve yürütmek amacıyla
+TQuAD Dataset,ÇAAM nerede bulunmaktadır ?,"Çanakkale merkezine 10km uzaklıkta ""Radar Tepesi"" nin güney yamacında Ulupınar Köyü'ne yakın bir bölgede, 410 m yükseklikte"
+TQuAD Dataset,ÇAAM hangi yıl faaliyete geçmiştir ?,2002 
+TQuAD Dataset,2 Temmuz 2004 tarih ve 5189 sayılı kanunu gereğince uydu işletmeciliği hangi kuruma devredilmiştir ?,Türksat Uydu Haberleşme Kablo TV ve İşletme A.Ş.
+TQuAD Dataset, Türksat Uydu Haberleşme Kablo TV ve İşletme A.Ş. ne zamandan itibaren çalışmaktadır ?,22 Temmuz 2004
+TQuAD Dataset,Türksat A.Ş kaç adet televizyon ve radyo yayını vardır ? ,800 civarında
+TQuAD Dataset,Ulaştırma Bakanlığı Türksat A.Ş üzerinde hangi hak ve yetkilere sahiptir ?,"oy, yönetim, temsil, denetim"
+TQuAD Dataset,Türksat A.Ş.'deki hak ve yetkiler hangi kurum kullanılmaktadır ?,Ulaştırma Bakanlığı
+TQuAD Dataset,Türksat A.Ş'nin hisseleri hangi kuruluşa aittir ? ,Hazine Müsteşarlığı
+TQuAD Dataset,Türksat 3A hangi amaçlarla kullanılmaktadır ?,"coğrafi koşullar nedeniyle radyolink ve kablo iletişim altyapısı mevcut olmayan bölgelere VSAT terminalleri aracılığıyla internet, ses ve görüntü hizmetlerinin götürülmesi için"
+TQuAD Dataset,Türksat 3A hangi frekans aralığında haberleşme hizmeti vermektedir ?,Ku frekans bandı
+TQuAD Dataset,Türksat 3A hangı sınırlara kadar kapsama alanına sahiptir ?,"Türkiye başta olmak üzere tüm Avrupa, Kuzey Afrika ile tüm Türk Cumhuriyetlerinin yanı sıra Çin sınırı"
+TQuAD Dataset,Türksat 3A nereden fırlatılmıştır ?,Fransız Guyanası'ndaki Guyana Uzay Merkezi
+TQuAD Dataset,50.0° Doğu yörüngesinde ilk defa bulanacak olan Türksat uydusu nedir ? ,Türksat 4B
+TQuAD Dataset,Türksat 4B uydusunun Ka frekans bandında nasıl bir hizmet sunması planlanmaktadır ?,spot kapsama alanları ile yüksek hızlı ve daha düşük maliyetlere sahip internet erişim hizmetleri 
+TQuAD Dataset,Türksat 4B hangi alanları kapsayacaktır ?,"Türkiye, Afrika, Avrupa, Orta Doğu ve Güney Batı Asya"
+TQuAD Dataset,Türksat 4B uydusunun fırlatmaları neden durdurulmuştur ?,Proton roketi arızası
+TQuAD Dataset,Burhaneddin Berken kimdir?,"Türk profesör, eğitimci ve bilim insanı"
+TQuAD Dataset,Burhaneddin Berkan kaç yılında ordinaryüs ünvanını almıştır?, 1946 
+TQuAD Dataset,Bergamalı Kadri kaç yılında müderrisliğe terfi ettirildi?, 1929
+TQuAD Dataset,Burhaneddin Berken kaç yılında hangi mektebde muallim muavini oldu?,1913 yılında Yüksek Mühendis Mektebi'
+TQuAD Dataset,Burhaneddin Berken 1912 senesınde nereden diploma almıştır?,Ecole Nationale des Ponts et Chausséesten 
+TQuAD Dataset,Hendese-i Mülkiye'den kaç yılında mezun olmuştur?,1908 
+TQuAD Dataset,Burhaneddin Berkan Türkiyede hangi laboratuvarların kurulmasında emeği geçmiştir?,su laboratuvarlarının
+TQuAD Dataset,Burhaneddin Berkan hangi alanda çalışmıştır ?,Hidrolik alanında
+TQuAD Dataset,Pîrî Reis Haritası kim tarafından ne zaman çizilmiştir?,Osmanlı Kaptan-ı Derya'sı (Amiral) Pîrî Reis tarafından 1513'te çizilmiş 
+TQuAD Dataset,Pîrî Reis in Amerika Kıtasını gösteren kaç tane haritası vardır?, iki
+TQuAD Dataset,"Piri Reis haritasının kenar notlarının, Osmanlı Türkçesinden yeni harflere çevrilip yayımlandığı kitabın adı ve yazarı kimdir?", Afet İnan; 1954 yılında yayımlanan En Eski Amerika Haritası adlı kitabı
+TQuAD Dataset,Piri Resi Yavuz Sultan Selim tarafından ne zaman kaptanı derya seçilmiştir?,1517 yılında
+TQuAD Dataset,Piri Resi dünya haritasını ne zaman bitirmiştir?, 1513
+TQuAD Dataset,Piri Reis' i kim yetiştirmiştir?,amcası Kemal Reis
+TQuAD Dataset,"Amerika'yı Asya'dan ayrı bir kıta olarak gösteren ve onu ilk defa ""Amerika"" olarak adlandıran kimdir?",Martin Waldseemüller
+TQuAD Dataset,Piri Reisin haritası ne zaman ve nerede bulundu?,9 Kasım 1929'da Topkapı Sarayı'nda sarayı müzeye dönüştürme sırasındaki envanter tespit çalışmaları sürerken tesadüfen bulundu.
+TQuAD Dataset,Piri Reisin haritasının yayımlandığı Piri Reis haritası isimli kitabın yazarı kimdir?, Yusuf Akçura
+TQuAD Dataset,Prof. Kahle; harita ile ilgili inceleme sonuçlarını ne zaman ve nerede sunmuştur?, 1931 yılında 18. Doğubilimleri Kongresi'nde
+TQuAD Dataset,Haritanın kayıp parçalarını arama çabaları sırasında dünya haritası olduğu sanılan bir başka Pîrî Reis haritası bulan kişi kimdir?,Topkapı Sarayı Müdürü Tahsin Öz
+TQuAD Dataset,Haritanın orjinal boyutları nedir?,900x600 mm 
+TQuAD Dataset,Piri Reisin haritası hangi tarzda yapılmıştır?,portolan tarzında yapılmıştır
+TQuAD Dataset,Harita toplam kaç renkle çizilmiştir?,dokuz renkle çizilmiştir.
+TQuAD Dataset,Piri Reisin haritasının diğer kısmına ne olduğuna inanılır?,öbür yarısı kayıp
+TQuAD Dataset,Nijer Nehri'nin kaynağı olarak piri reisin haritasında neresi gösterilmiştir?,Sahra Çölü'nde görünen göller
+TQuAD Dataset,Piri Reisin haritasında hangi kısımlar kolayca tanınabilir?,"Batı Avrupa, Batı Afrika ve Güney Amerika'nın doğusu kolayca tanınabilir."
+TQuAD Dataset,Piri Reisin haritasında ki Avrupa'da hangi yarımadalar iyi çizilmiştir?,Fransa ve İber Yarımadası iyi çizilmiştir
+TQuAD Dataset,Nijer Nehri'nin kaynağı olarak haritada neresi görülmektedir?,"Nijer Nehri'nin kaynağı olarak, Sahra Çölü'nde görünen göller vardır."
+TQuAD Dataset,Caferiye haritalarının özelliği nedir?,"Caferiye haritaları, çok eskiye dayanan, Abbasî halifelerinden Me'mun zamanında kopyalanmış olan, Büyük İskender zamanına ait haritalardır."
+TQuAD Dataset,Pîrî Reis haritasının Kristof Kolomb haritasından kaynaklandığının önemli bir delili nedir?,"Pîrî Reis haritasının Kristof Kolomb haritasından kaynaklandığının önemli bir delili, Küba'nın yokluğudur."
+TQuAD Dataset,"Notlarda ""Antilya"" olarak değinilen yer neresidir?", Karayipler
+TQuAD Dataset,Karayipler'in çiziminde Pîrî Reis hangi haritalardan yararlanmıştır?,"Sancuvano Batisdo adı iki farklı ada için (biri günümüz Porto Riko'sunda bulunan San Juan Bautista, öbürü Küçük Antiller'de yer alan Santa Maria de Guadalupe) kullanılmıştır"
+TQuAD Dataset,1500’de Hindistan’a giderken Brezilya'yı keşfeden kimdir?,Pedro Alvares Cabral
+TQuAD Dataset,"Charles Hapgood, Pîrî Reis'in haritasındaki Güney Amerika'nın güney ucundan doğuya doğru olan uzantıyı hangi kıta olarak tanıtmıştır?", 16. yüzyılda henüz varlığı bilinmeyen Antarktika kıtası olarak Avrupa'ya tanıtmıştır.
+TQuAD Dataset,Ayrıca haritanın orijinal nüshalarının kenarlarında Adile Ayda'nın dikkatini çeken noktalar nedir?,"Pîrî Reis'in yazı biçimi olmadığı belli olan ve yeni yazılmış olduğu anlaşılan, ""Kristof Kolomb'dan yararlandığını belirtir"" yazıların yanı sıra harita üzerinde yemek lekelerinin dahi bulunması"
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu hangi yılda doğmuştur?,1914
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu hangi tarihte vefat etmiştir?,11 Nisan 1997
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu nerede doğmuştur?,Diyarbakır
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu'nun mesleği nedir?,siyasetçi
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu yaşamı süresince hangi ünvanları almıştır?,Kurucu Meclis Odalar Temsilciliği
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu'nun kaç çocuğu vardır?,iki 
+TQuAD Dataset,Abdullah Mahir Büyükpamukçu Doktorasını hangi üniversitede tamamlamıştır?,ABD Michigan State Üniversitesi'nde
+TQuAD Dataset,Mustafa Behçet Efendi hangi alanlarda Türkçe çeviri yapmıştır ?, tıp ve tabiyat 
+TQuAD Dataset,Mustafa Behçet Efendi nerede doğmuştur ?,İstanbul’da
+TQuAD Dataset,Mustafa Behçet Efendinin Abdülhak Hamid ile ilişkisi nedir ?,Abdülhak Hamid’in büyük amcasıdır.
+TQuAD Dataset,Mustafa Behçet Efendinin babası kimdir ?,Mehmed Emin Şükühi Efendi
+TQuAD Dataset,Mustafa Behçet Efendinin Bin sır adlı eserini yayına hazırlayan kimdir ?, Abdülhak Molla’nın oğlu Hayrullah Efendi
+TQuAD Dataset,Mustafa Behçet Efendi hangi yılda saray hekimi olmuştur ?,1796’da
+TQuAD Dataset,Mustafa Behçet Efendinin ömrü boyunca yaşadığı yalının ismi nedir ?,Hekimbaşı Yalısı
+TQuAD Dataset,Mustafa Behçet Efendi hangi padişahın hekimbaşlığını yapmıştır ?,III. Selim
+TQuAD Dataset,Mustafa Behçet Efendi kaç ay sürgünde kalmıştır ? ,Onbir
+TQuAD Dataset,Mustafa Behçet Efendi Tıphane-i Amire ve Cerrahhane-i Amire'de hangi görevde bulunmuştur ?,Mustafa Behçet Efendi bu okulun nazırlığını yaptı.
+TQuAD Dataset,Mustafa Behçet Efendiye göre tıp bilimi nasıl öğretilmelidir ?,okullarda modern yöntemlerle
+TQuAD Dataset,Osmanlı İmparatorluğu'nun ilk cerrahhanesi nerede kurulmuştur ?,Şehzadebaşı'daki Tulumbacıbaşı Konağı'nda
+TQuAD Dataset,Osmanlı İmparatorluğu'nun ilk cerrahhanesinin adı nedir ? ,Tıphane-i Amire ve Cerrahhane-i Amire
+TQuAD Dataset,"Mustafa Behçet Efendi'nin ""Kolera Risalesi"" adlı eserinin Türkçe kitaplar açısından özelliği nedir ?",basılı ilk Türkçe tıp kitaplarından birisi
+TQuAD Dataset,Mustafa Behçet Efendinin 1831 yılında yayımladığı kitapçığın ismi nedir ?,Kolera Risalesi
+TQuAD Dataset,"Comte de Buffon'un ""Genel ve Özel Tabiyat Tarihi"" isimli eseri kaç cilttir ?",44 cilt
+TQuAD Dataset,"Mustafa Behçet Efendi ""Bin Sır"" adlı kitabını hangi konu üzerine yazmıştır ?",eski çağlardan kalma tedavi yöntemleriyle ilaçlar
+TQuAD Dataset,Mustafa Behçet Efendi nereye defnedilmiştir ?,Üsküdar’daki Nasuhi Dergahı’na
+TQuAD Dataset,Reşîdüddîn Fazlullah-ı Hemedânî kimdir?," Pers Yahudisi kökenli Müslüman hekim, yazar, tarihçi ve İlhanlılar'ın bir veziridir."
+TQuAD Dataset,Reşîdüddîn Fazlullah-ı Hemedânî kaç yaşında iken İslam dinini seçmiştir?,Otuz yaşında iken İslam dinine geçmiştir. 
+TQuAD Dataset,Olcaytu neden öldürülmüştür,Sunnilik yerine Şiiliği benimseyince 1316 yılında öldürülür
+TQuAD Dataset,1304 yılında İlhanlı tahtına kim geçmiştir?,Olcaytu
+TQuAD Dataset,Reşidüddin Fazlullah neden tutuklanmıştır?,sarayda oluşan Moğol-Şii hüküm savaşı sırasında 1316 yılında Reşidüddin Fazlullah Olcaytu'yu öldürdüğü gerekçesiyle tutuklanır
+TQuAD Dataset,Reşîdüddîn Fazlullah-ı Hemedânî ınCami’üt-Tevarih kitabının içeriği nedir?," Bu el yazması Arap, Yahudi, Moğol, Frenk ve Çinlilerin soyağaclarını (şecere) içerir."
+TQuAD Dataset,Cami’üt-Tevarih ın ikinci cildi kim tarafından hangi isimle yayınlanmıştır?,"Zeki Velidi Togan tarafından ""Oğuz Destanı"" adıyla yayımlanmıştır."
+TQuAD Dataset,Cami’üt-Tevarih içeriği nedir?,"Mahmud Gazan'dan, Moğollar ve onların hanedanlığını, sonraları Âdem'den Reşideddin Fazlullah'ın yaşadığı döneme kadar olan tüm tarihi kayıtları içerir."
+TQuAD Dataset,Reşideddin Fazlullah hangi amaçla bir yazıhane düzenler?, resimli kitapları üretmek için büyük bir yazıhane düzenler.
+TQuAD Dataset,Reşîdüddîn Fazlullah-ı Hemedânî Cami’üt-Tevarih i anlatırken kullandığı kaynak nedir?,Möngke Han'ın saltanat dönemini anlatımında Alaaddin Ata Melik Cüveynî'nin Ta' rīkh-i jahān-gushā ismindeki eseri Reşideddin Fazlullah'a büyük kaynak olmuştur.
+TQuAD Dataset,Ibni Bace 'nin bilimsel araştırmalarının bilinmesinin sebebi nedir?,Hayatının ilk dönemlerine dair pek bir bilgi yoktur fakat sonraki dönemlerde yazdığı eserler sayesinde düşüncesi ve bilimsel araştırmaları bilinmektedir.
+TQuAD Dataset,İbn_Bacce nerede ve ne zaman vefat etmiştır?,1138 yılında Fas'ta vefat etmiştir.
+TQuAD Dataset,İbn_Bacce asıl adı nedır?, Asıl adı Ebû Bekr Muhammed bin es-Saigdir.
+TQuAD Dataset, İbn Bacce nerede doğmuştur?,Endülüs'teki Zaragoza (Saragosta) kentinde
+TQuAD Dataset,Ibni Bacce neden dinsizlikle suçlanmıştır?,Metafizik ve felsefedeki çeşitli düşünceleri nedeniyle
+TQuAD Dataset,Felsefe dışında hangi alanlarda ılgılenmiştir?,"astronomi, matematik ve musikî ile ilgilenmiştir. Bunların dışında tıp'ta döneminin uzmanlarından olmuştur"
+TQuAD Dataset,"İlahi bilgiye akıl ile ulaşabileceğini savunan İbn_Bacce, hangi düşünceye karşı çıkmıştır?",Gazzali düşüncesine
+TQuAD Dataset,"İbn_Bacce'ye göre hangi yöntem ile elde edilen bilginin, ilmin değeri yoktur?",Deney
+TQuAD Dataset,İbn_Bacce'ye göre ilim elde etmenin tek aracı nedir?,akıl
+TQuAD Dataset,Hangi iki büyük Endülüs'lü filozof İbn_Bacce'den etkilenmiştir?, İbn Tufeyl ve İbn Rüşd'ü
+TQuAD Dataset,İbn_Bacce nerede vefat etmiştir?,Fas
+TQuAD Dataset,İbn_Bacce'nin asıl adı nedir?,Ebû Bekr Muhammed bin es-Saig
+TQuAD Dataset,İbn_Bacce nerede doğmuştur?,Zaragoza
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi'nde kaç tane fakülte vardır ?,9 fakülte
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi kaç yılında kurulmuştur ?,31 Mart 2011
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi'ne 6 Aralık 2011 de kim rektör olarak atanmıştır ?,Prof. Dr. Adem Ersoy
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi'ne Aralık 2015'den itibaren vekil rektör olarak kim atanmıştır ?,Prof. Dr. Aykut Gül
+TQuAD Dataset,Cumhurbaşkanı Recep Tayyip Erdoğan Adana Bilim ve Teknoloji Üniversitesi'ne Ağustos 2016 yılında kimi rekötür olarak atamıştır ?,Prof. Dr. Mehmet Tümay
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi 2017 Eğitim yılında nerede eğitime devam edecektir ?,Sarıçam Kampüsünde
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi'nin Mühendislik ve Doğa Bilimleri Fakültesi nerededir ?,Yeşiloba Yerleşkesi
+TQuAD Dataset,Adana Bilim ve Teknoloji Üniversitesi kaç tane yerleşkede eğitim vermektedir ?,3 küçük yerleşkede eğitim vermektedir
+TQuAD Dataset,Müteferrika'nın bastığı özgün eserler nerede bulunmaktadır?,Yalova'da bulunan İbrahim Müteferrika Kağıt Müzesi'nde
+TQuAD Dataset,İbrahim Müteferrika kaç yılında doğmuştur?,1674
+TQuAD Dataset,İbrahim Müteferrika kaç yılında ölmüştür?,1745 
+TQuAD Dataset,1719 yılında ilk kez basılan harita ne haritasıdır?, Marmara Denizi 
+TQuAD Dataset,İbrahim Müteferrika matbaayı ne zaman kurmuştur?,1719-1720 yılları arasında
+TQuAD Dataset,İbrahim Müteferrika nerede müslüman olmuştur?, İstanbul
+TQuAD Dataset,İbrahim Müteferrika İstanbula ne olarak gelmiştir?, Türkler tarafından esir olarak
+TQuAD Dataset,Matbaada basılan ilk kitap nedir?, Vankulu Lügatı
+TQuAD Dataset,Matbaanın açılmasının uygunluğu ile ilgili fetva kim tarafından verilmiştir?,Şeyhülislâm Abdullah Efendi
+TQuAD Dataset,Matbaanın kurulması için yurtdışından neler getirtilmiştir?,Makina ve Latin alfabesi kalıpları
+TQuAD Dataset,İlk matbaanın ismi nedir?,Darü't-Tıbâati'l Amire
+TQuAD Dataset,Matbaanın açılmasının koşulu nedir?,dini olmayan eserler basmak
+TQuAD Dataset,Mehmat Sait Efendi ile İbrahim Müteferrika'nın düşünceleri kim tarafından desteklenmiştir?,Sadrazam Nevşehirli Damat İbrahim Paşa
+TQuAD Dataset,Nevşehirli Damat İbrahim Paşa'nın Paris'e elçi olarak gönderdiği kişi kimdir?,Yirmisekiz Mehmed Çelebi
+TQuAD Dataset,Toplamda basılan kitapların yüzde kaçı satılmıştı?,70
+TQuAD Dataset,Matbaada basılan ilk kitaptan kaç tane basılmıştır?, 500 
+TQuAD Dataset,Tarihi-i Seyyah adlı kitap kaç yılında basılmıştır?,1729
+TQuAD Dataset,İbrahim Müteferrika ömrü boyunca kaç kitap basmıştır?,17
+TQuAD Dataset,İlmiye sınıfından insanların kitapları alması neyi göstermektedir?,ulemanın matbaaya karşı olmadığını 
+TQuAD Dataset,İbrahim Müteferrika Grammaire Turque den nereye satmıştır?,Cizvit Mektebine
+TQuAD Dataset,İbrahim Müteferrika neden Avrupa'nın değişik yerlerinde kitaplarını satmaya çalıştı?, satış adetleri çok düşük kaldığından 
+TQuAD Dataset,Basılan kitapları daha çok kimler almıştır?," Kethüda, Mektupçu, Çavuşbaşı gibi Osmanlı Bürokrasisi ve Şeyhülislam, Kadı v.b."
+TQuAD Dataset,Neden bazı kaynaklar İbrahim Müteferrika'nın bastığı kitap sayısı hakkında hataya düşmektedir?,Tarih-i Çelebizade 'nin pek çok nüshası Tarih-i Raşid 'in üçüncü ve son cildinin arkasına eklenip ciltlenerek beraber satıldığı için
+TQuAD Dataset,İbrahim Müteferrikanın ölümünden sonra matbaayı işletme yetkisi kimlere verilmiştir?,Rumeli kadılarından İbrahim Efendi ile Anadolu kadılarından Ahmed Efendiye
+TQuAD Dataset,İbrahim Müteferrika'nın ölümünden sonra basılan tek kitap kaç yılında basılmıştır?, 1757
+TQuAD Dataset,Matbaa hangi yıla kadar faaliyette bulunmamıştır?,1784
+TQuAD Dataset, İbrahim Müteferrika'nın ölümünden sonra matbaada hangi kitap basılmıştır?,Vankulu Lûgatı'nın ikinci baskısı
+TQuAD Dataset, 90.000 hattatın matbaanın Osmanlı İmparatorluğuna gelmesine engel olduğu neden inandırıcı değildir?,Çünkü o tarihlerde İstanbul'da bütün esnafların toplamı bile bunun çok altındadır
+TQuAD Dataset,Osmanlılarda matbaa kaç yıl aktif kalmıştır?,65
+TQuAD Dataset,Osmanlılarda matbaanın faaliyete geçtiği yıllarda Japonya'da kaç çeşit kitap basılmıştır?,10.000
+TQuAD Dataset,Matbaanın geç gelmesiyle alakalı asıl sorulması gereken soru nedir?,Geldi de Ne oldu ?
+TQuAD Dataset,Ahi Mehmet Çelebi'nin işi nedir ?,Osmanlı Hekim ve Yazar.
+TQuAD Dataset,Ahi Mehmet Çelebi İstanbul'da ne zaman vefat etmiştir ?,1524
+TQuAD Dataset,Ahi Mehmet Çelebi 1432 yılında nerede doğmuştur ?,Tebriz 
+TQuAD Dataset,Ahi Mehmet Çelebi'nin mezarı nerededir ?, İmam Şafi'nin kabri civarı
+TQuAD Dataset,Ahi Mehmet Çelebi babasından neyi öğrenmiştir ?,hekimliği 
+TQuAD Dataset,Ahi Mehmet Çelebi Yavuz ile hangi sefere katılmıştır ?,Mısır seferi
+TQuAD Dataset,Ahi Mehmet Çelebinin adı nerede Ahmet ve Mahmud olarak geçmektedir ?,kaynaklarda
+TQuAD Dataset,Ahi Mehmet Çelebi hangi eseri ile tanınır ?,Böbrek ve idrar kesesindeki taş oluşumunun nedenlerini ve tedavisini incelediği eseriyle
+TQuAD Dataset,Ahi Mehmet Çelebi yaşamı boyunca kaç defa hekim başı olmuştur ?,iki defa
+TQuAD Dataset,Ahi Mehmet Çelebi İbn-i Sina'nın hangi eserlerini Türkçe'ye çevirmiştir ?,el-kanun fi’t-Tıb
+TQuAD Dataset,Ahi Mehmet Çelebi en önemli olan eseri Risâle-i hasâtü’l-kilye ve’l-mesâne'yi hangi devirde ele almıştır ?, II. Bayezid devri
+TQuAD Dataset,Ahi Mehmet Çelebi'nin ismi nerelerde kullanılmıştır ?,"İstanbul’da bir mahalleye, Edirne’de bir köye ve Bulgaristan’da bir yöreye"
+TQuAD Dataset,Ahi Mehmet Çelebi Fatih ilçesinin hangi semtine camii yaptırmıştır ?,Eminönü 
+TQuAD Dataset,SAGUAR X5'i kim tasarlamıştır?,Sakarya Üniversitesi öğrencileri
+TQuAD Dataset,"SAGUARX5, SAGUAR X4 aracının hangi parçasını kullanarak üretildi? ",şasisini
+TQuAD Dataset,SAGUAR X4 yarıştığı ilk yarışta hangi ödülleri almıştır?,iki kupa
+TQuAD Dataset,SAGUAR X5 hangi aracın bir parçası kullanılarak üretildi?,SAGUAR X4
+TQuAD Dataset,Yarış sırasında neye bağlı olarak SAGUAR-X5'in ürettigi enerji miktarı azalmıştır? ,hava koşullarına ve panellerin eğimine bağlı olarak
+TQuAD Dataset,SAGUAR-X5' kaç adet güneş modülü kullanıldı?,18 adet
+TQuAD Dataset,Yarış sırasında ulaşılan en yüksek şarj değeri kaç amperdir?,15A
+TQuAD Dataset,MPPT en yüksek güç üretimini neyi değiştirerek sağlar?,akımı
+TQuAD Dataset,MPPT en yüksek güç üretimini neyi düzenleyerek sağlar? ,Panellerden gelen enerjiyi
+TQuAD Dataset,Akü Grubu değerlerinin sisteme uygun seçilmesi aracı hangi durumlarda kullanmamızı sağlar?,"daha yüksek verimde, daha yüksek hızda ve daha uzun süre boyunca"
+TQuAD Dataset,Akü grubu hazırlarken dikkat edilmesi gereken özellikler nelerdir?,"Lityum-İyon, Lityum Polimer, Ni-Cd, Ni-Mh ve Kurşun-Asid"
+TQuAD Dataset,DC motorlarından yüksek verim elde etmek için hangi tür motor tercih edilir?,fırçasız
+TQuAD Dataset,DC motor tipleri nelerdir?,Fırçalı ve fırçasız
+TQuAD Dataset,DC motorlarının verimi kaçtır?,DC motorların verimi % 90’ın üzerindedir
+TQuAD Dataset,Güneş arabalarında neden DC motorları kullanılmaktadır?,verimi daha yüksek olduğu için ve aküden çıkacak doğru gerilimle çalışabildiği için
+TQuAD Dataset,Kanopinin rüzgâr direncinden en az etkilenecek şekilde tasarlanması ne sağlar?,güç tasarrufu
+TQuAD Dataset,Hangi malzemeler aracın verimini arttırır?,hafif 
+TQuAD Dataset,Vites Kutusu niçin kullanılamamıştır?,aracın ağırlığını arttırdığı için
+TQuAD Dataset,Hangi parçaları arasındaki oran aracın gücünü değiştirir?,Motor dişlisi ile tekerlek dişlisi arasındaki
+TQuAD Dataset,Güneş enerjili araçlar ne ile hareket ettirilir?,motor milinden tekerleğe kadar olan bir zincir veya kayış ile
+TQuAD Dataset,Lastikler hangi özelliklere göre belirlenmelidir?,hava basıncı uygun şekilde seçilerek yerle temas eden yüzeyi sürtünmeyi en aza indirecek şekilde
+TQuAD Dataset,Güneş enerjili arabaların sahip olabileceği teker sayısının alt sınırı nedir?,3
+TQuAD Dataset,Projelerin yeni öğrencilere aktarılmasını kim sağlayacaktır?,öğrenci kulüpleri
+TQuAD Dataset,Ortaya çıkan teknolojinin kısa sürede gelişmesini sağlayacak faktörler nelerdir?,"Sistemli çalışma, iyi organizasyon ve gerekli ar-ge çalışmasının yapılması"
+TQuAD Dataset,Normal yarış pistinde olup güneş enerjili arabalar yarışında olmayan yarış özellikleri nelerdir?,hız veya dayanıklılık
+TQuAD Dataset,Akü grubunda depolanan enerjinin daha kısa sürede bitmesinin nedenleri nelerdir? ,"Pist yokuşlarının daha hızlı çıkılması, ani kalkışların yapılması, aracın gereğinden fazla zorlanması"
+TQuAD Dataset,SAGUAR X5’in MPPT gerilim girişi kaçtır?, 72-80 Volt
+TQuAD Dataset,SAGUAR X5’in motorun sürekli güç çıkışı kaçtır?,8 Beygir
+TQuAD Dataset,SAGUAR X5’in motorun Tepe Gücü kaç?,10 Beygir
+TQuAD Dataset,SAGUAR X5’in motor tipi?,DC Sabit Mıknatıs
+TQuAD Dataset,SAGUAR X5’in batarya toplam ağırlığı?,"49,5kg"
+TQuAD Dataset,SAGUAR X5’in hücre sayısı kaç?,91
+TQuAD Dataset,SAGUAR X5’in eni kaç cm?, 180cm
+TQuAD Dataset,SAGUAR X5’in Tek Modül Tepe Akımı kaç?," 2-4,5 A"
+TQuAD Dataset,SAGUAR X5’in Motor Ağırlığı kaç?,11kg
+TQuAD Dataset,SAGUAR X5’in kaç motor içeriyor?,1
+TQuAD Dataset,SAGUAR X5’in batarya kim üretir?, GP
+TQuAD Dataset,SAGUAR X5’in batarya tipi nedir?, Ni-Mh
+TQuAD Dataset,SAGUAR X5’in Arka Fren Tipi?,"Sağ El Freni,Sol Rejeneratif"
+TQuAD Dataset,SAGUAR X5’in Rejeneratif Frenleme var mı?,Var
+TQuAD Dataset,SAGUAR X5’in Lastik Basıncı kaç?, 40-45 PSI
+TQuAD Dataset,SAGUAR X5’in Lastik Modeli nedir?, MC11 Race Wheel
+TQuAD Dataset,SAGUAR X5’in Jant’te hangi malzemesi kullanılıyor?,Alüminyum
+TQuAD Dataset,SAGUAR X5’in Jant Modeli nedir?,17 Inch
+TQuAD Dataset,SAGUAR X5’te nasıl bir teker dizilim kullanılmakta?,2 ön 2 arka
+TQuAD Dataset,SAGUAR X5’in teker sayısı kaç?, 4
+TQuAD Dataset,SAGUAR X5’ ne tipi yönlendirme Mekanizma kullanıyor?,Direkt Rot Joystick
+TQuAD Dataset,SAGUAR X5 hangi tipi arka süspansyonlari kullaniyor?,Çift A-Arm
+TQuAD Dataset,SAGUAR X5 ne tip Ön Süspansiyonlar kullaniyor?,Çift A-Arm
+TQuAD Dataset,SAGUAR X5 hangi Şasi tipi ve malzemesi kullaniyor?," Al-Gr, Fe-Ni"
+TQuAD Dataset,SAGUAR X5’in şasi tipi nedir?,Al-Gr
+TQuAD Dataset,SAGUAR X5’in teker aralığı kaç cm?,220cm
+TQuAD Dataset,SAGUAR X5’in yüksekliği kaç?,"Standart 70cm,Tepe 110cm"
+TQuAD Dataset,SAGUAR X5’in yerden yüksekliği ne kadar?,22cm
+TQuAD Dataset,SAGUAR X5’in uzunluğu kaç?,490cm
+TQuAD Dataset,SAGUAR X5’in mürettebatı sayısı nedir?, 1
+TQuAD Dataset,SAGUAR X5’in toplam üretim maliyet neydi?,40.000 YTL
+TQuAD Dataset,SAGUAR X5’in üretim süresi neydi?,5 Ay
+TQuAD Dataset,SAGUAR X5’in Tasarım ne kadar sürdü?,2 Ay
+TQuAD Dataset,SAGUAR X5’in Formula G 2006'te Araç Numarası neydi?, 36
+TQuAD Dataset,SAGUAR X5 hangi etkinliklere katıldı?,"Formula G 2006 Ege Kupası, Formula G 2006 IstanbulPark, Autoshow 2006"
+TQuAD Dataset,SAGUAR X5’in Tasarım Kodu nedir?,X5
+TQuAD Dataset,SAGUAR X5 proje devamini nasıl sağlanacak,üniversitemizde kurulan öğrenci kulüpleri aracılığıyla bu projelerin devamlılığı sağlanacak ve yeni gelen öğrencilere aktarılacaktır
+TQuAD Dataset,SAGUAR X5’te lastik nasıl seçiliyor?,Lastiklerin hava basıncı uygun şekilde seçilerek yerle temas eden yüzeyi sürtünmeyi en aza indirecek şekilde seçilmelidir
+TQuAD Dataset,AGUAR X5’te vites kutusu neden kullanılmıyor?,aracın ağırlığını arttırdığı için vites kutusu henüz kullanılamamıştır
+TQuAD Dataset,SAGUAR X5’in MPPT akım çıkışı ne kadar oluyor?,Güneşe bağlı değişken
+TQuAD Dataset,Güneş enerjili araçlar DC motorların kullanılması ne faydası var?,DC motorların verimi % 90’ın üzerindedir ve kontrol edilmesi kolaydır
+TQuAD Dataset,Saguar 5X'in DC motorların verimi kaçtir?,% 90’ın üzerindedir
+TQuAD Dataset,Güneş arabalarında neden DC Motorlar kullanılmaktadır?,verimi daha yüksek olduğu için ve aküden çıkacak doğru gerilimle çalışabildiği için DC Motorlar kullanılmaktadır.
+TQuAD Dataset,Güneş enerjili araçlar nasıl hareket ettirilir?, motor milinden tekerleğe kadar olan bir zincir veya kayış ile hareket ettirilirler
+TQuAD Dataset,SAGUAR X5'in verimini nasıl artırıldı?,Aracın verimini arttırmak için hafif malzemeler kullanılır.
+TQuAD Dataset,Güneş enerjili bir arabayı en önemli aksam nedir?,şasidir
+TQuAD Dataset,Güneş arabalarında motor yüksek verimli olması için ne gerekiyor?,Fırçalı ve fırçasız tipleri olan bu motorlar veriminin daha yüksek olması için fırçasız olarak tercih edilirler.
+TQuAD Dataset,SAGUAR-X5 nasıl bir motor kullaniyor?,DC Motorlar
+TQuAD Dataset,Yarışlarda kullanılabilecek çeşitli akü tipleri nedir?,"ityum-İyon, Lityum Polimer, Ni-Cd, Ni-Mh ve Kurşun-Asid"
+TQuAD Dataset,"SAGUAR-X5 akü ş,seçerken neler önemli?","dikkat edilecek husus akü grubunun ağırlığı, şarj ve deşarj süresi, bitme ve şarj voltaj değerleridir"
+TQuAD Dataset,SAGUAR-X5 Yarış sırasında en yüksek ne kadar şarj değeri görülmüştür?,15A 
+TQuAD Dataset,SAGUAR-X5’teki güneş modülün toplam alanı kaç?,4.68 metrekaredir
+TQuAD Dataset,SAGUAR-X5’teki güneş modülün toplam ağırlığı kaç?,7kg
+TQuAD Dataset,SAGUAR-X5’te kaç adet güneş modülü kullanıldı?,18 adet
+TQuAD Dataset,SAGUAR-X5’te güneş panellerin verimlilik kaç?, %17 
+TQuAD Dataset,SAGUAR X5’in şasisi nereden geldi?, SAGUAR X4 
+TQuAD Dataset,SAGUAR X5 vs SAGUAR X4 arasindaki farki nedir?,üzgara karşı daha kararlı davranış sergileyen yeni aerodinamik yapısı ile X4 modelinden çok daha iyi 
+TQuAD Dataset,SAGUAR X5 ilk yarışında kaç kupa kazandı?, iki kupa 
+TQuAD Dataset,SAGUAR X5 nedir?,Sakarya Üniversitesi öğrencileri tarafından tasarlanan ve üretilen 2. Güneş arabası dır.
+TQuAD Dataset,SAGUAR ne demek,SAkarya Üniversitesi GÜneş ARabası
+TQuAD Dataset,SAGUARX5 i hangi yarış ardında tasarlanmış?,ormula G 2005 in ardından araçta ciddi iyileştirmeler planlayan ekip SAGUARX5 i tasarladı
+TQuAD Dataset,SAGUAR X5 normal bir araba ile ne fark i var?,Güneş enerjili arabalar normal bir araba gibi ileri ver geri gidebilir; rejeneratif olarak gerilim üretebilir
+TQuAD Dataset,Güneş enerjili araba'nın Kanopinin aerodinamik yapısı neden çok önemli?,Rüzgâr direncinden en az etkilenecek şekilde tasarlanması yine güç tasarrufu sağlar
+TQuAD Dataset,Güneş enerjili arabalar en az kaç tekerlekli oluyor?,en az 3 tekerleklidir
+TQuAD Dataset,Kitab'ul Kamil'in üçüncü bölümünde ne anlatılmaktadır?,yıldızların hareketlerine arız olan şeyler
+TQuAD Dataset,Kitab'ul Kamil'in ikinci bölümünde ne anlatılmaktadır?,yıldızların hareketlerinin incelenmesi
+TQuAD Dataset,Kitab'ul Kamil'in birinci bölümünde ne anlatılmaktadır?,yıldızların hareketinden önce bilinmesi gereken meseleler
+TQuAD Dataset,Kitab'ul Kamil'in tercümesini kim yapmıştır?,Sedilot
+TQuAD Dataset,Kitab'ul Kamil'in bir nüshasının kayıtlı olduğu yerin adı nedir?,Paris National Kütüphanesi
+TQuAD Dataset,Kitab'ul Kamil'in bir nüshasının kayıtlı olduğu numara kaçtır?,1138
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin trigonometri ve astronomiden bahseden meşhur eserinin ismi nedir?,Kitab'ul Kamil
+TQuAD Dataset,Ebu'l Vefa el-Buzcani hangi alanlarda yaptıklarıyla bilim tarihinde önemli bir yer tutmuştur?,Matematik ve astronomi
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin özellikle çalışmalar yaptığı alan nedir?,trigonometri 
+TQuAD Dataset,Ebu'l Vefa el-Buzcani astronomi üzerine ne çalışmalar yapmıştır?,Ay'ın hareketleri üzerine
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin Bağdad'a ne zaman gitmiştir?,959 yılında
+TQuAD Dataset,İlim tahsiline nerede başlamıştır?,amcası Ebu Amr Mugazili ve Ebu Yahya bin Kimib'in yanında
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin tam adı nedir?,Ebu el-Vefa Muhammed bin Muhammed bin Yahya bin İsmail bin el-Abbas el-Büzcani
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin doğduğu yer neresidir?,İran'da bulunan Buzgan kasabası
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin astronomik gözlemler için ürettiği çizelgelerin aralıkları nelerdir?,on beşer dakikalık açı aralıkları
+TQuAD Dataset,Ebu'l Vefa el-Buzcani'nin duvar oktantını geliştirme sebebi nedir?,yıldızların eğimlerininin kesin ve doğru bir şekilde ölçülebilmesi için
+TQuAD Dataset,Ebu'l Vefa el-Buzcani tarafından ilk defa ortaya konulan şey nedir?,Trigonometrinin altı esas oranı arasındaki trigonometrik ilişkiler
+TQuAD Dataset,Gerçekleştiği zamana kadar bilinmeyen dördüncü dereceden denklemlerin çözümünü kim yapmıştır?,Ebu'l Vefa
+TQuAD Dataset,Plorian Cajori'nin Ebu'l Vefa el-Buzcani hakkında yorum yaptığı eserin ismi nedir?,History of Mathematics
+TQuAD Dataset,Diferansiyel hesap ve analitik geometrinin temelini kuran insan kimdir?,Ebul Vefa
+TQuAD Dataset,ünlü bilim tarihçisi Plorian Caroji'ye göre Harezmi'nin matematik ve geometrideki buluşlarını geliştiren insan kimdir?,Ebul Vefa
+TQuAD Dataset,Ay üzerinde Ebu'l Vefa el-Buzcani'ye ithafen ne isim verilmiştir?,Abul Wafa
+TQuAD Dataset,Sekantın kaşifinin Ebu'l Vefa el-Buzcani olduğu kimlerin araştırmalarıyla tespit edilmiştir?,ünlü bilim tarihçilerinden Monte Candon ve Carra de Vaux
+TQuAD Dataset,Ebu'l Vefa el-Buzcani tanjant ve sekant fonksiyonlarını kimlerden yardım alarak tanımlamıştır? ,Habeş el Hasib ve El Mervezi
+TQuAD Dataset,"Ege Tarımsal Araştırma Enstitüsü'nün araştırma ve uygulamalar yaptığı alanlar hangileridir?,","Türkiye'deki bitkisel çeşitlilik, sığırcılık, arıcılık"
+TQuAD Dataset,Ege Tarımsal Araştırma Enstitüsü'nün bir bölgeye bağlı kalmayarak ülkesel çalışma yaptığı alan nedir?, tütün
+TQuAD Dataset,Ege Tarımsal Araştırma Enstitüsü'nün 1974 yılında ismi değiştikten sonra aldığı ad nedir?,Ege Bölge Zirai Araştırma Enstitüsü
+TQuAD Dataset,Ege Tarımsal Araştırma Enstitüsü'nün 1967 yılında birleştiği oluşumun adı nedir?,Bitki Araştırma ve İntrodüksiyon Merkezi
+TQuAD Dataset,Ege Tarımsal Araştırma Enstitüsü 1963 yılında hangi isimle çalışmalara başlamıştır?,Zirai Araştırma Enstitüsü
+TQuAD Dataset,Ege Tarımsal Araştırma Enstitüsü'nün altındaki bölümlerde neler yapılmaktadır?,hem araştırma geliştirme hem de araştırmaları doğrultusunda üretim uygulamaları da yapmaktadır.
+TQuAD Dataset,Battanî'nin lakabı nedir?, es-Sabi'dir 
+TQuAD Dataset,Battanî nerede doğmuştur?, Urfa ilinin bir ilçesi olan Harran'da 
+TQuAD Dataset,Battanî hangi alanlarda uzmanlaşmıştır?,matematikçi
+TQuAD Dataset,Bilim adamı Battanî latince'de nasıl anılır?,Albatenius
+TQuAD Dataset,Battani'nin astronomideki en fazla bilinen başarısı nedir?,"Güneş Yılını 365 gün, 5 saat, 46 dakika ve 24 saniye olarak ölçmüş olmasıdır."
+TQuAD Dataset,Battani'nin avrupalı astronom üzerinde büyük etki yaratan çalışması nedir?,Zij
+TQuAD Dataset,Modern trigonometrinin temelini kim atmıştır?,Battani
+TQuAD Dataset,Battanî nerede çalışmalar yapmıştır?,Şam
+TQuAD Dataset,el-Zij es-sabi'nin vatikanda olan nüshasını kim yazmıştır?,Plato
+TQuAD Dataset,Battanî'nin eserinin yeni baskısı 1645 yılında nerede ortaya çıkmıştır?,Bologna
+TQuAD Dataset,sekant ve kosekantın işteş fonksiyonlarını kim keşfetmiştir?,Battani
+TQuAD Dataset, sin x = a cos x eşitliğini bulan türk-islam bilim adamı kimdir?,Battani
+TQuAD Dataset,Aydaki kratere adı verilen bilim adamı kimdir?,Albategnius
+TQuAD Dataset,Süleyman Aydan Belen Mimar Sinan Güzel Sanatlar Üniversitesinde hangi alanda çalışmaktadır?,Seramik ve Cam Tasarımı alanında
+TQuAD Dataset,Süleyman Aydan Belen şuan hangi üniversitede çalışmaktadır?, Mimar Sinan Güzel Sanatlar Üniversitesi
+TQuAD Dataset,Süleyman Aydan Belen hangi yıldan itibaren profesör ünvanını taşımaktadır?,2002
+TQuAD Dataset,Süleyman Aydan Belen'in üniversitedeki yeterlik çalışmasının adı nedir?,"Kamusal Çevre Sıhhi Tesisat Gereçleri Üzerinde Araştırma, Yeni Tasarım, Uygulama Önerileri"
+TQuAD Dataset,Süleyman Aydan Belen'in 1976 yılında mezun olduğu okulun adı nedir?,Ankara Yükseliş Koleji
+TQuAD Dataset,Süleyman Aydan Belen'in seramik restoratörü ve fotoğrafçı olarak görev aldığı projeyi hangi okul yürütmektedir?,İstanbul Üniversitesi
+TQuAD Dataset,Süleyman Aydan Belen hangi yıldan beri fotoğrafçılıkla ilgilenmektedir?,1974
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun kaç personeli bulunmaktadır?,5548 personeli
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun Osmanlı İmparatorluğu'nda ki adı nedir?,Tophane-i Hümayun
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun kısaltması nedir?,MKE
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu kime hizmet etmekte ve ne trü ihtiyaçları karşılamaktadır?,"Türk Silahlı Kuvvetlerinin her türlü silah, mühimmat, roket, araç ve gereç ihtiyaçlarını "
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun temeli nereye dayanmaktadır?,Fatih Sultan Mehmet'in Top Döküm Tesislerini kurdurmasıyla
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu bünyesinde kaç adet fabrika bulunmaktadır?,18
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu nerelerden sipariş almaktadır?,"gerek yurt içi, gerekse yurt dışından"
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun sermayesinin tamamı neden devlet tarafından karşılanmasının başlıca sebebi nedir?,değişen Dünya ve Türkiye koşulları
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu günümüzde hangi kurum ile ortak ilişkiler yürütmektedir?,Türkiye Cumhuriyeti Millî Savunma Bakanlığı
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun sermaye sınırı ne kadardır?,300 Milyon TL
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu türkiyenin kaçıncı büyük sanayi kuruluşudur?,130.
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun tabanca kategorisindeki ürünleri nelerdir?,Canik
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun saldırı tüfeği kategorisinde ki ürünleri nelerdir?,G3A3
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun makinalı tabanca kategorisinde ki ürünleri nelerdir?,Mp 5
+TQuAD Dataset,Makina ve Kimya Endüstrisi Kurumu'nun keskin nişancı tüfeği kategorisinde ki ürünleri nelerdir?,MKEK T-12
+TQuAD Dataset,Hoca Sadeddin Efendi’nin mesleği nedir?,"Türk tarihçi, şeyhülislam ve müderris"
+TQuAD Dataset,Hoca Sadeddin Efendi kaç yılları arasında yaşamıştır?,"1536/7, İstanbul - 1599, İstanbul"
+TQuAD Dataset,Hoca Sadeddin Efendi kimlerin sadrazamlığa gelmesine katkıda bulunmuştur?,Cerrah Mehmed Paşa ve Damat İbrahim Paşa
+TQuAD Dataset,Hoca Sadeddin Efendi’nin şeyhülislamlığına karşı çıkanlara ne olmuştur?,görevden aldırtarak idam edilmesini sağladı
+TQuAD Dataset,Hoca Sadeddin Efendi kaç yılında şeyhülislam olmuştur?,1598 yılında
+TQuAD Dataset,Hoca Sadeddin Efendi kimden sonra şeyhülislam görevini almıştır?,Bostanzade Mehmed Efendi
+TQuAD Dataset,Sadrazam İbrahim Paşa’yı tutan valide nasıl etkisiz hale getirilmiştir?,Safiye Sultan'ın etkisiyle
+TQuAD Dataset,Hoca Sadeddin Efendi zamanında kim sadrazamlığa getirilmiştir?,Cigalazade Yusuf Sinan Paşa
+TQuAD Dataset,Hoca Sadeddin Efendi padişahın savaş alanından ayrılmamasını sağlayarak hangi savaşın kazanılmasında önemli rol oynamıştır?,Haçova Savaşında 
+TQuAD Dataset,Hoca Sadeddin Efendi ne zamandan itibaren devlet işlerinde etkili olmuştur?,1574 yılında III. Murad'ın tahta çıkması ile
+TQuAD Dataset,Hoca Sadeddin Efendi hangi sıfatla devlet işlerinde etkili olmuştur?,Hace-i Sultani 
+TQuAD Dataset,Hoca Sadeddin Efendi hangi padişahın şehzadeliğinde müderrisi olmuştur?,Şehzade Murad'ın (III. Murad)
+TQuAD Dataset,Hoca Sadeddin Efendi ilmiye sınıfında hangi yıllarda müderrislik yapmıştır?,1556 ila 1573 yılları arasında 
+TQuAD Dataset,Hoca Sadeddin Efendi hangi eserleri tercüme etmiştir?,Molla Muslihittin Lari'nin iki eseri ile Abdülkadir Geylani'nin Menakıbını Türkçeye tercüme etti.
+TQuAD Dataset,Hoca Sadeddin Efendi asıl ününü neyle kazanmıştır?,Hoca Tarihi olarak da anılan Tac üt-tevarih isimli yapıtıyla
+TQuAD Dataset,Hoca Sadeddin Efendi’nin mezarı nerededir?,"Eyüpsultan semtinde, Saçlı Abdülkadir Efendi Cami haziresindedir"
+TQuAD Dataset,Hoca Sadeddin Efendi’nin oğlu Esad Efendi kaç yaşındayken İstanbul kadısı oldu?,25 yaşında
+TQuAD Dataset,Hoca Sadeddin Efendi’nin oğlu Mehmed Efendi hangi görevlere getirilmiştir?,Mekke Kadısı ve hemen ardından İstanbul Kadısı tayin edildi. İki ay kadar sonra da Anadolu Kazaskeri oldu
+TQuAD Dataset,"Hoca Sadeddin Efendi, Abdülkadir Geylani’nin hangi eserini Türkçeye tercüme etmiştir?",Menakıb
+TQuAD Dataset,Tac üt-tevarih adlı eserin ana konusu nedir?,kuruluşundan I. Selim'in ölümüne kadar Osmanlı Tarihi
+TQuAD Dataset,"Cebir alanındaki çalışmaları, 16. yüzyıla kadar hangi üniversitelerde temel matematik ders kitabı olarak kullanılmıştır?",Avrupa üniversitelerinde
+TQuAD Dataset,Harezmi neyin atası olarak tanımlanmaktadır?,cebrin atası ya da kurucusu olarak
+TQuAD Dataset,"Cebiri bağımsız bir disiplin olarak öğreten, ""indirgeme"" ve ""dengeleme"" (denklemin farklı taraflarındaki benzer terimlerin aynı tarafa alınarak sadeleştirilmesi) yöntemlerini tanıtan ilk kişi kimdir?",Hârizmî 
+TQuAD Dataset,Hârizmî 780 yılında Harezm bölgesinin hangi şehrinde dünyaya gelmiştir?,Hive şehrinde
+TQuAD Dataset," Matematik, gökbilim, coğrafya ve algoritma alanlarında çalışmış Fars bilim insanı kimdir?",Hârizmî
+TQuAD Dataset,Devrinde bilginleri himayesi ile meşhur olan Abbasi halifesi Mem'un Harezmi'deki ilim kabiliyetinden haberdar olunca onu kendisi tarafından nerede görevlendirir?,"Antik Mısır, Mezopotamya, Yunan ve Hint medeniyetlerine ait eserlerle zenginleştirilmiş Bağdat Saray Kütüphanesi'nin idaresinde"
+TQuAD Dataset,Harezmi’nin aslında üç Banū Mûsā'dan en büyüğü olan Muḥammad ibn Mûsā ibn Shākir ile aynı kişi olabileceği görüşüne sahip kişi kimdir?,Douglas Morton Dunlop
+TQuAD Dataset," Harezmi, halife El-Memun tarafından bağdat’da inşa edilmiş Bilgelik Evi’nde bilim adamı olarak hangi alanlarda çalışmalar yapmıştır?",Yunanca ve Sanskritçe bilimsel el yazmalarının tercümesini de içeren bilim ve matematik alanlarında çalışmalar yapmıştır
+TQuAD Dataset,Muḥammad ibn Musa el-Harezmi el-Majusi el-Kurtubalı ismindeki Kurtubalı sıfatı onun nereden gelmiş olabileceğine işaret eder?,Bağdat'taki bir bağcılık bölgesi olan Kurtuba’dan (Qatrabbul) gelmiş olabileceğine işaret eder
+TQuAD Dataset,El-Harezmi'ye Muhammed ibn El-Tabari ona ismini ne olarak vermiştir?,Muḥammad ibn Musa el-Harezmi el-Majusi el-Kurtubalı
+TQuAD Dataset,"Harezmi, Batlamyus’un neyle ilgili verilerini sistematize edip düzeltmiştir?",Batlamyus’un Afrika ve Orta Doğu'yla ilgili verilerini 
+TQuAD Dataset,Harezminin hangi kitabı Hint-Arap rakam sisteminin Ortadoğu ve Avrupa'ya yayılmasının ana sebebi olmuştur?,Hint Rakamlarıyla Hesaplama Üzerine
+TQuAD Dataset,Harezminin Doğrusal ve ikinci dereceden denklemleri çözmeye yönelik sistematik yaklaşımıyla cebrin ortaya çıkmasına neden olan kitabının başlığı nedir?,Tamamlama ve Dengeleme ile Hesaplama Üzerine Özlü Kitap
+TQuAD Dataset,"El-Harezmī'nin matematik, coğrafya, astronomi ve haritacılığa katkısı hangi alandaki yeniliğin temelini oluşturmuştur?",cebir ve trigonometride
+TQuAD Dataset,harezminin şehirlere ait 2402 adet koordinatın listesini ve coğrafi özellikleri içeren kitabının ismi?,Dünyanın Tanımı Kitabı
+TQuAD Dataset," El-Harezmî'nin üçüncü önemli eseri, onun ‘Coğrafya’sı olarak da bilinen, 833 yılında bitirdiği eseri nedir?",Dünyanın Tanımı Kitabı
+TQuAD Dataset,"El-Harezmi’nin takvimsel ve astronomik hesaplamalara dayanan,içerisinde bir sinus değeri tablosu ile birlikte 116 adet takvimsel, astronomik ve astrolojik veriyi barındıran çalışmanın ismi?",Zīj el-Sindhind
+TQuAD Dataset,el-Harezmi tarafından geliştirilen Hint-Arap rakamlarıyla aritmetik gerçekleştirme tekniğinden türetilen terimin ismi nedir?,Algoritma
+TQuAD Dataset,Cebir'in babası olarak bilinen kişi kimdir?,Harezmi
+TQuAD Dataset,Bir dönem bulunduğu Hindistan’da sayıları ifade etmek için harfler ya da heceler yerine basamaklı sayı sisteminin kullanıldığını saptanan tanınmış kişi kimdir?,Harezmi
+TQuAD Dataset,Tamamlama ve Dengeleme ile Hesaplama Üzerine Özlü Kitap'ı ne özelliği taşımaktadır?,doğu ve batının ilk müstakil cebir kitabı olma özelliğini
+TQuAD Dataset,Harezminin tamamlama ve Dengeleme ile Hesaplama Üzerine Özlü Kitap 820 yılı dolaylarında yazılmış olup ne kitabıdır,matematik kitabıdır
+TQuAD Dataset,algoritmi de numero Indorum adıyla yazdığı kitabı Latinceye tercüme edilmesi sonucu < 12. yüzyılda batı dünyasına sunulan eserleriyle tanınan kişi kimdir?,Harezmî
+TQuAD Dataset,harezmininTarih ile ilgili eserleri nelerdir?,Kitab'ul Tarih
+TQuAD Dataset,harezminin El- Kitab'ul Muhtasar fi'l Hesab'il Cebri ve'l Mukabele Kitab al-Muhtasar fil Hisab el-Hind El-Mesahat matematik alanında neyin temelini oluşturmuştur?, cebrin temelini
+TQuAD Dataset,Razi'nin ölüm sebebi nedir?,Hastalıkları
+TQuAD Dataset,Razi hangi tarihte ölmüştür?,925 yılında
+TQuAD Dataset,Razi'nin ölüm yeri neresidir?,Rey
+TQuAD Dataset,Bertrand Russell'a göre Avrupa uygarlığının doğuşu ne ile olmuştur?,İbni Rüşd ve diğer bilim insanlarının eserlerinin Latinceye çevrilmesi 
+TQuAD Dataset,MAN 630 hangi yıllar arasında üretilmiştir ?,1958-1990
+TQuAD Dataset,MAN 630 hangi ülkede üretilmiştir ?,Batı Almanya
+TQuAD Dataset,MAN 630 kaç modeldir?,1958 model 
+TQuAD Dataset,MAN 630'un motorunun hacmi ne kadardır?,"8,275 litre"
+TQuAD Dataset,MAN 630 nerede üretilmektedir?,Batı Almanya
+TQuAD Dataset,MAN 630'un motorunun özellikleri nelerdir?,"Kendisine saatte 67km hız sağlayan 8,275 litre hacimli 130 beygirlik 6 silindirli"
+TQuAD Dataset,MAN 630 nedir?, Türk Silahlı Kuvvetleri tarafından yaygın biçimde kullanılan 1958 model Batı Almanya üretimi 4x4 arazi kamyonu
+TQuAD Dataset,"MAN 630, 1958-1990 arasında ne miktarda üretilmiştir?",20.000 den fazla
+TQuAD Dataset,Altay projesine verilen adın asıl kökeni nedir?,Orta Asya'da bulunan sıradağlardır
+TQuAD Dataset,Altay Projesinin hangi tarihte proje ana yüklenicisi seçilmiştir?,30 Mart 2007'de
+TQuAD Dataset,Fahrettin Altay’a soyismi kim tarafından verilmiştir?,Mustafa Kemal Atatürk
+TQuAD Dataset,Altay tankı ismini kimden almıştır?,Kurtuluş Savaşı'nda 5. Süvari Kolordusu'nu komuta eden Fahrettin Altay'dan
+TQuAD Dataset,Altay tankı projesinin proje ana yüklenicisi kimdir?,Otokar Otomotiv ve Savunma Sanayi A.Ş. 
+TQuAD Dataset,Altay projesi için daha önce hangi projeden elde edilen bilgi birikimlerinin kullanılması planlanıyor?,Güney Kore üretimi XK-2 ana muharebe tankı projesinden
+TQuAD Dataset,Altay projesinin seri üretime başlama tarihi olarak belirlenen yıl nedir?,2019 yılının sonunda
+TQuAD Dataset,Altay projesinin testleri hangi yılda tamamlanmıştır?,2012 yılında
+TQuAD Dataset,Altay projesi için ayrılan bütçe nedir?, 500 milyon dolar
+TQuAD Dataset,Altay projesinin teknik destek sağlayıcısı hangi firmadır?,Güney Kore'nin Rotem firmasıdır
+TQuAD Dataset,Altay projesinin modüler zırh paketini kim üretecektir?,Roketsan
+TQuAD Dataset,Altay projesinin hangi etapları Aselsan tarafından geliştirilecektir?,Volkan-III tank atış kontrol sistemi ve tank komuta kontrol muhabere bilgi sistemi 
+TQuAD Dataset,Altay tankının güç paketi hakkındaki sözleşmeler hangi tarihte imzalanmıştır?,15 Ekim 2010 tarihinde
+TQuAD Dataset,Altay projesinin ilk aşaması ne zaman tamamlanmıştır?,2010 Eylül ayında 
+TQuAD Dataset,Altay projesi kapsamında ilk prototip teslimatının hangi yılda olacağı öngörülmüştür?,2020 yılı başında
+TQuAD Dataset,Altay projesinin seri üretiminde ilk yılı için hedeflenen güç grubu üretim adedi ne kadardır?,30 tank motoru ve şanzıman üretimi
+TQuAD Dataset,Altay projesinin güç grubu üretim sürecinin ne kadar sürmesi planlanmaktadır?,54 ay 
+TQuAD Dataset,Altay projesinin motorunu üretecek firma hangi tarihte ihaleyi kazanmıştır?,12 Ağustos 2014 tarihinde
+TQuAD Dataset,Altay projesinin özgün motoru kim tarafından üretilecektir?,Tümosan Motor ve Traktör Sanayi A.Ş.
+TQuAD Dataset,Altay tankı kaç dereceye kadar nokta dönüşüne imkan sağlamaktadır?,360°
+TQuAD Dataset,Altay tankı güç grubunun vites yapısı nasıldır?,5 ileri 3 geri vites geçişi
+TQuAD Dataset,Altay tankı güç grubu hangi enjeksiyon sistemini kullanmaktadır?,Common-Rail 
+TQuAD Dataset,Altay tankı güç grubunun motor hacmi ne kadardır?,26 litre hacminde
+TQuAD Dataset,İ.T.Ü'den sonra bilgisayara sahip olan ilk devlet üniversitesi neresidir?,Orta Doğu Teknik Üniversitesi 
+TQuAD Dataset,Türkiye'ye gelen ikinci bilgisayaın modeli neydi?,IBM 1620 idi
+TQuAD Dataset,Türkiye'ye gelen ikinci bilgisayar İstanbul Teknik Üniversitesi'nin hangi binasına gelmiştir?,Taşkışla binasına 
+TQuAD Dataset,Türkiye'ye ikinci bilgisayar hangi amaçla gelmiştir?,akademik amaçlı kullanmak için
+TQuAD Dataset,Türkiye'ye ilk bilgisayar hangi yılda gelmiştir?,1960 yılında
+TQuAD Dataset,Bilgisayar Türkiye'de ilk olarak hangi kuruma gelmiştir?,Karayolları Genel Müdürlüğü'ne
+TQuAD Dataset,Türkiye'ye ilk bilgisayar hangi amaçla gelmiştir?,yol yapımında gereken hesaplamaları daha hızlı yapabilmek için
+TQuAD Dataset,Hibetallāh koni kesitleri çizmeye yarayan pergele ne ad vermiştir?, «tam-mükemmel pergel» 
+TQuAD Dataset,Hibetallāh b. el-Hüseyn el-Bedīʿ el-Asṭurlābī kaç yılında ölmüştür?,534/1140
+TQuAD Dataset,TAI Sivrisinek'i hangi şirket üretmiştir?,TUSAŞ
+TQuAD Dataset,TAI Sivrisinek ne tür bir araçtır?,Rotorlu İnsansız Hava Aracı
+TQuAD Dataset,TAI Sivrisinek ilk denemesinde kaç metre uçurulmuştur?,150 metre
+TQuAD Dataset,TAI Sivrisinek'te kullanılan Cirit adlı füze kaç km menzillidir?,8
+TQuAD Dataset,TAI Sivrisinek'te kullanılan Cirit füzesini hangi şirket üretmiştir?,Roketsan
+TQuAD Dataset,Umran İnan'ın 2. adı nedir?,Savaş
+TQuAD Dataset,Umran İnan yüksek lisansını hangi üniversitede tamamladı?,Orta Doğu Teknik Üniversitesi
+TQuAD Dataset,Umran İnan yüksek lisansını hangi yılda tamamladı?,1973
+TQuAD Dataset,Umran İnan doktorasını hangi yılda tamamladı?,1977
+TQuAD Dataset,Umran İnan doktorasını hangi üniversitede tamamlamıştır?,Stanford Üniversitesi
+TQuAD Dataset,Umran İnan doktorasını kimin gözetiminde bitirdi?,Robert Helliwell
+TQuAD Dataset,Umran İnan doktorasını hangi alanda aldı?,Jeofizik ve Çok düşük frekans Radyo Bilimi
+TQuAD Dataset,Umran İnan 1982 yılında Stanford Üniversitesi'nde hangi göreve atandı?,Yardımcı Doçent
+TQuAD Dataset,Umran İnan hangi yılda Doçent oldu?,1985
+TQuAD Dataset,Umran İnan 1992'den hangi yıla kadar akadamisyenlik görevine devam etti?,2009
+TQuAD Dataset,Umran İnan yaklaşık kaç doktora öğrencisi mezun etmiştir?,50
+TQuAD Dataset,Umran İnan Koç Üniversitesi rektörlüğüne kaç yılında başlamıştır?,2009'dan
+TQuAD Dataset,Umran İnan'ın kaça yakın makalesi dergilerde yayınlamıştır?,330
+TQuAD Dataset,Umran İnan yazdığı 4 ders kitabının 2'sini kiminle yazmıştır?,Aziz İnan
+TQuAD Dataset,Umran İnan'ın makalelerine yaklaşık kaç atıf yapılmıştır?,7400
+TQuAD Dataset,Kemal Beydilli'nin doğum yeri neresidir?,İstanbul
+TQuAD Dataset,Kemal Beydilli kaç yılında doğmuştur?,1942
+TQuAD Dataset,Kemal Beydilli yüksek öğrenimine hangi fakülteden başladı?,İktisat Fakültesi
+TQuAD Dataset,Kemal Beydilli doktora çalışmasını kimin yanında yaptı?,J. Kissling
+TQuAD Dataset,Kemal Beydilli doktorasını hangi üniversitede tamamlamıştır?,Münih Ünivesitesi
+TQuAD Dataset,"Orhan Dikmen,  hangi liseyi bitirdi?",Galatasaray Lisesi'ni
+TQuAD Dataset,"Orhan Dikmen,  hangi üniversiteyi bitirdi bitirdi?",İstanbul Üniversitesi İktisat Fakültesi ve İstanbul Üniversitesi Hukuk Fakültesi'ni
+TQuAD Dataset,"Orhan Dikmen, nerede yüksek lisansını tamaladı?",Paris Üniversitesi Yüksek Hukuk ve İktisat Etüdleri Programında
+TQuAD Dataset,"Orhan Dikmen, nerede yüksek lisansını tamaladı?",Paris Üniversitesi Yüksek Hukuk ve İktisat Etüdleri Programında
+TQuAD Dataset,Güneş saatinin üst yüzeyi yukarıdan kaç eşit parçaya bölünür?,12
+TQuAD Dataset,30. enlem derecesini ve silindir saati tasvir eden kimdir?,el-Marrākuşī
+TQuAD Dataset,Ebu'l-Vefâ el-Bûzcânî ne zaman doğmuştur?,940
+TQuAD Dataset,Ebu'l-Vefâ el-Bûzcânî nerede doğmuştur?,İran'da bulunan Buzgan kasabasında
+TQuAD Dataset,Ebu'l-Vefâ el-Bûzcânî'nin tam adı nedir'?,Ebu el-Vefa Muhammed bin Muhammed bin Yahya bin İsmail bin el-Abbas el-Büzcani
+TQuAD Dataset,"Ebul Vefa,  Bağdad'a ne zaman gitti?",959
+TQuAD Dataset,Hangi hizmetleriyle bilim tarihinde önemli bir yer tutmuştur.?,Matematik ve astronomideki
+TQuAD Dataset,"Ebu'l Vefa, yıldızların eğimlerininin kesin ve doğru bir şekilde ölçülebilmesi için bir ne geliştirdi?",duvar oktantı
+TQuAD Dataset,"Ebu'l Vefa, astronomik gözlemler için sinüs (ceyb) ve tanjant (zıl) değerlerini gösteren çizelgeleri kaç dakikalık açı aralıklarıyla hesapladı?",on beşer
+TQuAD Dataset,"Ebu'l Vefa, ne sahasında özellike trigonometri üzerinde çalışmalar yapmıştır?",matematik
+TQuAD Dataset,Sencer Divitçioğlu ne zaman doğmuştur?,14 Şubat 1927
+TQuAD Dataset,Sencer Divitçioğlu ne zaman ölmüştür?,ö. 8 Eylül 2014
+TQuAD Dataset,Sencer Divitçioğlu nerede doğmuştur?,İstanbul
+TQuAD Dataset,Sencer Divitçioğlu nerede ölmüştür?,İstanbul
+TQuAD Dataset,Sencer Divitçioğlu hangi yılda İstanbul Üniversitesi İktisat Fakültesi'ni bitirdi?,1950
+TQuAD Dataset,Sencer Divitçioğlu doktora eğitimini nerede tamamladı?,Paris Üniversitesi İktisadi Bilimler Fakültesi’nde
+TQuAD Dataset,Sencer Divitçioğlu ne zaman Türkiye'ye dönerek İstanbul Üniversitesi İktisat Fakültesi'nde öğretim üyesi olarak çalıştı?,1957'de
+TQuAD Dataset,"Sencer Divitçioğlu ne zaman ""Marx’ta İktisadi Büyüme"" adlı tezi ile doçent olmaya hak kazandı?",1959 yılında
+TQuAD Dataset,Sencer Divitçioğlu nerede 1962-1963 döneminde davetli profesör olarak çalıştı?,İngiltere'de Cambridge Üniversitesi'nde
+TQuAD Dataset,"Sencer Divitçioğlu ne zaman Kemal Tahir'in önerisiyle başlayarak tamamladığı Asya Üretim Tarzı ve Osmanlı Toplumu adlı çalışması Fransızca, Yunanca dahil birçok dile çevrildi?",1967'de
+TQuAD Dataset,"Sencer Divitçioğlu nerede 1968-1969'da tekrar Paris'te bir yıl süreyle, 1973'de  ikinci kez üç ay süreyle çalıştı?",Cambridge'de
+TQuAD Dataset,Sencer Divitçioğlu ne zaman Boğaziçi Üniversitesi'nde doktora dersleri verdi?,1975'te
+TQuAD Dataset,Sencer Divitçioğlu ne zaman profesörlüğe yükseldi?,1976 yılında
+TQuAD Dataset,Sencer Divitçioğlu ne zaman  Paris Üniversitesi'nde konuk profesör olarak dersler verdi?,1983 yılında
+TQuAD Dataset,"Sencer Divitçioğlu, Karl Marx tarafından ne zaman ortaya atılan Asya tipi üretim tarzı konusunu ayrıntılı bir şekilde incelemiştir?",1850'li yılların başında

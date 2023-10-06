@@ -37,8 +37,7 @@ function BackendTry(){
     const[info, setInfo] = React.useState("Undefined")
 
     React.useEffect(() => {axios.get("http://127.0.0.1:8000/api/").then((response) => {setInfo(response.data)})})
-
-
+    
     return(
         <div>
             <h1>{info[1].nick_name}</h1> 

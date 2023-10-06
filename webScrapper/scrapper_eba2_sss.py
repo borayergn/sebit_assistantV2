@@ -152,5 +152,5 @@ df = pd.DataFrame({"source":"https://ders.eba.gov.tr/yardim-sss/","concept":conc
 
 print(df.head())
 
-df.to_csv("csv_files/csv_EBA_sss",index=False)
+df.to_csv("csv_files/csv_EBA_sss.csv",index=False)
         

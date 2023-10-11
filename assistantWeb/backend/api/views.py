@@ -4,10 +4,14 @@ from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import viewsets
-from api.models import User,Chat,Message
-from api.serializers import UserSerializer,ChatSerializer,MessageSerializer
+from api.models import Chat,Message
+from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from django.contrib.auth.models import User
 import json
 import requests
+from rest_framework import generics
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -30,6 +34,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
+
 class ChatViewSet(viewsets.ModelViewSet):
     serializer_class = ChatSerializer
     queryset = Chat.objects.all()
@@ -37,6 +42,31 @@ class ChatViewSet(viewsets.ModelViewSet):
 class MessageViewSet(viewsets.ModelViewSet):
     serializer_class = MessageSerializer
     queryset = Message.objects.all()
+
+class TokenView(TokenObtainPairView):
+    serializer_class = TokenSerializer
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = RegisterSerializer
+    permission_classes = (AllowAny,)
+
+
+
+    
+
+@api_view(['GET'])
+def home(request):
+    paths = {
+        "API_PATHS":
+            {
+            "users": "http://127.0.0.1:8000/api/users/",
+            "chats": "http://127.0.0.1:8000/api/chats/",
+            "messages": "http://127.0.0.1:8000/api/messages/",
+            "inference": "http://127.0.0.1:8000/api/inference/"
+            }
+        }
+    return(Response(paths))
 
 @api_view(['GET','POST'])
 def inference(request):

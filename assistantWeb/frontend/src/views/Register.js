@@ -12,8 +12,17 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {Link as RouterLink } from "react-router-dom";
+import CloseIcon from '@mui/icons-material/Close';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 
 import ButtonAppBar from '../utilComponents/TopBar'
+import axios from 'axios';
+
+import Config from '../url_config.json'
 
 function Copyright(props) {
   return (
@@ -32,14 +41,47 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
+
+
 export default function Register() {
+
+  const [errors,setErrors] = React.useState([])
+  const [isError,setIsError] = React.useState(false)
+
   const handleSubmit = (event) => {
+    setIsError(false)
+    setErrors([])
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    let infos = {
+      username: data.get('username'),
       email: data.get('email'),
       password: data.get('password'),
-    });
+      password_again: data.get('Re-Enter Password')
+    }
+    console.log(infos);
+
+
+    axios.post(Config.Authentication.REGISTER_URL,infos).catch((error) => {
+      if(error.response){
+        setIsError(true)
+        for (let key in error.response.data){
+          setErrors(prevErrors => [...prevErrors, error.response.data[key][0]]);
+          console.log(errors)
+        }
+        // console.log(error.response);
+        // console.log(error.response.headers);
+        // console.log(error.response.request.responseText)
+        // console.log(error.response.request.response)
+      }
+      else if(error.request){
+        console.log(error.request)
+      }
+      else {
+        console.log('Error', error.message);
+      }
+    })
+  
   };
 
   return (
@@ -63,18 +105,18 @@ export default function Register() {
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="username"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="username"
+                  label="Username"
                   autoFocus
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              {/* <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -83,7 +125,7 @@ export default function Register() {
                   name="lastName"
                   autoComplete="family-name"
                 />
-              </Grid>
+              </Grid> */}
               <Grid item xs={12}>
                 <TextField
                   required
@@ -106,7 +148,38 @@ export default function Register() {
                 />
               </Grid>
               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="Re-Enter Password"
+                  label="Re-Enter Password"
+                  type="password"
+                  id="Re-Enter Password"
+                  autoComplete="Re-Enter Password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <List>
+                  {Object.keys(errors).map(function(key){ 
+                    let currentErrror = errors[key]
+                    return(
+                      <ListItem key={key}>
+                        <ListItemIcon sx = {{color:'warning.main'}}>
+                          <CloseIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary={currentErrror}
+                          sx = {{color:'warning.main'}}
+                        />
+                      </ListItem>
+                      )
+                    
+                  })}
+                </List>
+              </Grid>
+              <Grid item xs={12}>
                 <FormControlLabel
+                  
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
                   label="I want to receive inspiration, marketing promotions and updates via email."
                 />

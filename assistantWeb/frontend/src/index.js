@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, createTheme} from "@mui/material";
-import data from "./url_config.yaml";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,10 +23,13 @@ const theme = createTheme(
     palette: {
       mode: 'dark',
       primary: {
-        main: '#44444a',
+        main: '#393E46',
       },
       secondary: {
-        main: '#da6600',
+        main: '#00ADB5',
+      },
+      warning: {
+        main: '#30E3CA',
       },
     },
 

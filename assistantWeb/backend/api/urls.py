@@ -19,5 +19,6 @@ urlpatterns = [
     path('api/inference',views.inference),
     path('api/register',views.RegisterView.as_view()),
     path('auth/',views.TokenView.as_view()),
-    path('auth/refresh',TokenRefreshView.as_view())
+    path('auth/refresh',TokenRefreshView.as_view()),
+    path('auth/authenticate_user',views.authentiacte_user)
 ]

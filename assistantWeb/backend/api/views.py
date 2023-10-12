@@ -12,6 +12,8 @@ import json
 import requests
 from rest_framework import generics
 from rest_framework.permissions import AllowAny, IsAuthenticated
+from django.contrib.auth import authenticate, login
+from django.http import HttpResponseBadRequest
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -87,6 +89,22 @@ def inference(request):
     
 )
     return(Response(answer))
+
+@api_view(['POST'])
+def authentiacte_user(request):
+    username_form = request.data["username"]
+    password_form = request.data["password"]
+
+    user = authenticate(username = username_form , password = password_form)
+
+    if(user is not None):
+        login(request, user)
+        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form}))
+
+    else:
+        return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form}))
+
+        
 # Create your views here.
 
 

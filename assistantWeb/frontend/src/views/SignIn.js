@@ -15,9 +15,13 @@ import { grey, deepOrange, purple } from '@mui/material/colors';
 import axios from 'axios'
 import { instanceOf } from 'prop-types';
 import {Link as RouterLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import ButtonAppBar from '../utilComponents/TopBar'
+import CloseIcon from '@mui/icons-material/Close';
 
+import Config from '../url_config.json'
+import Home from './Home';
 
 
 function Copyright(props) {
@@ -34,29 +38,43 @@ function Copyright(props) {
 }
 
 
-function GoogleIcon(){
-    return(
-        <img src='google.png' alt='google'></img>
-    )
-}
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
-const theme = createTheme({
-    palette: {
-      primary: deepOrange,
-      secondary: grey,
-    },
-  });
 
 export default function SignIn() {
+
+  const [isLoginFail,setIsLoginFail] = React.useState(false)
+  const [isLoggedIn,setIsLoggedIn] = React.useState(false)
+  const navigate = useNavigate()
+
+  let loginFailMessage = "Invalid Username or Password"
+  let loginSuccessMessage = "Login Succesfull."
+
+  React.useEffect(()=>{
+    if(isLoggedIn){
+      navigate('/')
+    }
+  },[isLoggedIn])
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
+    let infos = {
+      username: data.get('username'),
       password: data.get('password'),
-    });
+    }
+    
+    axios.post(Config.Authentication.LOGIN_URL,infos).then((response)=>{
+      console.log(response.data)
+      if(response.data["Status"] === loginFailMessage){
+        setIsLoginFail(true)
+      }
+      else{
+        setIsLoginFail(false)
+        setIsLoggedIn(true)
+      }
+    }).catch((error) => {console.log(error.response)})
+    console.log(infos);
   };
 
   return (
@@ -78,14 +96,15 @@ export default function SignIn() {
             Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <Grid container spacing = {2}>
             <TextField
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
             />
             <TextField
@@ -110,6 +129,12 @@ export default function SignIn() {
             >
               Sign In
             </Button>
+            <Grid item xs={12} sx={{mb:3,mt:2,py:3,mr:3,justifyContent:"center",display:"flex",color:"warning.main"}}>
+              {isLoginFail && <CloseIcon sx={{mr:2}}/>}
+              <Typography>
+                  {isLoginFail && loginFailMessage}
+              </Typography>
+            </Grid>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
@@ -122,9 +147,10 @@ export default function SignIn() {
                 </Link>
               </Grid>
             </Grid>
-          </Box>
+          </Grid>
         </Box>
-        <Box
+      </Box>
+    <Box
           sx={{
             marginTop: 8,
             display: 'flex',

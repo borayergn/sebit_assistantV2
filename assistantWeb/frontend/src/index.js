@@ -29,7 +29,7 @@ const theme = createTheme(
         main: '#00ADB5',
       },
       warning: {
-        main: '#30E3CA',
+        main: '#A32638',
       },
     },
 

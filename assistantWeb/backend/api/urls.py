@@ -20,5 +20,8 @@ urlpatterns = [
     path('api/register',views.RegisterView.as_view()),
     path('auth/',views.TokenView.as_view()),
     path('auth/refresh',TokenRefreshView.as_view()),
-    path('auth/authenticate_user',views.authentiacte_user)
+    path('auth/authenticate_user',views.authentiacte_user),
+    path('auth/logout',views.logout_user),
+    path('auth/check_auth',views.check_auth),
+    #path('auth/session_test',views.session_test)
 ]

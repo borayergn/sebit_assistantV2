@@ -7,6 +7,7 @@ from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from django.contrib.auth.password_validation import validate_password
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import authenticate
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -66,5 +67,17 @@ class RegisterSerializer(serializers.ModelSerializer):
                 {"password": "Password fields didn't match."})
 
         return attrs
+    
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
+    def validate(self, attrs):
+        user = authenticate(username=attrs['username'], 
+        password=attrs['password'])
+        if not user:
+            raise serializers.ValidationError('Incorrect username or password.')
+        if not user.is_active:
+            raise serializers.ValidationError('User is disabled.')
+        return {'user': user}
 
     

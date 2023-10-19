@@ -1,4 +1,5 @@
 import * as React from 'react';
+import AccountMenu from '../utilComponents/DropMenu'
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,15 +17,18 @@ import Typography from '@mui/material/Typography';
 import { Button, Container } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import ChatIcon from '@mui/icons-material/Chat';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+
 import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import Paper from '@mui/material/Paper';
 import axios, { all } from 'axios'
 import DeleteIcon from '@mui/icons-material/Delete';
-import { CollectionsBookmarkOutlined } from '@mui/icons-material';
-import { HfInference } from "@huggingface/inference";
+
+import Cookies from 'js-cookie';
+
+
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 
 import Config from '../url_config.json'
@@ -39,6 +43,7 @@ const constantChatData = {
   "user":1,
   "chatName":"New Chat"
 }
+
 
 
 function Chat(props) {
@@ -164,6 +169,11 @@ function Chat(props) {
       .catch(error => console.error(error.response.data));
 
   }
+  const getSessionData = () => {
+    axios.post(Config.Authentication.CHECK_AUTH_URL).then((response)=>{
+      console.log("Session data:",response.data)
+    })
+  }
   const handleSendMessage = async () => {
 
       const userMessage = await handleUserPost();
@@ -181,6 +191,9 @@ function Chat(props) {
       setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
 
       setSortOrder(sortOrder+1) //User and Bot message pairs will have the same sort order
+
+      getSessionData()
+      
   }
 
   function getActiveChat(){
@@ -265,25 +278,19 @@ function Chat(props) {
         )})}
             <Divider />
       </List>
-    <List sx={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          maxWidth: 360, 
-        }}>
-      <ListItem disablePadding sx={{position : "absolute", bottom : 0}}>
-            <ListItemButton>
-              <ListItemIcon>
-                  <AccountCircleIcon />
-              </ListItemIcon>
-              <ListItemText primary = "Username"/>
-              <ListItemIcon>
-                  <MoreHorizIcon />
-              </ListItemIcon>
-            </ListItemButton>
-      </ListItem>
-    </List>
+    <Box>
+      <List sx={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            maxWidth: 360, 
+          }}>
+        <ListItem disablePadding sx={{position : "absolute", bottom : 0}}>
+            <AccountMenu />
+        </ListItem>
+      </List>
+    </Box>
 
     </div>
   );

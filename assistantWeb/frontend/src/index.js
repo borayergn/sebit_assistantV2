@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, createTheme} from "@mui/material";
+import axios, { all } from 'axios'
+import Cookies from 'js-cookie';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
+axios.defaults.withCredentials = true;
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'x-csrftoken'
+axios.defaults.headers.common['Authorization'] = `Bearer ${Cookies.get("access_token")}`;
 
 const theme = createTheme(
   {

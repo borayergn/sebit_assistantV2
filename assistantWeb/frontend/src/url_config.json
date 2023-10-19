@@ -13,6 +13,8 @@
         "AUTH_TOKENS_URL": "http://127.0.0.1:8000/auth",
         "REFRESH_ACCESS_URL":"http://127.0.0.1:8000/auth/refresh",
         "REGISTER_URL" : "http://127.0.0.1:8000/api/register",
-        "LOGIN_URL" : "http://127.0.0.1:8000/auth/authenticate_user"
+        "LOGIN_URL" : "http://127.0.0.1:8000/auth/authenticate_user",
+        "LOGOUT_URL" : "http://127.0.0.1:8000/auth/logout",
+        "CHECK_AUTH_URL" : "http://127.0.0.1:8000/auth/check_auth"
     }
 }

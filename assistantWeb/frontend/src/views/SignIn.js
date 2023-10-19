@@ -19,9 +19,12 @@ import { useNavigate } from "react-router-dom";
 
 import ButtonAppBar from '../utilComponents/TopBar'
 import CloseIcon from '@mui/icons-material/Close';
+import Cookies from 'js-cookie'
+import jwt from'jwt-decode'
 
 import Config from '../url_config.json'
 import Home from './Home';
+import { CookieSharp } from '@mui/icons-material';
 
 
 function Copyright(props) {
@@ -38,12 +41,15 @@ function Copyright(props) {
 }
 
 
-
+const getTokens = (username_password) => {
+  return axios.post(Config.Authentication.AUTH_TOKENS_URL+"/",username_password)
+}
 
 export default function SignIn() {
 
   const [isLoginFail,setIsLoginFail] = React.useState(false)
   const [isLoggedIn,setIsLoggedIn] = React.useState(false)
+  const [sessionTokens,setSessionTokens] = React.useState({})
   const navigate = useNavigate()
 
   let loginFailMessage = "Invalid Username or Password"
@@ -63,18 +69,27 @@ export default function SignIn() {
       username: data.get('username'),
       password: data.get('password'),
     }
-    
-    axios.post(Config.Authentication.LOGIN_URL,infos).then((response)=>{
-      console.log(response.data)
-      if(response.data["Status"] === loginFailMessage){
-        setIsLoginFail(true)
-      }
-      else{
-        setIsLoginFail(false)
-        setIsLoggedIn(true)
-      }
-    }).catch((error) => {console.log(error.response)})
-    console.log(infos);
+
+    //Authenticate User
+    axios.post(Config.Authentication.LOGIN_URL, infos, {
+      'withCredentials': true,
+      }).then((response)=>{
+            console.log(response.data)
+            if(response.data["Status"] === loginFailMessage){
+              setIsLoginFail(true)
+            }
+            else{
+              setIsLoginFail(false)
+              setIsLoggedIn(true)
+              //Set Cookies
+              Cookies.set("username",infos["username"])
+              // let tokensPromise = getTokens(infos)
+              // tokensPromise.then((response) => {axios.defaults.headers.common['Authorization'] = `Bearer ${response.data['access']}`;Cookies.set('refresh_token',response.data["refresh"]);Cookies.set('access_token',response.data["access"])}).catch((error) => {console.log(error.response.request.responseText)})
+            }
+          }).catch((error) => {console.log(error.response)})
+
+
+    console.log(Cookies.get())
   };
 
   return (

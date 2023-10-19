@@ -5,15 +5,16 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import viewsets
 from api.models import Chat,Message
-from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer
+from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer,LoginSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.models import User
 import json
 import requests
 from rest_framework import generics
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseBadRequest
+from django.contrib.auth.decorators import login_required
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -95,15 +96,43 @@ def authentiacte_user(request):
     username_form = request.data["username"]
     password_form = request.data["password"]
 
-    user = authenticate(username = username_form , password = password_form)
+    user = authenticate(request,username = username_form , password = password_form)
+
+    request.session["username"] = user.get_username()
 
     if(user is not None):
         login(request, user)
-        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form}))
+        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated}))
 
     else:
         return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form}))
+    
+@api_view(['POST','GET'])
+def logout_user(request):
+    logout(request)
+    return(Response("User Logged Out "))
 
+#TODO: Şimdilik @login_required ve request.session kullanarak git. (veya request.session lengthe göre anla) request.user'da bug var, bi ara düzelt. (request.session datası güzel taşınıyo olmasına rağmen request.user AnonymousUser olarak dönüyo)
+
+@api_view(['POST', 'GET'])
+def check_auth(request):
+        if(len(request.session.keys()) != 0):
+            return Response({"Message": "User Authenticated","user-id":request.session["_auth_user_id"],"session-data":request.session})
+        else:
+            return Response({"Message": "Authentication failed","session-data":request.session})
+
+
+    
+# @api_view(['POST','GET'])
+# def session_test(request):
+#     request.session["a"] = "a"
+#     request.session["b"] = "b"
+#     request.session["c"] = "c"
+
+#     request.session.modified = True
+#     request.session.save()
+
+#     return(Response(request.session))
         
 # Create your views here.
 

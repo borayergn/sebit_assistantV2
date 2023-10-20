@@ -38,10 +38,13 @@ export default function AccountMenu() {
         Cookies.remove('username')
         Cookies.remove('access_token')
         Cookies.remove('refresh_token')
+        Cookies.remove('user-id')
     }).catch((error) => {console.log(error.response)})
 
     setClickedLogout(true)
-    axios.post(Config.Authentication.LOGOUT_URL).then((response) => {console.log(response.data)}).catch((error) => {console.log(error.response.request.responseText)})
+    axios.post(Config.Authentication.LOGOUT_URL).then((response) => {
+      console.log(response.data)
+    }).catch((error) => {console.log(error.response.request.responseText)})
     console.log(Cookies.get())
   }
 

@@ -11,11 +11,14 @@ import { useNavigate } from "react-router-dom";
 import Footer from '../utilComponents/Footer'
 import ButtonAppBar from '../utilComponents/TopBar'
 import axios from 'axios';
+import Spin from '../utilComponents/SpinAnimation'
 
 import Config from '../url_config.json'
 import { Cookie } from '@mui/icons-material';
 
 import Cookies from 'js-cookie';
+
+import "../anim.css"
 
 
 
@@ -30,6 +33,8 @@ export default function Home() {
     console.log("Token:",token,"csrf:",csrf)
     axios.post(Config.Authentication.CHECK_AUTH_URL,{'withCredentials': true }).then((response) => {
       console.log(response.data)
+      Cookies.set("user-id",response.data["user-id"])
+      console.log(Cookies.get())
       if(response.data["Message"] === "Authentication failed"){
           navigate('/login')
       }
@@ -63,10 +68,10 @@ export default function Home() {
                 alignItems : "center" ,
                 display : "flex",
                 flexDirection : "column",
-
               },
             }}
           >
+            {/* <Spin /> */}
                 <Grow in = {true} timeout={1000}>
                   <Paper  elevation={8} sx = {{  boxShadow: 3 ,overflow:"ellipsis"}}><Typography item sx ={{mt : 2}}>Cookies</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{Cookies.get("csrftoken")} </Typography></Paper>
                 </Grow>
@@ -91,11 +96,13 @@ export default function Home() {
               my : 10
               }}>
           <Grow in = {true} timeout={1750}>
+            <Box sx = {{bottom:0}}>
               <Button onClick={handleChatButton} variant='outlined' sx = {{color : "secondary.main", fontSize : 23}}> Try Sebit Assistant</Button>
+            </Box>
           </Grow>
         </Box>
         
-        <Box sx = {{mt:5}}>  {/* TODO: bu asagi yapısacak simdilik hardcode margin verdim düzelt */}
+        <Box sx = {{position:"fixed",bottom:0,width:"97%"}}>  {/*  */}
           <Footer/>
         </Box>
     </Container>

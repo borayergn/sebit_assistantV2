@@ -23,6 +23,7 @@ import ButtonAppBar from '../utilComponents/TopBar'
 import axios from 'axios';
 
 import Config from '../url_config.json'
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -47,6 +48,7 @@ export default function Register() {
 
   const [errors,setErrors] = React.useState([])
   const [isError,setIsError] = React.useState(false)
+  const navigate = useNavigate()
 
   const handleSubmit = (event) => {
     setIsError(false)
@@ -62,7 +64,7 @@ export default function Register() {
     console.log(infos);
 
 
-    axios.post(Config.Authentication.REGISTER_URL,infos).catch((error) => {
+    axios.post(Config.Authentication.REGISTER_URL,infos).then((response) => {navigate("/login")}).catch((error) => {
       if(error.response){
         setIsError(true)
         for (let key in error.response.data){

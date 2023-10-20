@@ -1,6 +1,6 @@
 App
 ----------------------------
-1-) Postgre implementasyonu
+1-) Postgre implementasyonu ✅
 2-) Chatlere Update date-time eklenecek ✅
 4-) end to end encryption eklenecek (Opsiyonel)
 5-) Authorization Authentication eklenecek⭕
@@ -10,6 +10,7 @@ App
 9-) Sort order ✅
 10-) API Key Authorization Authentication
 11-) huggingface API arayüz entegrasyonu ✅
+12-) appi mobilden görme (firewall,port)
 
 Model
 ----------------------------
@@ -23,6 +24,8 @@ Model
         6-) Atutotrain lama chat formatı (hash ve tag)✅
         7-) Kalite arttırmak ⭕
         8-) Up Sampling AR-GE ⭕
+        9-) Lanchain ✅
+        10-) Langserve ⭕
 
     Train
     --------------------------------

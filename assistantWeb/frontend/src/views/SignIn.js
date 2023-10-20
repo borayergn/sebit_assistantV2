@@ -83,8 +83,8 @@ export default function SignIn() {
               setIsLoggedIn(true)
               //Set Cookies
               Cookies.set("username",infos["username"])
-              // let tokensPromise = getTokens(infos)
-              // tokensPromise.then((response) => {axios.defaults.headers.common['Authorization'] = `Bearer ${response.data['access']}`;Cookies.set('refresh_token',response.data["refresh"]);Cookies.set('access_token',response.data["access"])}).catch((error) => {console.log(error.response.request.responseText)})
+              let tokensPromise = getTokens(infos)
+              tokensPromise.then((response) => {Cookies.set('refresh_token',response.data["refresh"]);Cookies.set('access_token',response.data["access"])}).catch((error) => {console.log(error.response.request.responseText)})
             }
           }).catch((error) => {console.log(error.response)})
 

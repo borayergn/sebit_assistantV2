@@ -39,8 +39,17 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class ChatViewSet(viewsets.ModelViewSet):
+
     serializer_class = ChatSerializer
-    queryset = Chat.objects.all()
+
+    def get_queryset(self):
+        queryset = Chat.objects.all()
+        user = self.request
+        if user is not None:
+            queryset =  Chat.objects.filter(user_id = user.session["_auth_user_id"])
+        return queryset
+
+    
 
 class MessageViewSet(viewsets.ModelViewSet):
     serializer_class = MessageSerializer

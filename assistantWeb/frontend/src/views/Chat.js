@@ -27,10 +27,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Cookies from 'js-cookie';
 
 
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-
-
 import Config from '../url_config.json'
 
 // 
@@ -38,11 +34,14 @@ import Config from '../url_config.json'
 
 
 const drawerWidth = 240;
-
-const constantChatData = {
-  "user":1,
-  "chatName":"New Chat"
+function constantChatFunc(){
+  const constantChatData = {
+    "user":Cookies.get("user-id"),
+    "chatName":"New Chat"
+  }
+  return constantChatData
 }
+
 
 
 
@@ -58,19 +57,21 @@ function Chat(props) {
   const [prediction,setPrediction] = React.useState("...")
   const [inferenceWait,setInferenceWait] = React.useState(false) //This is true if response is being waited from inference API
   
-  const handleMessageState = messages.map((message, i) => {
-
-      if (i === (messages.length - 1)){
-        message.text = prediction
-      }
-  });
-
   React.useEffect(() => {
+    messages.map((message, i) => {
+
+        if (i === (messages.length - 1)){
+          message.text = prediction
+        } 
+      }
+  )},[inferenceWait]);
+
+  // React.useEffect(() => {
     
-    if (prediction === "..."){
-      setMessages(handleMessageState)
-    }
-  },[prediction])
+  //   if (prediction === "..."){
+  //     setMessages(handleMessageState)
+  //   }
+  // },[prediction])
 
   React.useEffect(() => {
     axios.get(Config.Endpoints.CHATS_URL).then((response) => {setChats(response.data)})
@@ -181,13 +182,13 @@ function Chat(props) {
       const botMessage = await handleBotPost(userMessage.text);
       console.log("Prediction State:",prediction)
       console.log("botMessage.text",botMessage.text)
-
       
 
       if (sortOrder===0)
         patchChatName(userMessage)
       
       // Update the messages state with both user and bot messages
+      botMessage.text = "..."
       setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
 
       setSortOrder(sortOrder+1) //User and Bot message pairs will have the same sort order
@@ -242,7 +243,9 @@ function Chat(props) {
       <Container sx = {{height : 100}}>
         <Toolbar sx = {{alignItems : "center" ,display : "flex",flexDirection : "column",justifyContent : "center" , height : 100 }}><Button variant='outlined' sx = {{color : 'secondary.main', height : 55 , width : 180 , whiteSpace : "nowrap"}}><Typography sx = {{fontSize : 12, letterSpacing:5 , textAlign : "left"}}>Create New</Typography>         
           <IconButton sx={{color : "secondary.main",}} size = "small" onClick={() => {
-                  axios.post(Config.Endpoints.CHATS_URL+"/",constantChatData).then((response)=>{
+                  console.log(Cookies.get())
+                  axios.post(Config.Endpoints.CHATS_URL+"/",constantChatFunc()).then((response)=>{
+                  console.log(response.data)
                   handleChatActivity(response.data["id"])
                   })
                   }}>
@@ -355,6 +358,7 @@ function Chat(props) {
             {messages.map((message) => (
               <Message key={message.id} message={message} />
             ))}
+            {/* {(inferenceWait && (messages.length !== 0)) ? <Message message={{"id":messages[-1].id,"sender":"bot","text":"..."}}/>:<Message message={{"id":messages[-1].id,"sender":"bot","text":messages[-1].text}}/>}  */}
           </Box>
 
       

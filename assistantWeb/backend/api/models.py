@@ -1,12 +1,7 @@
 from django.db import models
 from django import utils
+from django.contrib.auth.models import User
 
-class User(models.Model):
-    nick_name = models.CharField(max_length=50)
-    email = models.CharField(max_length=50,unique=True)
-    api_key = models.CharField(max_length=50,unique=True)
-    password = models.CharField(max_length=50)
-    register_time = models.DateTimeField(default = utils.timezone.now())
 
 class Chat(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)

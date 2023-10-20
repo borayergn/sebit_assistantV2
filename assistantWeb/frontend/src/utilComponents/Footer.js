@@ -13,10 +13,9 @@ export default function Footer() {
       sx={{
         backgroundColor: "#2f2f2f",
         p: 1,
-
       }}
     >
-      <Container maxWidth="lg">
+      <Container sx = {{flexGrow:1}}>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="secondary.main" gutterBottom>

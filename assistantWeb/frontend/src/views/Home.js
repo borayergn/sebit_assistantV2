@@ -12,13 +12,15 @@ import Footer from '../utilComponents/Footer'
 import ButtonAppBar from '../utilComponents/TopBar'
 import axios from 'axios';
 import Spin from '../utilComponents/SpinAnimation'
-
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Config from '../url_config.json'
 import { Cookie } from '@mui/icons-material';
+import Grid from '@mui/material/Grid';
 
 import Cookies from 'js-cookie';
 
-import "../anim.css"
+
 
 
 
@@ -43,6 +45,23 @@ export default function Home() {
       }
     })
   }
+
+  const [currentPaper, setCurrentPaper] = React.useState(0);
+
+  const papers = [
+    'Paper 1 Content',
+    'Paper 2 Content',
+    'Paper 3 Content',
+  ];
+
+  const handlePrevious = () => {
+    setCurrentPaper((prevPaper) => (prevPaper > 0 ? prevPaper - 1 : papers.length - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentPaper((prevPaper) => (prevPaper < papers.length - 1 ? prevPaper + 1 : 0));
+  };
+
   
     return (
 
@@ -52,7 +71,8 @@ export default function Home() {
           <Container sx = {{
               alignItems : "center" ,
               display : "flex",
-              flexDirection : "column",
+              flexDirection : "row",
+              justifyContent:"flex-start"
               }}>
             <Box
             sx={{
@@ -64,26 +84,45 @@ export default function Home() {
                 height: 300,
                 mt: 10,
                 mb: 10,
-                ml: 10,
                 alignItems : "center" ,
                 display : "flex",
                 flexDirection : "column",
               },
             }}
           >
-            {/* <Spin /> */}
+             {/* <Spin /> */}
+            {/* <Grid sx={{display:"flex",flexDirection:"column" ,justifyContent:"center"}}>
+              <Button 
+              sx = {{color:"secondary.main"}}
+              variant="contained"
+              onClick={handlePrevious}
+              startIcon={<ChevronLeftIcon />}
+            />
+          </Grid>
                 <Grow in = {true} timeout={1000}>
                   <Paper  elevation={8} sx = {{  boxShadow: 3 ,overflow:"ellipsis"}}><Typography item sx ={{mt : 2}}>Cookies</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{Cookies.get("csrftoken")} </Typography></Paper>
                 </Grow>
                 <Grow in = {true} timeout={1250}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3}}><Typography item sx ={{mt : 2}}>Question?</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}></Typography></Paper>
+                  <Paper  elevation={8} sx = {{  boxShadow: 3}}><Typography item sx ={{mt : 2}}>Question?</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{papers[currentPaper]}</Typography></Paper>
                 </Grow>
                 <Grow in = {true} timeout={1500}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3 }}><Typography item sx ={{mt : 2}}>Question?</Typography> <Typography item sx ={{mt : 3 , ml:1, color: "secondary.main"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography></Paper>
+                  <Paper  elevation={8} sx = {{  boxShadow: 3}}><Typography item sx ={{mt : 2}}>Question?</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{papers[currentPaper]}</Typography></Paper>
                 </Grow>
-                <Grow in = {true} timeout={1750}>
+            <Grid sx={{display:"flex",flexDirection:"column" ,justifyContent:"center"}}>
+              <Button 
+                sx = {{color:"secondary.main"}}
+                variant="contained"
+                onClick={handleNext}
+                endIcon={<ChevronRightIcon />}
+              />
+            </Grid>  */}
+
+                {/* {/* <Grow in = {true} timeout={1500}>
                   <Paper  elevation={8} sx = {{  boxShadow: 3 }}><Typography item sx ={{mt : 2}}>Question?</Typography> <Typography item sx ={{mt : 3 , ml:1, color: "secondary.main"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography></Paper>
-                </Grow>
+                </Grow> */}
+                {/* <Grow in = {true} timeout={1750}>
+                  <Paper  elevation={8} sx = {{  boxShadow: 3 }}><Typography item sx ={{mt : 2}}>Question?</Typography> <Typography item sx ={{mt : 3 , ml:1, color: "secondary.main"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography></Paper>
+                </Grow>  */}
 
           </Box>
         </Container>

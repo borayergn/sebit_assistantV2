@@ -114,6 +114,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://10.106.0.84:3000'
 ]
 
 ROOT_URLCONF = 'backend.urls'

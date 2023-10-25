@@ -3,7 +3,7 @@ App
 1-) Postgre implementasyonu ✅
 2-) Chatlere Update date-time eklenecek ✅
 4-) end to end encryption eklenecek (Opsiyonel)
-5-) Authorization Authentication eklenecek⭕
+5-) Authorization Authentication eklenecek ✅
 6-) mobil tarayıcı responsitivity
 7-) Mesajlara Sort order mantigi ✅
 8-) Chat ismi ✅

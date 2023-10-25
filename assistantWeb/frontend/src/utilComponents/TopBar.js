@@ -53,7 +53,6 @@ export default function ButtonAppBar() {
                 display:"flex",
                 justifyContent:"center",
                 flexGrow:1
-                     //TODO: hard coded oldu bunu centerlamayı düzelt
             }}
             >
                 <AutoStoriesIcon />

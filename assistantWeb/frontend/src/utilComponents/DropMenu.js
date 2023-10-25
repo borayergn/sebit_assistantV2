@@ -70,7 +70,7 @@ export default function AccountMenu() {
             aria-expanded={open ? 'true' : undefined}
           >
             {/* TODO: replace true with if profile icon exists, if exists render profile */}
-            <Avatar sx={{ width: 32, height: 32 }}>{(Object.keys(Cookies.get()).length === 0) ? "" : Cookies.get('username').charAt(0).toUpperCase()}</Avatar> 
+            <Avatar sx={{ width: 32, height: 32 }}>{Cookies.get('username').charAt(0).toUpperCase()}</Avatar> 
           </IconButton>
         </Tooltip>
       </Box>

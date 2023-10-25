@@ -129,6 +129,19 @@ def check_auth(request):
             return Response({"Message": "User Authenticated","user-id":request.session["_auth_user_id"],"session-data":request.session})
         else:
             return Response({"Message": "Authentication failed","session-data":request.session})
+        
+@api_view(['POST','GET'])
+def checkLangServe(request):
+    test_data = {
+                "input": {
+                    "query": "Hızlıgo nedir"
+                },
+                "config": {},
+                "kwargs": {}
+                }
+    response = requests.post('http://172.17.45.102:8080/invoke',json=test_data)
+    content = response.content
+    return Response(content)
 
 
     

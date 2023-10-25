@@ -6,7 +6,8 @@
         "MESSAGES_URL" : "http://127.0.0.1:8000/api/messages",
         "CHATS_URL" : "http://127.0.0.1:8000/api/chats",
         "USERS_URL" : "http://127.0.0.1:8000/api/users",
-        "BASE_INFERENCE_URL" : "http://127.0.0.1:8000/api/inference"
+        "BASE_INFERENCE_URL" : "http://127.0.0.1:8000/api/inference",
+        "LORA_INFERENCE_URL" : "http://127.0.0.1:8000/api/testLLama"
     },
 "Authentication":
     {

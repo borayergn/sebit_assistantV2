@@ -5,13 +5,8 @@ import time
 from selenium.webdriver.common.by import By
 import re
 
-# from webdriver_manager.chrome import ChromeDriverManager
-
-
 concepts = list()
 descriptions = list()
-
-# driver = webdriver.Chrome(ChromeDriverManager().install()) # Hata verdi ama seleniumun yeni updateinde driver path belirtmeye gerek yokmuş kendi handle ediyomuş
 
 
 driver = webdriver.Chrome()
@@ -34,8 +29,6 @@ concept_divs_kitap = driver.find_elements(By.XPATH,'/html[1]/body[1]/div[1]/div[
 for i in concept_divs_kitap:
     concepts.append(i.get_attribute("textContent").split(") ")[1]) # Splitting question with question number using ") " pattern. (Ex: "1) Vitamin LGS nedir?")
 
-# print(concepts)
-
 #Scrapping Descriptions Vitamin-LGS
 description_divs_lgs = driver.find_elements(By.XPATH, '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]//div[@class="panel"]')
 
@@ -50,6 +43,7 @@ for description in description_divs_lgs:
         concatParagraph = re.sub("\n\t*",",",concatParagraph)
 
     descriptions.append(concatParagraph)
+
 
 #Scrapping Descriptions Vitamin-Kitap
 

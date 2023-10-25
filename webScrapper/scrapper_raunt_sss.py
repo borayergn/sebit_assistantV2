@@ -11,9 +11,6 @@ import re
 concepts = list()
 descriptions = list()
 
-# driver = webdriver.Chrome(ChromeDriverManager().install()) # Hata verdi ama seleniumun yeni updateinde driver path belirtmeye gerek yokmuş kendi handle ediyomuş
-
-
 driver = webdriver.Chrome()
 
 driver.get("https://www.raunt.com/sss")
@@ -42,14 +39,10 @@ for description in description_divs:
     descriptions.append(concatParagraph)
 
 
-# print(concepts[1])
-# print(descriptions[1])
 
 df = pd.DataFrame({"source":"https://www.raunt.com/sss","concept":concepts,"description":descriptions})
 
 print(df.head())
 
 df.to_csv("csv_files/csv_Raunt.csv",index=False)
-
-# time.sleep(10)
 

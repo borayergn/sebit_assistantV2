@@ -28,6 +28,9 @@ import Cookies from 'js-cookie';
 
 
 import Config from '../url_config.json'
+import ThreeDots from '../utilComponents/animatedDots';
+
+import "../anim.css"
 
 // 
 
@@ -128,7 +131,7 @@ function Chat(props) {
   }
 
   const handlePrompt = (prompt_) => {
-    return axios.post(Config.Endpoints.BASE_INFERENCE_URL,{"prompt":prompt_})
+    return axios.post(Config.Endpoints.LORA_INFERENCE_URL,{"prompt":prompt_})
   }
 
   const handleUserPost = () => {
@@ -149,7 +152,7 @@ function Chat(props) {
 
     console.log(prompt_)
     let data_p = handlePrompt(prompt_)
-    data_p.then((response) => {console.log(response.data.generated_text);console.log("Response returned?");setInferenceWait(false); setPrediction(response.data.generated_text)})
+    data_p.then((response) => {console.log(response.data["result"]);console.log("Response returned?");setInferenceWait(false); setPrediction(response.data["result"])})
     return axios.post(Config.Endpoints.MESSAGES_URL+"/", {
       "content": prediction,
       "sort_order": sortOrder,
@@ -175,6 +178,7 @@ function Chat(props) {
       console.log("Session data:",response.data)
     })
   }
+
   const handleSendMessage = async () => {
 
       const userMessage = await handleUserPost();
@@ -188,7 +192,8 @@ function Chat(props) {
         patchChatName(userMessage)
       
       // Update the messages state with both user and bot messages
-      botMessage.text = "..."
+      botMessage.text = <ThreeDots />
+      console.log("render?")
       setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
 
       setSortOrder(sortOrder+1) //User and Bot message pairs will have the same sort order
@@ -233,6 +238,31 @@ function Chat(props) {
           }}
         >
           <Typography variant="body1">{message.text}</Typography>
+        </Paper>
+      </Box>
+    );
+  };
+
+  const MessageLoad = ({ message }) => {
+    const isBot = message.sender === "bot";
+  
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: isBot ? "flex-start" : "flex-end",
+          mb: 2,
+        }}
+      >
+        <Paper
+          variant="outlined"
+          sx={{
+            p: 2,
+            backgroundColor: isBot ? "primary.main" : "secondary.main",
+            borderRadius: isBot ? "20px 20px 20px 5px" : "20px 20px 5px 20px",
+          }}
+        >
+          <ThreeDots />
         </Paper>
       </Box>
     );

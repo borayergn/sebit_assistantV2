@@ -19,6 +19,7 @@ import { Cookie } from '@mui/icons-material';
 import Grid from '@mui/material/Grid';
 
 import Cookies from 'js-cookie';
+import ThreeDots from '../utilComponents/animatedDots';
 
 
 
@@ -90,6 +91,7 @@ export default function Home() {
               },
             }}
           >
+            <ThreeDots />
              {/* <Spin /> */}
             {/* <Grid sx={{display:"flex",flexDirection:"column" ,justifyContent:"center"}}>
               <Button 

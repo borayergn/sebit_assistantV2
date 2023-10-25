@@ -132,16 +132,23 @@ def check_auth(request):
         
 @api_view(['POST','GET'])
 def checkLangServe(request):
+
+    send_query = "hızlıgo nedir"
+
+    if request.method == "POST":
+        send_query = request.data["prompt"]
+    
     test_data = {
                 "input": {
-                    "query": "Hızlıgo nedir"
+                    "query": send_query
                 },
                 "config": {},
                 "kwargs": {}
                 }
     response = requests.post('http://172.17.45.102:8080/invoke',json=test_data)
-    content = response.content
-    return Response(content)
+    content = response.json()
+    print(type(content))
+    return Response(content["output"])
 
 
     

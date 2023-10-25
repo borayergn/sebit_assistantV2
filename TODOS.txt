@@ -10,7 +10,8 @@ App
 9-) Sort order ✅
 10-) API Key Authorization Authentication
 11-) huggingface API arayüz entegrasyonu ✅
-12-) appi mobilden görme (firewall,port)
+12-) appi mobilden görme (firewall,port) ✅
+13-) LORA modelini langserve üzerinden Client'a getirme
 
 Model
 ----------------------------
@@ -25,7 +26,7 @@ Model
         7-) Kalite arttırmak ⭕
         8-) Up Sampling AR-GE ⭕
         9-) Lanchain ✅
-        10-) Langserve ⭕
+        10-) Langserve ✅
 
     Train
     --------------------------------

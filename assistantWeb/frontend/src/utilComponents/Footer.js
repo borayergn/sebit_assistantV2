@@ -12,7 +12,7 @@ export default function Footer() {
       component="footer"
       sx={{
         backgroundColor: "#2f2f2f",
-        p: 1,
+        p: 0.1,
       }}
     >
       <Container sx = {{flexGrow:1}}>

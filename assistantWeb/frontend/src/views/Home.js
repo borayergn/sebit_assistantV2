@@ -17,12 +17,11 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Config from '../url_config.json'
 import { Cookie } from '@mui/icons-material';
 import Grid from '@mui/material/Grid';
+import { TypeAnimation } from 'react-type-animation';
+import Texts from '../utilComponents/AnimatedText';
 
 import Cookies from 'js-cookie';
 import ThreeDots from '../utilComponents/animatedDots';
-
-
-
 
 
 
@@ -47,6 +46,10 @@ export default function Home() {
     })
   }
 
+  const handleProfileButton = () => {
+    navigate('/profile')
+  }
+
   const [currentPaper, setCurrentPaper] = React.useState(0);
 
   const papers = [
@@ -63,7 +66,7 @@ export default function Home() {
     setCurrentPaper((prevPaper) => (prevPaper < papers.length - 1 ? prevPaper + 1 : 0));
   };
 
-  
+
     return (
 
       <Container maxWidth={false} sx = {{height:"%100"}}>
@@ -73,59 +76,22 @@ export default function Home() {
               alignItems : "center" ,
               display : "flex",
               flexDirection : "row",
-              justifyContent:"flex-start"
+              justifyContent:"center"
               }}>
+
             <Box
+            
             sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              '& > :not(style)': {
-                m: 1,
-                width: 200,
-                height: 300,
-                mt: 10,
-                mb: 10,
-                alignItems : "center" ,
-                display : "flex",
-                flexDirection : "column",
-              },
+                display:"flex",
+                flexGrow:0,
+                height:"50vh",
+                width:"40vw",
+                justifyContent:"center",
+                alignItems:"center",
+                mt:3
             }}
           >
-            <ThreeDots />
-             {/* <Spin /> */}
-            {/* <Grid sx={{display:"flex",flexDirection:"column" ,justifyContent:"center"}}>
-              <Button 
-              sx = {{color:"secondary.main"}}
-              variant="contained"
-              onClick={handlePrevious}
-              startIcon={<ChevronLeftIcon />}
-            />
-          </Grid>
-                <Grow in = {true} timeout={1000}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3 ,overflow:"ellipsis"}}><Typography item sx ={{mt : 2}}>Cookies</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{Cookies.get("csrftoken")} </Typography></Paper>
-                </Grow>
-                <Grow in = {true} timeout={1250}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3}}><Typography item sx ={{mt : 2}}>Question?</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{papers[currentPaper]}</Typography></Paper>
-                </Grow>
-                <Grow in = {true} timeout={1500}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3}}><Typography item sx ={{mt : 2}}>Question?</Typography><Typography sx ={{mt : 3 , ml:1, color: "secondary.main"}}>{papers[currentPaper]}</Typography></Paper>
-                </Grow>
-            <Grid sx={{display:"flex",flexDirection:"column" ,justifyContent:"center"}}>
-              <Button 
-                sx = {{color:"secondary.main"}}
-                variant="contained"
-                onClick={handleNext}
-                endIcon={<ChevronRightIcon />}
-              />
-            </Grid>  */}
-
-                {/* {/* <Grow in = {true} timeout={1500}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3 }}><Typography item sx ={{mt : 2}}>Question?</Typography> <Typography item sx ={{mt : 3 , ml:1, color: "secondary.main"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography></Paper>
-                </Grow> */}
-                {/* <Grow in = {true} timeout={1750}>
-                  <Paper  elevation={8} sx = {{  boxShadow: 3 }}><Typography item sx ={{mt : 2}}>Question?</Typography> <Typography item sx ={{mt : 3 , ml:1, color: "secondary.main"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Typography></Paper>
-                </Grow>  */}
-
+              <Texts />
           </Box>
         </Container>
         <Box sx ={{
@@ -133,19 +99,17 @@ export default function Home() {
               display : "flex",
               flexDirection : "column",
               justifyContent: "center",
-              height: 100,
-              my : 10
+              height: "%100",
+              my : 10,
+              bottom:0
               }}>
           <Grow in = {true} timeout={1750}>
-            <Box sx = {{bottom:0}}>
-              <Button onClick={handleChatButton} variant='outlined' sx = {{color : "secondary.main", fontSize : 23}}> Try Sebit Assistant</Button>
+            <Box sx = {{bottom:0 ,display:"flex",justifyContent:"center"}}>
+              <Button onClick={handleChatButton} size="large" variant='outlined' sx = {{color : "secondary.main", fontSize : 23}}> Try Sebit Assistant</Button>
             </Box>
           </Grow>
         </Box>
         
-        <Box sx = {{position:"fixed",bottom:0,width:"97%"}}>  {/*  */}
-          <Footer/>
-        </Box>
     </Container>
 
     );

@@ -109,12 +109,15 @@ def authentiacte_user(request):
 
     request.session["username"] = user.get_username()
 
+    user_data = User.objects.get(username = request.session["username"])
+    user_serialized = UserSerializer(user_data , many=False)
+
     if(user is not None):
         login(request, user)
-        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated}))
+        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated,"user_data":user_serialized.data}))
 
     else:
-        return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form}))
+        return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form,"user_data":user_serialized.data}))
     
 @api_view(['POST','GET'])
 def logout_user(request):

@@ -83,12 +83,17 @@ export default function SignIn() {
               setIsLoggedIn(true)
               //Set Cookies
               Cookies.set("username",infos["username"])
+              let user_data = response.data["user_data"]
+              Cookies.set("first_name",user_data["first_name"])
+              Cookies.set("last_name",user_data["last_name"])
+              Cookies.set("email",user_data["email"])
+              Cookies.set("user-id",user_data["id"])
               let tokensPromise = getTokens(infos)
               tokensPromise.then((response) => {Cookies.set('refresh_token',response.data["refresh"]);Cookies.set('access_token',response.data["access"])}).catch((error) => {console.log(error.response.request.responseText)})
             }
           }).catch((error) => {console.log(error.response)})
 
-
+    
     console.log(Cookies.get())
   };
 

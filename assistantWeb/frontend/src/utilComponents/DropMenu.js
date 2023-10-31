@@ -34,11 +34,15 @@ export default function AccountMenu() {
   };
 
   const handleLogout = () => {
+    navigate('/redirect')
     axios.post(Config.Authentication.REFRESH_ACCESS_URL,{"refresh":Cookies.get('refresh_token')}).then((response)=>{
         Cookies.remove('username')
         Cookies.remove('access_token')
         Cookies.remove('refresh_token')
         Cookies.remove('user-id')
+        Cookies.remove('first_name')
+        Cookies.remove('email')
+        Cookies.remove('last_name')
     }).catch((error) => {console.log(error.response)})
 
     setClickedLogout(true)
@@ -46,6 +50,11 @@ export default function AccountMenu() {
       console.log(response.data)
     }).catch((error) => {console.log(error.response.request.responseText)})
     console.log(Cookies.get())
+  }
+
+  
+  const handleProfile = () => {
+    navigate('/profile')
   }
 
   const handleHome = () => {
@@ -110,7 +119,7 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'left', vertical: 'bottom' }}
         anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleProfile}>
             <ListItemIcon sx = {{color:'#757575'}}>
                 <PersonIcon /> 
             </ListItemIcon>

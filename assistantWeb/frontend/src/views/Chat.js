@@ -54,7 +54,7 @@ function Chat(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [input,setInput] = React.useState("")
   const [messages,setMessages] = React.useState([])
-  const [chats,setChats] = React.useState("Undefined")
+  const [chats,setChats] = React.useState([])
   const [activeButton,setActiveButton] = React.useState(0)
   const [sortOrder,setSortOrder] = React.useState(0)
   const [prediction,setPrediction] = React.useState("...")
@@ -210,6 +210,10 @@ function Chat(props) {
     return activeChatPromise
   }
 
+  function compare (a,b){
+
+    return b.update_time - a.update_time;
+  }
 
   function getMessages(){
     const promise = axios.get(Config.Endpoints.MESSAGES_URL)
@@ -286,7 +290,7 @@ function Chat(props) {
       </Container>
       <Divider />
       <List sx={{display:"flex",flexDirection:'column',height : "80%", maxHeight : 750, overflowY : "auto"}}>
-        {Object.keys(chats).map(function(key){ 
+        {Object.keys(chats.sort(compare)).map(function(key){ 
           
           var chatObj = chats[key]
           var chatName = chatObj["chat_name"]    
@@ -298,7 +302,7 @@ function Chat(props) {
               <ListItemIcon style={{marginRight : "auto"}}>
                 <ChatIcon />
               </ListItemIcon>
-              <ListItemText primary={chatName} primaryTypographyProps={{ style: { whiteSpace: "normal",  wordWrap:'break-word'} }}/>
+              <ListItemText primary={chatObj.id} primaryTypographyProps={{ style: { whiteSpace: "normal",  wordWrap:'break-word'} }}/>
               </ListItemButton>
               <ListItemButton sx={{display: "flex" , justifyContent: "flex-end",maxWidth:50}} onClick={() => handleDeleteButton(chatObj.id)}>
                   <ListItemIcon sx={{ display:"flex", justifyContent :"flex-end",marginRight : "auto"}}>

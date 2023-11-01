@@ -129,7 +129,7 @@
 
   .changes-updated{
     opacity: 1;
-    animation : changes-updated-frame 1s normal forwards ease-in-out ;
+    animation : changes-updated-frame 10s normal forwards ease-in-out ;
   }
 
   @keyframes changes-updated-frame{
@@ -140,5 +140,7 @@
         opacity: 0;
     }
   }
+
+
 
 

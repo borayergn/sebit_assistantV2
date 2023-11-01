@@ -2,7 +2,7 @@ App
 ----------------------------
 1-) Postgre implementasyonu ✅
 2-) Chatlere Update date-time eklenecek ✅
-4-) end to end encryption eklenecek (Opsiyonel)
+4-) end to end encryption eklenecek 
 5-) Authorization Authentication eklenecek ✅
 6-) mobil tarayıcı responsitivity
 7-) Mesajlara Sort order mantigi ✅
@@ -11,7 +11,16 @@ App
 10-) API Key Authorization Authentication
 11-) huggingface API arayüz entegrasyonu ✅
 12-) appi mobilden görme (firewall,port) ✅
-13-) LORA modelini langserve üzerinden Client'a getirme
+13-) LORA modelini langserve üzerinden Client'a getirme ✅
+14-) Redirect URL Login/Logout(Login => Chat, Logout=> Redirect => Home) ✅
+15-) chat listesine Update-Date time sort ⭕⭕⭕⭕
+16-) Home page düzenle ✅
+17-) Yıldızlı mesaj profile (Not opsiyonel)
+18-) Kullanım analizi (Tiktoken, usage vs sadece backend)⭕⭕⭕⭕⭕
+19-) Profil form bitir ✅
+20-) Login Register ekranı sadeleştir
+21-) Forgot password
+22-) Profil değiştirmeyi alertten çekip dinamikleştir
 
 Model
 ----------------------------

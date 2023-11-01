@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 class Chat(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     chat_name = models.CharField(max_length = 50,default="New Chat")
-    create_time = models.DateTimeField(default = utils.timezone.now())
-    update_time = models.DateTimeField(default = utils.timezone.now())
+    create_time = models.DateTimeField(auto_now_add= True)
+    update_time = models.DateTimeField(auto_now=True)
 
 
 class Message(models.Model):

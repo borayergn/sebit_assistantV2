@@ -99,7 +99,6 @@ export default function Profile(){
             alert("An error occured while changing profile")
             console.log(error.response.data)
         })
-
     }
 
     const AnimatedPopup = () => {

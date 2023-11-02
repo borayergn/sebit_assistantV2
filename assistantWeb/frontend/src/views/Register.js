@@ -30,7 +30,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Sebit
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -179,13 +179,6 @@ export default function Register() {
                   })}
                 </List>
               </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid>
             </Grid>
             <Button
               type="submit"
@@ -195,7 +188,7 @@ export default function Register() {
             >
               Sign Up
             </Button>
-            <Grid container justifyContent="flex-end">
+            <Grid container justifyContent="center">
               <Grid item>
                 <Link component = {RouterLink} to = "/login" variant="body2">
                   Already have an account? Sign in

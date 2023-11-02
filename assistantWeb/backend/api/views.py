@@ -15,6 +15,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseBadRequest
 from django.contrib.auth.decorators import login_required
+import tiktoken
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -152,6 +153,25 @@ def checkLangServe(request):
     content = response.json()
     print(type(content))
     return Response(content["output"])
+
+@api_view(['POST','GET'])
+def countToken(request):
+    input = "Türk cumhuriyetinin kurucusu kimdir"
+    output = "Türk Cumhuriyeti’nin Kurucusu Mustafa Kemal Atatürk."
+
+    encoding = tiktoken.get_encoding("cl100k_base")
+
+    token_input_integers = encoding.encode(input)
+    token_output_integers = encoding.encode(output)
+
+    token_input_bytes = [encoding.decode_single_token_bytes(token) for token in token_input_integers]
+    token_output_bytes = [encoding.decode_single_token_bytes(token) for token in token_output_integers]
+
+    num_input_tokens = len(encoding.encode(input))
+    num_output_tokens = len(encoding.encode(output))
+
+
+    return Response({"input_token_count":num_input_tokens,"output_token_count":num_output_tokens,"input_tokens":token_input_bytes,"output_tokens":token_output_bytes})
 
 
     

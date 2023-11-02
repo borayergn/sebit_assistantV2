@@ -2,7 +2,9 @@
   "dependencies": {
     "@huggingface/hub": "^0.8.4",
     "@huggingface/inference": "^2.6.1",
+    "chart.js": "^4.4.0",
     "react-alert": "^7.0.3",
+    "react-chartjs-2": "^5.2.0",
     "react-transition-group": "^4.4.5",
     "react-type-animation": "^3.1.0",
     "react-typed": "^1.2.0",

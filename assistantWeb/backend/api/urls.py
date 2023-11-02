@@ -5,6 +5,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
+from django.contrib.auth import views as auth_views
 
 router = DefaultRouter()
 
@@ -24,5 +25,10 @@ urlpatterns = [
     path('auth/logout',views.logout_user),
     path('auth/check_auth',views.check_auth),
     path('api/testLLama',views.checkLangServe),
+    path('api/test/countToken',views.countToken),
+    path('auth/reset_password/', auth_views.PasswordResetView.as_view(), name ='reset_password'),
+    path('auth/reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name ='password_reset_done'),
+    path('auth/reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(), name ='password_reset_confirm'),
+    path('auth/reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name ='password_reset_complete'),
     #path('auth/session_test',views.session_test)
 ]

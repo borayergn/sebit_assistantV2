@@ -28,8 +28,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import Fade from '@mui/material/Fade';
 import { Alert } from 'react-alert'
+import { LineChart } from '@mui/x-charts/LineChart';
+
 
 import "../anim.css";
+
 
 // Create a custom theme with your desired styles
 
@@ -38,6 +41,7 @@ export default function Profile(){
 
     const [isSettingsActive,setIsSettingsActive] = React.useState(false)
     const [isUpdated,setIsUpdated] = React.useState(false)
+    const [activeButton,setActiveButton] = React.useState("None")
     const drawerWidth = 300;
 
     
@@ -180,12 +184,68 @@ export default function Profile(){
         )
     }
 
+
+      
+    const Usage = () => {
+        
+        return(
+            <Container sx = {{display:"flex",justifyContent:"center",mt:15,ml:5}}>
+            <LineChart
+            xAxis={
+                [
+                {
+                  id: 'Days',
+                  data: [1,2,3,4,5,6,7],
+                  label:"Days (week)"
+                },
+              ]}
+              yAxis={
+                [
+                    {
+                        label:"Token Count"
+                    }
+                ]
+              }
+            series={[
+                {
+                data: [1,2,3,4,5,6,7]
+                },
+
+            ]}
+            width={500}
+            height={400}
+   
+            />
+        </Container>
+
+      )
+    }
+
+    const DynamicPage = () => {
+        if(activeButton === "None"){
+            return(<AccountInfo />)
+        }
+        else if(activeButton === "Account"){
+            return(<AccountInfo />)
+        }
+        else if(activeButton === "Settings"){
+            return(<Settings />)
+        }
+        else if(activeButton === "Usage"){
+            return(<Usage />)
+        }
+    }
+ 
     const handleSettingsClick = () => {
-        setIsSettingsActive(true)
+        setActiveButton("Settings")
     }
     const handleAccountClick = () => {
-        setIsSettingsActive(false)
+        setActiveButton("Account")
     }
+    const handleUsageClick= () => {
+        setActiveButton("Usage")
+    }
+
 
 
     return(
@@ -211,15 +271,20 @@ export default function Profile(){
                     <ListItem sx={{mt:1.5}}>
                         <Grid container spacing={7} >
                             <Grid item xs = {6} md = {6}  sx = {{display:'flex',justifyContent:"flex-end"}}>
-                                <Button variant='outlined' size = 'small' sx = {{color:'secondary.main'}} onClick={handleSettingsClick}>Settings</Button>
+                                <Button  style = {{textTransform:"none"}} variant='outlined' size = 'small' sx = {{color:'secondary.main'}} onClick={handleSettingsClick}><Typography sx = {{letterSpacing:2}}>Settings</Typography></Button>
                             </Grid>
                             <Grid item xs = {6} md = {6}  sx = {{display:'flex',justifyContent:"flex-start"}}>
-                                <Button  variant='outlined' size = 'small' sx = {{color:'secondary.main'}} onClick={handleAccountClick}>Account</Button>
+                                <Button   style = {{textTransform:"none"}} variant='outlined' size = 'small' sx = {{color:'secondary.main'}} onClick={handleAccountClick}><Typography sx = {{letterSpacing:2}}>Account</Typography></Button>
                             </Grid>
                         </Grid>
                     </ListItem>
                 </List>
                 <Divider />
+                <List sx = {{mt:2}}>
+                    <ListItem sx = {{display:'flex',justifyContent:"center",mt:2}}>
+                        <Button style = {{textTransform:"none"}} variant='outlined' size = 'large' sx = {{color:'secondary.main',width:"12vw"}} onClick={handleUsageClick}><Typography sx = {{letterSpacing:2}}>Usage</Typography></Button>
+                    </ListItem>
+                </List>
                 <Box>
                     <List sx={{
                             position: 'absolute',
@@ -235,8 +300,7 @@ export default function Profile(){
                 </Box>
             </Drawer>
         </Grid>
-
-            {isSettingsActive ? <Settings />:<AccountInfo />}
+            <DynamicPage />
       </Grid>
         </Container>
     )

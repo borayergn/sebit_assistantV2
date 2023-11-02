@@ -32,7 +32,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Sebit
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -179,34 +179,6 @@ export default function SignIn() {
             
           }}
         >
-                <Button
-                type="submit"
-                fullWidth
-                variant="outlined"
-                sx={{ mt: 3, mb: 2 }}
-                
-                >
-
-                    <Typography sx={{color:"secondary.main"}}>Continue With Google</Typography>
-                </Button>
-
-                <Button
-                type="submit"
-                fullWidth
-                variant="outlined"
-                sx={{ mt: 3, mb: 2 }}
-                >
-                    <Typography sx={{color:"secondary.main"}}>Continue With Facebook</Typography>
-                </Button>
-
-                <Button
-                type="submit"
-                fullWidth
-                variant="outlined"
-                sx={{ mt: 3, mb: 2 }}
-                >
-                    <Typography sx={{color:"secondary.main"}}>Continue With Apple </Typography>
-                </Button>
 
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />

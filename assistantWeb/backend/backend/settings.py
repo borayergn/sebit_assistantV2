@@ -33,6 +33,15 @@ SESSION_ENGINE = "django.contrib.sessions.backends.db"
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_COOKIE_SECURE = False
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'NapcanIdMe@gmail.com'
+EMAIL_HOST_PASSWORD = 'xlsq gxqv gajw lfrn'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'NapcanIdMe@gmail.com'
+SERVER_EMAIL = 'NapcanIdMe@gmail.com'
+
 
 # Application definition
 

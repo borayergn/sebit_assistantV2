@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: NapcanIdMe@gmail.com
+Date: Thu, 02 Nov 2023 11:52:35 -0000
+Message-ID: <169892595553.342738.16657180479968303986@dataintel.ies-sebit.com>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/auth/reset/Nw/bx1czn-beb68c90d1e7a74922597aecea01e5af
+
+Your username, in case you’ve forgotten: borayEmailDeneme
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

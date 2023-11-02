@@ -3,33 +3,24 @@ import * as React from 'react';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button, Container } from '@mui/material';
-import ButtonAppBar from '../utilComponents/TopBar';
 import Cookies from 'js-cookie';
 import Config from '../url_config.json'
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import AccountMenu from '../utilComponents/DropMenu';
-import ReactCSSTransitionGroup, { Transition } from 'react-transition-group';
 import CheckIcon from '@mui/icons-material/Check';
 import TextField from '@mui/material/TextField';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
-import Fade from '@mui/material/Fade';
-import { Alert } from 'react-alert'
 import { LineChart } from '@mui/x-charts/LineChart';
-
+import Grow from '@mui/material/Grow';
+import { PieChart } from '@mui/x-charts/PieChart';
+import Stack from '@mui/material/Stack';
 
 import "../anim.css";
 
@@ -128,9 +119,10 @@ export default function Profile(){
             autoComplete="off"
             onSubmit={handleSubmit}
           >
+            <Grow in = {true} timeout={1250}>
             <Grid container direction={'column'} spacing={6} sx = {{mt:2}}>
                 {/* <AnimatedPopup /> */}
-               
+                    
                     <Grid item xs = {6} md = {2} > 
                         <Typography variant='h5' sx = {{fontFamily:'monospace',letterSpacing:1,color:"secondary.main",fontWeight:"bold"}}>Name</Typography>
                         <StyledTextField name_ = "first_name"defaultVal={infoDisplay(Cookies.get("first_name"))} />               
@@ -172,6 +164,7 @@ export default function Profile(){
                     </Grid>
                      
             </Grid>  
+            </Grow>
         </Box>       
 
     </Grid>
@@ -189,34 +182,96 @@ export default function Profile(){
     const Usage = () => {
         
         return(
-            <Container sx = {{display:"flex",justifyContent:"center",mt:15,ml:5}}>
-            <LineChart
-            xAxis={
-                [
-                {
-                  id: 'Days',
-                  data: [1,2,3,4,5,6,7],
-                  label:"Days (week)"
-                },
-              ]}
-              yAxis={
-                [
-                    {
-                        label:"Token Count"
-                    }
-                ]
-              }
-            series={[
-                {
-                data: [1,2,3,4,5,6,7]
-                },
+            
+                <Grid container direction={"column"} spacing={10} sx = {{display:'flex',justifyContent:"center",pt:3}}>
+                    <Grow in = {true} timeout={1500}>
+                        <Stack direction="row" width="100%" textAlign="center" spacing={2} sx = {{ml:35,mt:10}}>
+                            <Box flexGrow={1}>
+                                <Typography variant = "h5" sx = {{mr:10,py:2,fontFamily:"monospace",color:"secondary.main"}}>Your Most Used Words</Typography>
+                                    <PieChart
+                                        series={[
+                                            {
+                                            data: [
+                                                { id: 0, value: 30, label: 'What' },
+                                                { id: 1, value: 15, label: 'How' },
+                                                { id: 2, value: 5, label: 'Can' },
+                                            ],
+                                            },
+                                        ]}
+                                        width={400}
+                                        height={200}
+                                        innerRadius = {30}
+                                        outerRadius = {100}
+                                        paddingAngle = {5}
+                                        cornerRadius = {5}
+                                        startAngle = {-90}
+                                        endAngle = {180}
+                                        cx = {150}
+                                        cy = {150}
+                                        />
+                            </Box>
+                            <Box flexGrow={1}>
+                                <Typography variant = "h5" sx = {{mr:37,py:2,fontFamily:"monospace",color:"secondary.main"}}>Assistant's Most Used Words</Typography>
+                                    <PieChart
+                                        series={[
+                                            {
+                                            data: [
+                                                { id: 0, value: 20, label: 'Sebit' },
+                                                { id: 1, value: 15, label: 'How' },
+                                                { id: 2, value: 10, label: 'Yes' },
+                                            ],
+                                            },
+                                        ]}
+                                        width={400}
+                                        height={200}
+                                        innerRadius = {30}
+                                        outerRadius = {100}
+                                        paddingAngle = {5}
+                                        cornerRadius = {5}
+                                        startAngle = {-90}
+                                        endAngle = {180}
+                                        cx = {150}
+                                        cy = {150}
+                                        />
+                            </Box>
+                        </Stack>
+                    </Grow>
+                    <Grow in = {true} timeout={1250}>                    
+                        <Grid item xs = {6} md = {6}  sx = {{display:'flex',justifyContent:"center",alignItems:"center"}}>
+                            <LineChart
+                            xAxis={
+                                [
+                                {
+                                id: 'Days',
+                                data: [1,2,3,4,5,6,7],
+                                label:"Days (week)"
+                                },
+                            ]}
+                            yAxis={
+                                [
 
-            ]}
-            width={500}
-            height={400}
-   
-            />
-        </Container>
+                                ]
+                            }
+                            series={[
+                                {
+                                data: [200,10,500,1000,700,200,252],
+                                label:"Input Tokens"
+                                },
+                                {
+                                data: [350,35,150,2000,568,342,123],
+                                label:"Output Tokens"
+                                }
+
+                            ]}
+                            width={800}
+                            height={400}
+                
+                            />
+                    </Grid>
+                </Grow>
+        
+             </Grid>
+        
 
       )
     }

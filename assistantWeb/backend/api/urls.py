@@ -12,6 +12,7 @@ router = DefaultRouter()
 router.register(r'users',views.UserViewSet,basename='users')
 router.register(r'chats',views.ChatViewSet,basename='chats')
 router.register(r'messages',views.MessageViewSet,basename='messages')
+router.register(r'apiKeys',views.ApiKeyViewSet,basename='apiKeys')
 
 urlpatterns = [
 
@@ -30,5 +31,6 @@ urlpatterns = [
     path('auth/reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name ='password_reset_done'),
     path('auth/reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(), name ='password_reset_confirm'),
     path('auth/reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name ='password_reset_complete'),
+    path('api/get_api_key',views.generateApiKey)
     #path('auth/session_test',views.session_test)
 ]

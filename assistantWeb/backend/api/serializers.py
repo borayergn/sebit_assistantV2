@@ -2,6 +2,7 @@ from rest_framework import serializers
 #from api.models import User
 from api.models import Chat
 from api.models import Message
+from api.models import ApiKey
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
@@ -22,6 +23,11 @@ class MessageSerializer(serializers.ModelSerializer):
 class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chat
+        fields = '__all__'
+
+class ApiKeySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ApiKey
         fields = '__all__'
 
 class TokenSerializer(TokenObtainPairSerializer):

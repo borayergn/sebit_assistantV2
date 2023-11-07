@@ -16,4 +16,12 @@ class Message(models.Model):
     sort_order = models.PositiveIntegerField(default=0)
     sender = models.CharField(max_length=4,default="user")
 
+class ApiKey(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    key_hash = models.CharField()
+    key_name = models.CharField(max_length=30)
+    create_time = models.DateTimeField(auto_now_add= True)
+    update_time = models.DateTimeField(auto_now=True)
+
+
 # Create your models here.

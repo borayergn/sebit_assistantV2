@@ -276,16 +276,18 @@ function Chat(props) {
   const drawer = (
     <div>
       <Container sx = {{height : 100}}>
-        <Toolbar sx = {{alignItems : "center" ,display : "flex",flexDirection : "column",justifyContent : "center" , height : 100 }}><Button variant='outlined' sx = {{color : 'secondary.main', height : 55 , width : 180 , whiteSpace : "nowrap"}}><Typography sx = {{fontSize : 12, letterSpacing:5 , textAlign : "left"}}>Create New</Typography>         
-          <IconButton sx={{color : "secondary.main",}} size = "small" onClick={() => {
-                  console.log(Cookies.get())
-                  axios.post(Config.Endpoints.CHATS_URL+"/",constantChatFunc()).then((response)=>{
-                  console.log(response.data)
-                  handleChatActivity(response.data["id"])
-                  })
-                  }}>
-            <AddIcon sx={{fontSize : 22}}/>
-          </IconButton>
+        <Toolbar sx = {{alignItems : "center" ,display : "flex",flexDirection : "column",justifyContent : "center" , height : 100 }}>
+          <Button variant='outlined' sx = {{color : 'secondary.main', height : 55 , width : 180 , whiteSpace : "nowrap"}}>
+              <Typography sx = {{fontSize : 12, letterSpacing:5 , textAlign : "left"}}>Create New</Typography>         
+              <IconButton sx={{color : "secondary.main",}} size = "small" onClick={() => {
+                      console.log(Cookies.get())
+                      axios.post(Config.Endpoints.CHATS_URL+"/",constantChatFunc()).then((response)=>{
+                      console.log(response.data)
+                      handleChatActivity(response.data["id"])
+                      })
+                      }}>
+              <AddIcon sx={{fontSize : 22}}/>
+              </IconButton>
         </Button>
       </Toolbar>
       </Container>

@@ -9,7 +9,7 @@ App
 8-) Chat ismi ✅
 9-) Sort order ✅
 10.1-) API Key Authorization Authentication (Authorization)
-10.2-) API Key Authorization Authentication (UI+Generation)⭕⭕
+10.2-) API Key Authorization Authentication (UI+Generation)✅
 11-) huggingface API arayüz entegrasyonu ✅
 12-) appi mobilden görme (firewall,port) ✅
 13-) LORA modelini langserve üzerinden Client'a getirme ✅
@@ -23,9 +23,10 @@ App
 20-) Login Register ekranı sadeleştir ✅
 21.1-) Forgot password (backend) ✅ 
 21.2-) Forgot password(frontend) ⭕⭕⭕ 
-22-) Profil değiştirmeyi alertten çekip dinamikleştir ⭕
-23-) Profil sayfası aktif buton ⭕⭕⭕⭕⭕
-
+22-) Profil değiştirmeyi alertten çekip dinamikleştir ✅
+23-) Profil sayfası aktif buton ✅
+24-) Cascadeleri düzenle
+25-) API Security ? 
 Model
 ----------------------------
     Data
@@ -40,6 +41,7 @@ Model
         8-) Up Sampling AR-GE ⭕
         9-) Lanchain ✅
         10-) Langserve ✅ (stream_log dene)
+        11-) RLHF
 
     Train
     --------------------------------

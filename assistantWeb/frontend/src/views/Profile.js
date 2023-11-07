@@ -414,17 +414,29 @@ export default function Profile(){
                 event.preventDefault();
             
                 const data = new FormData(event.currentTarget);
+                let infoName = ""
+
                 let infos = {
                 name: data.get('name'),
                 }
-                console.log(infos["name"])
+                
+                if(infos["name"].type === undefined){
+                    console.log("girdim")
+                    infoName = "API KEY "+(userKeys.length+1).toString()
+                }
+                else{
+                    infoName = infos["name"]
+                }
+                
+                
+                console.log("infoname:",infoName)
                  axios.get("http://127.0.0.1:8000/api/get_api_key").then((response) => {
                 console.log(response.data["Key"])
                 setKey(response.data["Key"])
                     }).catch((error) => {
                         console.log(error)
                     }).then(
-                axios.post(Config.Endpoints.API_KEYS_URL+"/",{"user":Cookies.get("user-id"),"key_hash":key,"key_name":infos["name"]}).then((response => {
+                axios.post(Config.Endpoints.API_KEYS_URL+"/",{"user":Cookies.get("user-id"),"key_hash":key,"key_name":infoName}).then((response => {
                     
                     console.log(response.data)
                     setIsKeysUpdated(true)
@@ -455,7 +467,7 @@ export default function Profile(){
                    
                         <DialogContent>
                             <DialogContentText>
-                                Once You Created The API Key, a Popup Will Appear Which Has Your API Key and You Won't Be Able To See Your API Key Again.
+                                Once You Created The API Key, a Popup Will Appear Which Shows Your API Key and You Won't Be Able To See Your API Key Again.
                             </DialogContentText>
                             
                             <TextField
@@ -546,7 +558,7 @@ export default function Profile(){
                
                     <DialogContent>
                         <DialogContentText variant = "h6" sx = {{fontSize:20,mb:2,fontWeight:"bold",display:"flex",justifyContent:"center"}}>
-                            You Won't See This Key Again Please Copy and Store it In a Safe Storage
+                            You Won't Be Able To See This Key Again Please Copy and Store it In a Safe Storage
                         </DialogContentText>
                         
                         <TextField

@@ -83,23 +83,23 @@ export default function Profile(){
 
     const drawerWidth = 300;
 
-            React.useEffect(() => {
-            
-                axios.get(Config.Endpoints.API_KEYS_URL+"/").then(response => {
-
-                
-                setUserKeys([])
-                for (let index = 0; index < response.data.length; index++) {
-                    const element = response.data[index];
-                    setUserKeys(prevKeys => [...prevKeys,{"name":element["key_name"],"key":element["key_hash"],"id":element["id"]}])
-                }
-                }).catch((error) => {
-                    console.log(error.data)
-                })
+    // Effect hook to handle API key list when its updated
+    React.useEffect(() => {   
+        axios.get(Config.Endpoints.API_KEYS_URL+"/").then(response => {
+   
+        setUserKeys([])
+        for (let index = 0; index < response.data.length; index++) {
+            const element = response.data[index];
+            setUserKeys(prevKeys => [...prevKeys,{"name":element["key_name"],"key":element["key_hash"],"id":element["id"]}])
+        }
+        }).catch((error) => {
+                console.log(error.data)
+        })
             
             
         },[isKeysUpdated])
 
+    //Effect hook to return key update state to false after an update
     React.useEffect(() => {
         if(isKeysUpdated === true){
             setTimeout(() => {
@@ -108,6 +108,7 @@ export default function Profile(){
         }
     },[isKeysUpdated])
 
+    //Effect hook to return profile update state to false after an update
     React.useEffect(() => {
         if(isUpdated === true){
             setTimeout(() => {
@@ -115,6 +116,8 @@ export default function Profile(){
             },5000)
         }
     },[isUpdated])
+
+    //Utility display function for account page
     const infoDisplay = (info) => {
         if (info === ""){
             return " "
@@ -124,6 +127,7 @@ export default function Profile(){
         }
     }
 
+    //A specific text field component
     const StyledTextField = ({defaultVal,name_}) => {
         return (
             <TextField 
@@ -150,6 +154,7 @@ export default function Profile(){
         )
     }
 
+    //An allert component for account page to warn user that changes have been saved
     const ChangesSavedAlert = () => {
         
         return(
@@ -166,6 +171,7 @@ export default function Profile(){
         )
     }
 
+    //Form submit handler for handle account information change
     const handleSubmit = (event) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
@@ -192,16 +198,8 @@ export default function Profile(){
         })
     }
 
-    const AnimatedPopup = () => {
-        let opacity_ = true
-        return (
-            isUpdated && <Box
-            className = "changes-updated"
-            sx = {{opacity:1}}
-            ><CheckIcon /><Typography>Changes Saved</Typography></Box>
-        )
-    }
     
+    //Account info page component
     const AccountInfo = () => {
         return(
 
@@ -273,6 +271,7 @@ export default function Profile(){
         )
     }
 
+    //A component to show currently selected page to the user
     const ActiveStateButton = ({button_name,handleFunc}) => {
             
         if (button_name === activeButton){
@@ -288,6 +287,7 @@ export default function Profile(){
         
     }
 
+    // Settings page component
     const Settings = () => {
         return(
             <Typography>Settings</Typography>
@@ -295,9 +295,8 @@ export default function Profile(){
     }
 
 
-      
+    //Usage page component
     const Usage = () => {
-        
         return(
             
                 <Grid container direction={"column"} spacing={10} sx = {{display:'flex',justifyContent:"center",pt:3}}>
@@ -400,6 +399,7 @@ export default function Profile(){
 
     
 
+    //API key creation popup 
      function FormDialog() {
             const [open, setOpen] = React.useState(false);
         
@@ -421,7 +421,6 @@ export default function Profile(){
                 }
                 
                 if(infos["name"].type === undefined){
-                    console.log("girdim")
                     infoName = "API KEY "+(userKeys.length+1).toString()
                 }
                 else{
@@ -520,6 +519,7 @@ export default function Profile(){
             );
     }
 
+    // A utility component to copy the API key to the clipboard
     const CopyToClipboardButton = () => {
         const [open, setOpen] = React.useState(false)
         const handleClick = () => {
@@ -544,6 +544,7 @@ export default function Profile(){
         )
     }
 
+    //A popup to show original key to the user once.
     function OriginalKeyPopup() {
     
     
@@ -605,12 +606,8 @@ export default function Profile(){
 }
 
       
+       // A component to display user API Keys
        function CustomizedTables() {
-
-        // const deleteApiKey = (id) => {
-        //     axios.delete(Config.Endpoints.API_KEYS_URL+"/"+id)
-        // }
-
 
         return (
         <Container>
@@ -657,6 +654,8 @@ export default function Profile(){
         )
     }
 
+    // A wrapper component to switch between sub-components(pages)
+    // A string state which changes on button clicks is managing these sub-component switchs
     const DynamicPage = () => {
         if(activeButton === "None"){
             return(<AccountInfo />)
@@ -675,6 +674,7 @@ export default function Profile(){
         }
     }
  
+    // Changes string state to call the right sub-component (page)
     const handleSettingsClick = () => {
         setActiveButton("Settings")
     }
@@ -689,7 +689,7 @@ export default function Profile(){
     }
 
 
-
+    // General profile page
     return(
         <Container >
             <CssBaseline />

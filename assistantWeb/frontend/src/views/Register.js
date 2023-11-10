@@ -50,6 +50,11 @@ export default function Register() {
   const [isError,setIsError] = React.useState(false)
   const navigate = useNavigate()
 
+  // Gets register information from form
+  // Requests to the authentication backend
+  // Checks for returning invalid password errors if any
+  // if there is no error => register user to the system and navigate user to login
+  // İf there is errors => display them
   const handleSubmit = (event) => {
     setIsError(false)
     setErrors([])
@@ -71,10 +76,7 @@ export default function Register() {
           setErrors(prevErrors => [...prevErrors, error.response.data[key][0]]);
           console.log(errors)
         }
-        // console.log(error.response);
-        // console.log(error.response.headers);
-        // console.log(error.response.request.responseText)
-        // console.log(error.response.request.response)
+
       }
       else if(error.request){
         console.log(error.request)

@@ -58,7 +58,8 @@ class ChatViewSet(viewsets.ModelViewSet):
 
 class MessageViewSet(viewsets.ModelViewSet):
     serializer_class = MessageSerializer
-    #queryset = Message.objects.all()
+    queryset = Message.objects.all()
+
 
 class ApiKeyViewSet(viewsets.ModelViewSet):
     serializer_class = ApiKeySerializer
@@ -148,6 +149,9 @@ def authentiacte_user(request):
 
     user = authenticate(request,username = username_form , password = password_form)
 
+    if(user is None):
+        return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form}))
+
     request.session["username"] = user.get_username()
 
     user_data = User.objects.get(username = request.session["username"])
@@ -157,8 +161,7 @@ def authentiacte_user(request):
         login(request, user)
         return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated,"user_data":user_serialized.data}))
 
-    else:
-        return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form,"user_data":user_serialized.data}))
+   
     
 @api_view(['POST','GET'])
 def logout_user(request):

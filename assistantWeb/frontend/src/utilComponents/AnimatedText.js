@@ -28,7 +28,7 @@ import ReactLoading from "https://cdn.skypack.dev/react-loading@2.0.3";
 import { useNavigate } from 'react-router-dom'
 import Typed from 'react-typed';
 
-
+// Home page animation
 export default function Texts(){
     return (
         

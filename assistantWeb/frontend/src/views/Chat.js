@@ -32,9 +32,6 @@ import ThreeDots from '../utilComponents/animatedDots';
 
 import "../anim.css"
 
-// 
-
-
 
 const drawerWidth = 240;
 
@@ -60,7 +57,9 @@ function Chat(props) {
   const [sortOrder,setSortOrder] = React.useState(0)
   const [prediction,setPrediction] = React.useState("...")
   const [inferenceWait,setInferenceWait] = React.useState(false) //This is true if response is being waited from inference API
+  const [isChatUpdated,setIsChatUpdated] = React.useState(true)
   
+  //Effect hook to wait inference to set bot message
   React.useEffect(() => {
     messages.map((message, i) => {
 
@@ -70,16 +69,21 @@ function Chat(props) {
       }
   )},[inferenceWait]);
 
-  // React.useEffect(() => {
-    
-  //   if (prediction === "..."){
-  //     setMessages(handleMessageState)
-  //   }
-  // },[prediction])
-
+  //Effect hook to set updated chat state to false again after update
   React.useEffect(() => {
-    axios.get(Config.Endpoints.CHATS_URL).then((response) => {setChats(response.data)})
-  })
+    if(isChatUpdated === true){
+        setTimeout(() => {
+            setIsChatUpdated(false)
+        },1)
+    }
+},[isChatUpdated])
+
+  //Effect hook to update chat list
+  React.useEffect(() => {
+    if(isChatUpdated){
+      axios.get(Config.Endpoints.CHATS_URL).then((response) => {setChats(response.data)})
+    }
+  },[isChatUpdated])
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -93,10 +97,12 @@ function Chat(props) {
     
     axios.delete(deleteUrlChat).then(response => {
       console.log("Deleted post: ",id)
+      setIsChatUpdated(true)
     })
     .catch(error => console.error(error))
   }
 
+  //This function is to track chat activity with chat id to query correct messages from DB to UI
   function handleChatActivity(id){
     setActiveButton(id)
     if(activeButton === 0){
@@ -127,6 +133,7 @@ function Chat(props) {
       
       
       setMessages(chatMessages)
+      
     })
     
   }
@@ -135,6 +142,15 @@ function Chat(props) {
     return axios.post(Config.Endpoints.LORA_INFERENCE_URL,{"prompt":prompt_})
   }
 
+
+  //UI SPECIFIED FORMAT:
+  //-----------------------------------
+  // id => Message ID 
+  // text => Message content string
+  // sender => Bot or User
+  //-----------------------------------
+
+  //Requests to messages endpoint with the correct UI specified format 
   const handleUserPost = () => {
     return axios.post(Config.Endpoints.MESSAGES_URL+"/", {
       "content": input,
@@ -167,6 +183,7 @@ function Chat(props) {
     }));
   };
 
+  //Updates the chat name after the first message of the chat is entered
   function patchChatName(name){
     
       axios.patch((Config.Endpoints.CHATS_URL+"/"+activeButton+"/"),{chat_name : name.text})
@@ -180,6 +197,8 @@ function Chat(props) {
     })
   }
 
+
+  // A wrapper function which wraps user message and bot message request functions
   const handleSendMessage = async () => {
 
       const userMessage = await handleUserPost();
@@ -203,14 +222,8 @@ function Chat(props) {
       
   }
 
-  function getActiveChat(){
-    let messagesPromise = getMessages()
-    let activeChatUrl = Config.Endpoints.CHATS_URL+"/"+activeButton
-    let activeChatPromise = axios.get(activeChatUrl)
 
-    return activeChatPromise
-  }
-
+  // Utility function for sorting chats according to update time
   function compare (a,b){
 
     return b.update_time - a.update_time;
@@ -223,6 +236,7 @@ function Chat(props) {
     return dataPromise
   }
 
+  //This function classifies messages according to message.sender and brings them to the UI accordingly
   const Message = ({ message }) => {
     const isBot = message.sender === "bot";
   
@@ -248,31 +262,33 @@ function Chat(props) {
     );
   };
 
-  const MessageLoad = ({ message }) => {
-    const isBot = message.sender === "bot";
+  // const MessageLoad = ({ message }) => {
+  //   const isBot = message.sender === "bot";
   
-    return (
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: isBot ? "flex-start" : "flex-end",
-          mb: 2,
-        }}
-      >
-        <Paper
-          variant="outlined"
-          sx={{
-            p: 2,
-            backgroundColor: isBot ? "primary.main" : "secondary.main",
-            borderRadius: isBot ? "20px 20px 20px 5px" : "20px 20px 5px 20px",
-          }}
-        >
-          <ThreeDots />
-        </Paper>
-      </Box>
-    );
-  };
+  //   return (
+  //     <Box
+  //       sx={{
+  //         display: "flex",
+  //         justifyContent: isBot ? "flex-start" : "flex-end",
+  //         mb: 2,
+  //       }}
+  //     >
+  //       <Paper
+  //         variant="outlined"
+  //         sx={{
+  //           p: 2,
+  //           backgroundColor: isBot ? "primary.main" : "secondary.main",
+  //           borderRadius: isBot ? "20px 20px 20px 5px" : "20px 20px 5px 20px",
+  //         }}
+  //       >
+  //         <ThreeDots />
+  //       </Paper>
+  //     </Box>
+  //   );
+  // };
 
+
+  // Left drawer for chats.
   const drawer = (
     <div>
       <Container sx = {{height : 100}}>
@@ -280,10 +296,14 @@ function Chat(props) {
           <Button variant='outlined' sx = {{color : 'secondary.main', height : 55 , width : 180 , whiteSpace : "nowrap"}}>
               <Typography sx = {{fontSize : 12, letterSpacing:5 , textAlign : "left"}}>Create New</Typography>         
               <IconButton sx={{color : "secondary.main",}} size = "small" onClick={() => {
+
+                      //Create new button click for chat
+
                       console.log(Cookies.get())
                       axios.post(Config.Endpoints.CHATS_URL+"/",constantChatFunc()).then((response)=>{
                       console.log(response.data)
                       handleChatActivity(response.data["id"])
+                      setIsChatUpdated(true)
                       })
                       }}>
               <AddIcon sx={{fontSize : 22}}/>
@@ -294,7 +314,8 @@ function Chat(props) {
       <Divider />
       <List sx={{display:"flex",flexDirection:'column',height : "80%", maxHeight : 750, overflowY : "auto"}}>
         {Object.keys(chats.sort(compare)).map(function(key){ 
-          
+
+          //Display chats on the drawer
           var chatObj = chats[key]
           var chatName = chatObj["chat_name"]    
           var activity = chatObj.id === activeButton
@@ -305,7 +326,7 @@ function Chat(props) {
               <ListItemIcon style={{marginRight : "auto"}}>
                 <ChatIcon />
               </ListItemIcon>
-              <ListItemText primary={chatObj.id} primaryTypographyProps={{ style: { whiteSpace: "normal",  wordWrap:'break-word'} }}/>
+              <ListItemText primary={chatName} primaryTypographyProps={{ style: { whiteSpace: "normal",  wordWrap:'break-word'} }}/>
               </ListItemButton>
               <ListItemButton sx={{display: "flex" , justifyContent: "flex-end",maxWidth:50}} onClick={() => handleDeleteButton(chatObj.id)}>
                   <ListItemIcon sx={{ display:"flex", justifyContent :"flex-end",marginRight : "auto"}}>
@@ -393,6 +414,9 @@ function Chat(props) {
           <Box sx={{display:"flex",flexDirection:'column',height : "80%", maxHeight : 850, overflowY : "auto"}}>
 
             {messages.map((message) => (
+
+              //Displaying messages in UI
+
               <Message key={message.id} message={message} />
             ))}
             {/* {(inferenceWait && (messages.length !== 0)) ? <Message message={{"id":messages[-1].id,"sender":"bot","text":"..."}}/>:<Message message={{"id":messages[-1].id,"sender":"bot","text":messages[-1].text}}/>}  */}

@@ -28,7 +28,10 @@ import ThreeDots from '../utilComponents/animatedDots';
 
 export default function Home() {
   const navigate = useNavigate()
-
+  
+  // Requests to the authentication backend;
+  // If user is authenticated => navigate user to the chat interface
+  // If user is not authenticated => navigate user to the login page
   const handleChatButton = () => {
     const csrf = Cookies.get("csrftoken")
     const token = Cookies.get("access_token")
@@ -45,27 +48,6 @@ export default function Home() {
       }
     })
   }
-
-  const handleProfileButton = () => {
-    navigate('/profile')
-  }
-
-  const [currentPaper, setCurrentPaper] = React.useState(0);
-
-  const papers = [
-    'Paper 1 Content',
-    'Paper 2 Content',
-    'Paper 3 Content',
-  ];
-
-  const handlePrevious = () => {
-    setCurrentPaper((prevPaper) => (prevPaper > 0 ? prevPaper - 1 : papers.length - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentPaper((prevPaper) => (prevPaper < papers.length - 1 ? prevPaper + 1 : 0));
-  };
-
 
     return (
 

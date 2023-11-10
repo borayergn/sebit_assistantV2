@@ -20,6 +20,13 @@ import axios from 'axios';
 
 import Config from '../url_config.json';
 
+
+// Drop menu component to wrap some key functional buttons for navigating between pages
+// Displays:
+// Profile Button
+// Settings Button
+// Home Button
+// Logout Buttons
 export default function AccountMenu() {
   const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);

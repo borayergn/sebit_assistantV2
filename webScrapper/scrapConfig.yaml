@@ -1,0 +1,31 @@
+---
+urls:
+  meb:
+    [
+      "https://odsgm.meb.gov.tr/www/sss.php",
+      "https://ogm.meb.gov.tr/www/sss.php",
+      "https://www.meb.gov.tr/sss.php",
+      "https://personel.meb.gov.tr/www/sss.php",
+      "https://oygm.meb.gov.tr/www/sss.php",
+      "https://tegm.meb.gov.tr/www/sss.php",
+      "https://orgm.meb.gov.tr/www/sss.php",
+      "https://yyegm.meb.gov.tr/www/sss.php",
+      "https://ookgm.meb.gov.tr/www/sss.php",
+      "https://pazar53.meb.gov.tr/www/sss.php",
+      "https://dhgm.meb.gov.tr/www/sss.php",
+      "http://hbogm.meb.gov.tr/www/sss.php",
+    ]
+
+  osym: "https://www.osym.gov.tr/TR,8808/genel.html"
+
+  yok: "https://www.yok.gov.tr/iletisim/sss"
+
+  vitamin: "https://www.vitaminegitim.com/ortaokul/sss.jsp"
+
+  vcloud: "https://www.sebitvcloud.com/tr/yardim.jsp"
+
+  hizligo: "https://www.hizligo.com/sss"
+
+  eba: "https://ders.eba.gov.tr/yardim-sss/"
+
+  raunt: "https://www.raunt.com/sss"

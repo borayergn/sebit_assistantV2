@@ -28,7 +28,7 @@ import ReactLoading from "https://cdn.skypack.dev/react-loading@2.0.3";
 import { useNavigate } from 'react-router-dom'
 
 
-
+// A Util component for user to redirect when user is logged out for a small time
 export default function WaitRedirect() {
     const navigate = useNavigate()
 

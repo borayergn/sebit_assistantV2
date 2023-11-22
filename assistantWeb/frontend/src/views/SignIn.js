@@ -61,6 +61,12 @@ export default function SignIn() {
     }
   },[isLoggedIn])
 
+  // Gets login information from form
+  // Requests to the authentication backend
+  // Checks for returning errors if any
+  // If there is no error => redirects user to the home page
+  // If there is errors => display them
+  // Sets the user cookies
   const handleSubmit = (event) => {
     event.preventDefault();
 

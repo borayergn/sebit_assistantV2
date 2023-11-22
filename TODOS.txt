@@ -27,6 +27,7 @@ App
 23-) Profil sayfası aktif buton ✅
 24-) Cascadeleri düzenle
 25-) API Security ? 
+26-) Frontenddeki arka arkaya calları backende taşı
 Model
 ----------------------------
     Data

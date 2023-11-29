@@ -4,8 +4,8 @@ from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import viewsets
-from api.models import Chat,Message,ApiKey
-from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer,LoginSerializer,ApiKeySerializer
+from api.models import Chat,Message,ApiKey,BlobField
+from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer,LoginSerializer,ApiKeySerializer,BlobSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.models import User
 import json
@@ -19,7 +19,7 @@ import tiktoken
 import secrets
 from rest_framework.decorators import action
 import hashlib
-
+import base64
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -68,12 +68,14 @@ class ApiKeyViewSet(viewsets.ModelViewSet):
     
     def create(self, request):
         
+        response = requests.get("http://127.0.0.1:8000/api/get_api_key")
+        content = response.json()
+
+        print(content["Key"])
         hashed_key = request.data
 
-        parse = hashed_key["key_hash"].split(".")[0] +"."+ hashlib.sha256(hashed_key["key_hash"].encode('utf-8')).hexdigest()
+        parse = content["Key"].split(".")[0] +"."+ hashlib.sha256(content["Key"].encode('utf-8')).hexdigest()
         hashed_key["key_hash"] = parse
-
-
 
         serializer = ApiKeySerializer(data = hashed_key)
 
@@ -81,7 +83,10 @@ class ApiKeyViewSet(viewsets.ModelViewSet):
 
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return_json = dict(serializer.data)
+            return_json.update({"real_key":content["Key"]})
+            print(return_json)
+            return Response(return_json)
         else:
             return(Response(serializer.errors))
             
@@ -94,8 +99,38 @@ class ApiKeyViewSet(viewsets.ModelViewSet):
     
 
 
+class BlobViewSet(viewsets.ModelViewSet):
+    serializer_class = BlobSerializer
+    queryset = BlobField.objects.all()
+
+    def create(self,request):
+
+        blob = request.data.copy()
+        blob_as_str = blob["data"]
+        blob_file = base64.encodebytes(bytes(blob_as_str,"UTF-8"))
+        blob["data"] = blob_file
+
+        serializer = BlobSerializer(data=blob)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return(Response(serializer.errors))
+    
+    def get_queryset(self):
+        queryset = BlobField.objects.all()
+        user = self.request
+        if user is not None:
+            queryset =  BlobField.objects.filter(user_id = user.session["_auth_user_id"])
+        return queryset
 
 
+        
+
+        
+
+    
 
 class TokenView(TokenObtainPairView):
     serializer_class = TokenSerializer

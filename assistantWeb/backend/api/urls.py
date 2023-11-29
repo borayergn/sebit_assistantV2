@@ -13,6 +13,8 @@ router.register(r'users',views.UserViewSet,basename='users')
 router.register(r'chats',views.ChatViewSet,basename='chats')
 router.register(r'messages',views.MessageViewSet,basename='messages')
 router.register(r'apiKeys',views.ApiKeyViewSet,basename='apiKeys')
+router.register(r'user_images',views.BlobViewSet,basename="images")
+
 
 urlpatterns = [
 

@@ -32,6 +32,25 @@ export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [clickedHome, setClickedHome] = React.useState(false)
   const [clickedLogout, setClickedLogout] = React.useState(false)
+
+  const [image,setImage] = React.useState("")
+
+
+  // Effect hook to get user profile image when the component first mounted
+  React.useEffect(() => {
+      axios.get(Config.Endpoints.IMAGES_URL).then(response => {
+          console.log(response.data)
+          if (response.data.length !== 0){
+            setImage(response.data[0]["image"])
+          }
+          else{
+            console.log("User has no image")
+          }
+      }).catch((error)=>{
+          console.log(error.data)
+      })
+  },[])
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -85,8 +104,8 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            {/* TODO: replace true with if profile icon exists, if exists render profile */}
-            <Avatar sx={{ width: 32, height: 32 }}>{Cookies.get('username').charAt(0).toUpperCase()}</Avatar> 
+            
+            <Avatar sx={{ width: 32, height: 32 }} alt={Cookies.get('username').charAt(0).toUpperCase()} src={image}>{Cookies.get('username').charAt(0).toUpperCase()}</Avatar> 
           </IconButton>
         </Tooltip>
       </Box>

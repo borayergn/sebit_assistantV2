@@ -1,22 +1,20 @@
-
 {
-"Endpoints":
-    {
-        "BASE_URL" : "http://127.0.0.1:8000/api",
-        "MESSAGES_URL" : "http://127.0.0.1:8000/api/messages",
-        "CHATS_URL" : "http://127.0.0.1:8000/api/chats",
-        "USERS_URL" : "http://127.0.0.1:8000/api/users",
-        "API_KEYS_URL" : "http://127.0.0.1:8000/api/apiKeys",
-        "BASE_INFERENCE_URL" : "http://127.0.0.1:8000/api/inference",
-        "LORA_INFERENCE_URL" : "http://127.0.0.1:8000/api/testLLama"
+    "Endpoints": {
+        "BASE_URL": "http://127.0.0.1:8000/api",
+        "MESSAGES_URL": "http://127.0.0.1:8000/api/messages",
+        "CHATS_URL": "http://127.0.0.1:8000/api/chats",
+        "USERS_URL": "http://127.0.0.1:8000/api/users",
+        "API_KEYS_URL": "http://127.0.0.1:8000/api/apiKeys",
+        "BASE_INFERENCE_URL": "http://127.0.0.1:8000/api/inference",
+        "LORA_INFERENCE_URL": "http://127.0.0.1:8000/api/testLLama",
+        "IMAGES_URL": "http://127.0.0.1:8000/api/user_images/"
     },
-"Authentication":
-    {
+    "Authentication": {
         "AUTH_TOKENS_URL": "http://127.0.0.1:8000/auth",
-        "REFRESH_ACCESS_URL":"http://127.0.0.1:8000/auth/refresh",
-        "REGISTER_URL" : "http://127.0.0.1:8000/api/register",
-        "LOGIN_URL" : "http://127.0.0.1:8000/auth/authenticate_user",
-        "LOGOUT_URL" : "http://127.0.0.1:8000/auth/logout",
-        "CHECK_AUTH_URL" : "http://127.0.0.1:8000/auth/check_auth"
+        "REFRESH_ACCESS_URL": "http://127.0.0.1:8000/auth/refresh",
+        "REGISTER_URL": "http://127.0.0.1:8000/api/register",
+        "LOGIN_URL": "http://127.0.0.1:8000/auth/authenticate_user",
+        "LOGOUT_URL": "http://127.0.0.1:8000/auth/logout",
+        "CHECK_AUTH_URL": "http://127.0.0.1:8000/auth/check_auth"
     }
 }

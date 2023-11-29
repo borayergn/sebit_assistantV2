@@ -1,45 +1,42 @@
 
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import {Link as RouterLink } from "react-router-dom";
-import CloseIcon from '@mui/icons-material/Close';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-
-import ButtonAppBar from './TopBar'
-import axios from 'axios';
-
-import Config from '../url_config.json'
-import ReactLoading from "https://cdn.skypack.dev/react-loading@2.0.3";
+import ReactLoading from 'react-loading';
 import { useNavigate } from 'react-router-dom'
 
 
 // A Util component for user to redirect when user is logged out for a small time
 export default function WaitRedirect() {
     const navigate = useNavigate()
+    const [isRedirected,setIsRedirected] = React.useState(false)
+    const [formerTimeout,setFormerTimeout] = React.useState(null)
 
     React.useEffect(() => {
-      setTimeout(()=>{
+      console.log("isRedirected:",isRedirected)
+
+      let timeout = setTimeout(()=>{
         navigate('/')
       },5000)
-    },[])
+
+      if(!isRedirected){
+        setFormerTimeout(timeout)
+      }
+      
+      if(isRedirected){
+        clearTimeout(timeout)
+        clearTimeout(formerTimeout)
+        navigate('/')
+      }
+
+    },[isRedirected])
+
 
     const handleClick = () => {
-      navigate('/')
+      setIsRedirected(true)
     }
     return (
       <Container sx={{height:"100vh",width:"100vw",display:"flex",justifyContent:"center",alignItems:"center"}}>

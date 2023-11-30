@@ -20,11 +20,13 @@ import secrets
 from rest_framework.decorators import action
 import hashlib
 import base64
+from rest_framework.exceptions import APIException
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
 API_TOKEN = "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"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
+
 
 def inferenceAPIQuery(payload):
     data = json.dumps(payload)
@@ -37,6 +39,7 @@ def inferenceAPIQuery(payload):
 #     users = User.objects.all()
 #     users_serialized = UserSerializer(users , many = True)
 #     return(Response(users_serialized.data))
+
 
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
@@ -83,9 +86,10 @@ class ApiKeyViewSet(viewsets.ModelViewSet):
 
         if serializer.is_valid():
             serializer.save()
+
             return_json = dict(serializer.data)
             return_json.update({"real_key":content["Key"]})
-            print(return_json)
+
             return Response(return_json)
         else:
             return(Response(serializer.errors))
@@ -124,11 +128,6 @@ class BlobViewSet(viewsets.ModelViewSet):
         if user is not None:
             queryset =  BlobField.objects.filter(user_id = user.session["_auth_user_id"])
         return queryset
-
-
-        
-
-        
 
     
 
@@ -213,8 +212,7 @@ def check_auth(request):
             return Response({"Message": "Authentication failed","session-data":request.session})
         
 @api_view(['POST','GET'])
-def checkLangServe(request):
-
+def invoke(request):
     send_query = "hızlıgo nedir"
 
     if request.method == "POST":
@@ -258,6 +256,31 @@ def generateApiKey(request):
     total_api_key = prefix +"."+rest
 
     return(Response({"Key":total_api_key}))
+
+@api_view(['POST','GET'])
+def authenticate_key(request):
+    # Get key in header
+    original_key = request.META.get('HTTP_API_KEY')
+
+    if original_key==None:
+        raise APIException("key should be passed to request by 'Api-Key' header")
+
+    key_data = ApiKey.objects.filter(key_hash = original_key.split(".")[0] +"."+ hashlib.sha256(original_key.encode('utf-8')).hexdigest())
+    
+    if (key_data):
+        key_data_json = key_data.values()[0]
+        return(Response({"Authenticated":True,"User":key_data_json["user_id"]}))
+    else:
+        return(Response({"Authenticated":False}))
+    
+@api_view(['POST','GET'])
+def invoke_key(request):
+    response = requests.post('http://172.17.45.102:8080/invoke',json=request.data,timeout=5)
+    content = response.json()
+    print(type(content))
+    return Response(content["output"])
+    
+
 
     
 # @api_view(['POST','GET'])

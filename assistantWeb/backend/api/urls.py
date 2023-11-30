@@ -27,12 +27,14 @@ urlpatterns = [
     path('auth/authenticate_user',views.authentiacte_user),
     path('auth/logout',views.logout_user),
     path('auth/check_auth',views.check_auth),
-    path('api/testLLama',views.checkLangServe),
+    path('api/invoke',views.invoke),
     path('api/test/countToken',views.countToken),
     path('auth/reset_password/', auth_views.PasswordResetView.as_view(), name ='reset_password'),
     path('auth/reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name ='password_reset_done'),
     path('auth/reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(), name ='password_reset_confirm'),
     path('auth/reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name ='password_reset_complete'),
-    path('api/get_api_key',views.generateApiKey)
+    path('api/get_api_key',views.generateApiKey),
+    path('key/authenticate_key',views.authenticate_key),
+    path('key/invoke_key',views.invoke_key)
     #path('auth/session_test',views.session_test)
 ]

@@ -615,7 +615,6 @@ export default function Profile() {
           key_name: infoName,
         })
         .then((response) => {
-          console.log("Post Response:", response.data);
           setKey(response.data["real_key"]);
           setIsKeysUpdated(true);
           SetOriginalKeyPopupState(true);

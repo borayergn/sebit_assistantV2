@@ -1,11 +1,9 @@
 from django.shortcuts import render
-from django.db import models
-from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import viewsets
-from api.models import Chat,Message,ApiKey,BlobField
-from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer,LoginSerializer,ApiKeySerializer,BlobSerializer
+from api.models import Chat,Message,ApiKey,BlobField,Usage
+from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer,UsageSerializer,ApiKeySerializer,BlobSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.models import User
 import json
@@ -13,7 +11,6 @@ import requests
 from rest_framework import generics
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponseBadRequest
 from django.contrib.auth.decorators import login_required
 import tiktoken
 import secrets
@@ -44,6 +41,19 @@ def inferenceAPIQuery(payload):
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
+
+class UsageViewSet(viewsets.ModelViewSet):
+    serializer_class = UsageSerializer
+
+    def get_queryset(self):
+
+        queryset = Usage.objects.all()
+        user = self.request
+
+        if user is not None:
+            queryset =  Usage.objects.filter(user_id = user.session["_auth_user_id"])
+
+        return queryset
 
 
 class ChatViewSet(viewsets.ModelViewSet):
@@ -225,15 +235,15 @@ def invoke(request):
                 "config": {},
                 "kwargs": {}
                 }
-    response = requests.post('http://172.17.45.102:8080/invoke',json=test_data)
+    response = requests.post('http://172.17.45.102:8001/invoke',json=test_data)
     content = response.json()
-    print(type(content))
+    print(content)
     return Response(content["output"])
 
 @api_view(['POST','GET'])
 def countToken(request):
-    input = "Türk cumhuriyetinin kurucusu kimdir"
-    output = "Türk Cumhuriyeti’nin Kurucusu Mustafa Kemal Atatürk."
+    input = request.data["input"]
+    output = request.data["output"]
 
     encoding = tiktoken.get_encoding("cl100k_base")
 
@@ -246,7 +256,13 @@ def countToken(request):
     num_input_tokens = len(encoding.encode(input))
     num_output_tokens = len(encoding.encode(output))
 
-
+    data = {
+               "input_tokens":num_input_tokens,
+               "output_tokens":num_output_tokens,
+               "user_id":request.session["_auth_user_id"]
+           }
+    
+    requests.post("http://127.0.0.1:8000/api/user_usage/",json=data)
     return Response({"input_token_count":num_input_tokens,"output_token_count":num_output_tokens,"input_tokens":token_input_bytes,"output_tokens":token_output_bytes})
 
 @api_view(['POST','GET'])
@@ -275,10 +291,10 @@ def authenticate_key(request):
     
 @api_view(['POST','GET'])
 def invoke_key(request):
-    response = requests.post('http://172.17.45.102:8080/invoke',json=request.data,timeout=5)
+    response = requests.post('http://172.17.45.102:8001/invoke',json=request.data)
     content = response.json()
-    print(type(content))
-    return Response(content["output"])
+    print(content)
+    return Response(content["output"]["result"])
     
 
 

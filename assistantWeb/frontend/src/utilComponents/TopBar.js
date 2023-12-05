@@ -30,7 +30,12 @@ export default function ButtonAppBar() {
       })
     }
 
-    checkAuth()
+    // Check if user logged in when component mounts
+    React.useEffect(() => {
+      console.log(isLoggedIn)
+      checkAuth()
+    },[])
+    
 
     return (
       <Box sx={{ flexGrow: 1 }}>

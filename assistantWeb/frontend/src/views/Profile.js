@@ -30,7 +30,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import AddIcon from "@mui/icons-material/Add";
-import Popup from "reactjs-popup";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -40,7 +39,6 @@ import "reactjs-popup/dist/index.css";
 import "../anim.css";
 import { Snackbar } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import { Form } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -72,8 +70,7 @@ export default function Profile() {
   const [userKeys, setUserKeys] = React.useState([]);
   const [isKeysUpdated, setIsKeysUpdated] = React.useState(false);
   const [key, setKey] = React.useState("");
-  const [originalKeyPopupState, SetOriginalKeyPopupState] =
-    React.useState(false);
+  const [originalKeyPopupState, SetOriginalKeyPopupState] = React.useState(false);
   const [image, setImage] = React.useState("");
 
   const drawerWidth = 300;
@@ -601,7 +598,8 @@ export default function Profile() {
         name: data.get("name"),
       };
 
-      if (infos["name"].type === undefined) {
+      console.log(infos["name"])
+      if (infos["name"] === "") {
         infoName = "API KEY " + (userKeys.length + 1).toString();
       } else {
         infoName = infos["name"];

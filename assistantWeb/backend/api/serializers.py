@@ -1,9 +1,6 @@
 from rest_framework import serializers
 #from api.models import User
-from api.models import Chat
-from api.models import Message
-from api.models import ApiKey
-from api.models import BlobField
+from api.models import Chat,ApiKey,BlobField,Message,Usage
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
@@ -15,6 +12,11 @@ from django.contrib.auth import authenticate
 class BlobSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlobField
+        fields = '__all__'
+
+class UsageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usage
         fields = '__all__'
         
 class UserSerializer(serializers.ModelSerializer):

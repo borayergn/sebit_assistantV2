@@ -2,32 +2,22 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
 import Grow from '@mui/material/Grow';
-import {Link as RouterLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Footer from '../utilComponents/Footer'
 import ButtonAppBar from '../utilComponents/TopBar'
 import axios from 'axios';
-import Spin from '../utilComponents/SpinAnimation'
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Config from '../url_config.json'
-import { Cookie } from '@mui/icons-material';
-import Grid from '@mui/material/Grid';
-import { TypeAnimation } from 'react-type-animation';
 import Texts from '../utilComponents/AnimatedText';
-
 import Cookies from 'js-cookie';
-import ThreeDots from '../utilComponents/animatedDots';
+
 
 
 
 
 export default function Home() {
   const navigate = useNavigate()
+  const [isLoggedIn,setIsLoggedIn] = React.useState(false)
   
   // Requests to the authentication backend;
   // If user is authenticated => navigate user to the chat interface
@@ -48,6 +38,18 @@ export default function Home() {
       }
     })
   }
+
+  const handleAPIButton = () => {
+    navigate('/api_docs')
+  }
+
+  // React.useEffect(() => {
+  //   axios.post(Config.Authentication.CHECK_AUTH_URL,{'withCredentials': true }).then((response) => {
+  //       if(response.data["Message"] === "User Authenticated"){
+  //         setIsLoggedIn(true)
+  //       }
+  //   })
+  // },[])
 
     return (
 
@@ -88,6 +90,11 @@ export default function Home() {
           <Grow in = {true} timeout={1750}>
             <Box sx = {{bottom:0 ,display:"flex",justifyContent:"center"}}>
               <Button onClick={handleChatButton} size="large" variant='outlined' sx = {{color : "secondary.main", fontSize : 23}}> Try Sebit Assistant</Button>
+            </Box>
+          </Grow>
+          <Grow in = {true} timeout={1750}>
+            <Box sx = {{bottom:0 ,display:"flex",justifyContent:"center",mt:5}}>
+              <Button onClick={handleAPIButton} size="large" variant='outlined' sx = {{color : "secondary.main", fontSize : 23}}> Check API</Button>
             </Box>
           </Grow>
         </Box>

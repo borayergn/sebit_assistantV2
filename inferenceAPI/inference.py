@@ -1,18 +1,20 @@
 from model import Model
 import requests
+import warnings
 
 class Inference(Model):
 
-    def __new__(cls, model, tokenizer,api_key):
+    def __new__(cls,api_key, model = "LLama2-SA", tokenizer = "LLama2-SA"):
         response = requests.get("http://127.0.0.1:8000/key/authenticate_key",headers={"Api-Key":api_key})
         content = response.json()
     
         if not content["Authenticated"]:
+            warnings.warn("Invalid API Key, None object will return.")
             return None
         else:
             return super().__new__(cls)
         
-    def __init__(self, model, tokenizer,api_key):
+    def __init__(self,api_key, model = "LLama2-SA", tokenizer = "LLama2-SA"):
 
         super().__init__(model, tokenizer)
 
@@ -51,9 +53,10 @@ class Inference(Model):
             }
         
         response = requests.post("http://127.0.0.1:8000/key/invoke_key",json=prompt_data)
+        
         content = response.json()
 
-        return(content["output"])
+        return(content)
     
     def predictWithDocuments(self,prompt):
         pass

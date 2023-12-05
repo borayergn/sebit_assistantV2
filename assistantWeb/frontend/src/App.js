@@ -4,6 +4,7 @@ import Chat from './views/Chat';
 import SignIn from './views/SignIn';
 import Register from './views/Register'
 import Profile from './views/Profile';
+import ApiDocs from './views/ApiDocs'
 
 import axios from 'axios';
 import {
@@ -28,6 +29,7 @@ function App() {
             <Route exact path = '/profile' element = {<Profile />}></Route>
             <Route exact path = '/redirect' element = {<WaitRedirect />}></Route>
             <Route exact path = '/textDemo' element = {<Texts />}></Route>
+            <Route exact path = '/api_docs' element = {<ApiDocs />}></Route>
           </Routes>
       </Router>
   )

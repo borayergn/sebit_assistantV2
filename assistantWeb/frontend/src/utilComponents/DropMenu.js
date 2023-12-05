@@ -32,10 +32,16 @@ export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [clickedHome, setClickedHome] = React.useState(false)
   const [clickedLogout, setClickedLogout] = React.useState(false)
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false)
 
   const [image,setImage] = React.useState("")
 
 
+  React.useEffect(() => {
+    if(Cookies.get("username")){
+      setIsLoggedIn(true)
+    }
+  },[])
   // Effect hook to get user profile image when the component first mounted
   React.useEffect(() => {
       axios.get(Config.Endpoints.IMAGES_URL).then(response => {
@@ -106,6 +112,7 @@ export default function AccountMenu() {
           >
             
             <Avatar sx={{ width: 32, height: 32 }} alt={Cookies.get('username').charAt(0).toUpperCase()} src={image}>{Cookies.get('username').charAt(0).toUpperCase()}</Avatar> 
+
           </IconButton>
         </Tooltip>
       </Box>

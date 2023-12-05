@@ -197,6 +197,14 @@ function Chat(props) {
     })
   }
 
+  const countTokens = (input,output) => {
+    axios.post(Config.Endpoints.COUNT_TOKEN_URL,{"input":input,"output":output}).then(
+      (response) => console.log(response.data)
+    ).then((error) => {
+      console.log(error.response.data)
+    })
+  }
+
 
   // A wrapper function which wraps user message and bot message request functions
   const handleSendMessage = async () => {
@@ -217,7 +225,7 @@ function Chat(props) {
       setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
 
       setSortOrder(sortOrder+1) //User and Bot message pairs will have the same sort order
-
+      // countTokens(userMessage,botMessage)
       getSessionData()
       
   }

@@ -63,7 +63,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 // Create a custom theme with your desired styles
 
-export default function Profile() {
+export default function Profile(props) {
   const [isSettingsActive, setIsSettingsActive] = React.useState(false);
   const [isUpdated, setIsUpdated] = React.useState(false);
   const [activeButton, setActiveButton] = React.useState("None");
@@ -72,8 +72,17 @@ export default function Profile() {
   const [key, setKey] = React.useState("");
   const [originalKeyPopupState, SetOriginalKeyPopupState] = React.useState(false);
   const [image, setImage] = React.useState("");
+  const [prevButtonClicked, setPrevButtonClicked] = React.useState(false);
 
   const drawerWidth = 300;
+  // Effect hook to check if navigation is comming from apiDocs page button
+  React.useEffect(() => {
+    // Automatically click the button only if navigated from PageOne
+    if (!prevButtonClicked ) {
+      console.log(document.getElementById('autoClickButton'))
+      setPrevButtonClicked(true);
+    }
+  }, [prevButtonClicked]);
 
   // Effect hook to get user profile image when the component first mounted
   React.useEffect(() => {
@@ -406,10 +415,11 @@ export default function Profile() {
   };
 
   //A component to show currently selected page to the user
-  const ActiveStateButton = ({ button_name, handleFunc }) => {
+  const ActiveStateButton = ({ button_name, handleFunc, id_ }) => {
     if (button_name === activeButton) {
       return (
         <Button
+          id={id_}
           button_name={button_name}
           style={{ textTransform: "none" }}
           variant="outlined"
@@ -1022,6 +1032,7 @@ export default function Profile() {
                 <ActiveStateButton
                   button_name="API Keys"
                   handleFunc={handleApiKeysClick}
+                  id_="autoClickButton"
                 />
               </ListItem>
             </List>

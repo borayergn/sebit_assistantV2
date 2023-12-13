@@ -11,7 +11,6 @@ import { Snackbar } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
-import Typed from "react-typed";
 import Grow from "@mui/material/Grow";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -29,7 +28,7 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import { Create } from "@mui/icons-material";
+import { TypeAnimation } from "react-type-animation";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -595,14 +594,19 @@ answer = inference.predict("What is Sebit")`}
                 flexDirection: "row",
               }}
             >
-              <Typed
-                strings={["from saApi.inference import Inference"]}
-                typeSpeed={100}
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "from saApi.inference import Inference",
+                ]}
+                wrapper="strong"
+                speed={5}
                 style={{
                   color: "#00ADB5",
                   fontFamily: "monospace",
                   fontSize: 30,
                 }}
+                repeat={0}
               />
             </Box>
           </Grow>
@@ -616,14 +620,19 @@ answer = inference.predict("What is Sebit")`}
                 flexDirection: "row",
               }}
             >
-              <Typed
-                strings={["api_key = $API_KEY"]}
-                typeSpeed={220}
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "api_key = $API_KEY",
+                ]}
+                wrapper="strong"
+                speed={5}
                 style={{
                   color: "#00ADB5",
                   fontFamily: "monospace",
                   fontSize: 30,
                 }}
+                repeat={0}
               />
             </Box>
           </Grow>
@@ -637,14 +646,19 @@ answer = inference.predict("What is Sebit")`}
                 flexDirection: "row",
               }}
             >
-              <Typed
-                strings={["inference = Inference(api_key)"]}
-                typeSpeed={150}
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "inference = Inference(api_key)",
+                ]}
+                wrapper="strong"
+                speed={5}
                 style={{
                   color: "#00ADB5",
                   fontFamily: "monospace",
                   fontSize: 30,
                 }}
+                repeat={0}
               />
             </Box>
           </Grow>

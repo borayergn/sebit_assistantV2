@@ -131,6 +131,8 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://127.0.0.1:8000',
+    
 ]
 
 
@@ -163,10 +165,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "sebitAssistantDB",
+        "NAME": "postgre_db",
         "USER": "boray",
-        "PASSWORD": "314314",
-        "HOST": "127.0.0.1",
+        "PASSWORD": "boray314314",
+        "HOST": "database-1.c7q9jjckgyqv.eu-north-1.rds.amazonaws.com",
         "PORT": "5432",
     }
 }

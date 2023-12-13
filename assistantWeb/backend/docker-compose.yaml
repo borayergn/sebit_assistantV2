@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: django-server-deploy
+    image: django-server-i-deploy
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    # volumes:
+    #   - .:/backend
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=postgre_db
+      - POSTGRES_USER=boray
+      - POSTGRES_PASSWORD=boray314314

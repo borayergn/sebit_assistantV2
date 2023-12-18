@@ -187,6 +187,7 @@ def inference(request):
     return(Response(answer))
 
 @api_view(['POST'])
+@permission_classes([AllowAny])
 def authentiacte_user(request):
     username_form = request.data["username"]
     password_form = request.data["password"]
@@ -215,6 +216,7 @@ def logout_user(request):
 #TODO: Şimdilik @login_required ve request.session kullanarak git. (veya request.session lengthe göre anla) request.user'da bug var, bi ara düzelt. (request.session datası güzel taşınıyo olmasına rağmen request.user AnonymousUser olarak dönüyo)
 
 @api_view(['POST', 'GET'])
+@permission_classes([AllowAny])
 def check_auth(request):
         if(len(request.session.keys()) != 0):
             return Response({"Message": "User Authenticated","user-id":request.session["_auth_user_id"],"session-data":request.session})

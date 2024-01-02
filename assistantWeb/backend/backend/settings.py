@@ -33,7 +33,8 @@ ALLOWED_HOSTS = []
 
 SESSION_ENGINE = "django.contrib.sessions.backends.db" 
 SESSION_SAVE_EVERY_REQUEST = True
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = None
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = 'smtp.gmail.com'
@@ -84,7 +85,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5), # uzat (TTL uygununa bak)
     'REFRESH_TOKEN_LIFETIME': timedelta(days=50),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -116,11 +117,10 @@ SIMPLE_JWT = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = [
-#     "http://localhost:3000",
-#     "http://localhost:8000",
-# ]
+
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_USE_SESSIONS = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
@@ -132,6 +132,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'http://127.0.0.1:8000',
+    'http://django-server-env.eba-yye9dqwq.eu-north-1.elasticbeanstalk.com/'
     
 ]
 
@@ -164,7 +165,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": "django.db.backends.postgresql", # engine vermeden çalışıyo mu dene
         "NAME": "postgre_db",
         "USER": "boray",
         "PASSWORD": "boray314314",
@@ -196,7 +197,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us'  # TR'ye çek
 
 TIME_ZONE = 'UTC'
 

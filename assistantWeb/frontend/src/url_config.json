@@ -6,7 +6,7 @@
         "USERS_URL": "http://127.0.0.1:8000/api/users",
         "API_KEYS_URL": "http://127.0.0.1:8000/api/apiKeys",
         "BASE_INFERENCE_URL": "http://127.0.0.1:8000/api/inference",
-        "LORA_INFERENCE_URL": "http://127.0.0.1:8000/api/inference",
+        "LORA_INFERENCE_URL": "http://127.0.0.1:8000/api/invoke",
         "IMAGES_URL": "http://127.0.0.1:8000/api/user_images/",
         "USAGE_URL": "http://127.0.0.1:8000/api/user_usage/",
         "COUNT_TOKEN_URL": "http://127.0.0.1:8000/api/countToken"
@@ -17,7 +17,8 @@
         "REGISTER_URL": "http://127.0.0.1:8000/api/register",
         "LOGIN_URL": "http://127.0.0.1:8000/auth/authenticate_user",
         "LOGOUT_URL": "http://127.0.0.1:8000/auth/logout",
-        "CHECK_AUTH_URL": "http://127.0.0.1:8000/auth/check_auth"
+        "CHECK_AUTH_URL": "http://127.0.0.1:8000/auth/check_auth",
+        "FORGOT_PASSWORD_URL": "http://127.0.0.1:8000/auth/reset_password/"
     },
     "KEY": {
         "INVOKE_URL": "http://127.0.0.1:8000/key/invoke_key",

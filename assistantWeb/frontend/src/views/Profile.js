@@ -74,6 +74,8 @@ export default function Profile(props) {
   const [image, setImage] = React.useState("");
   const [prevButtonClicked, setPrevButtonClicked] = React.useState(false);
 
+  // çok fazla Boolean kullanmadan işleri nasıl halledebilirim araştırabilirim
+
   const drawerWidth = 300;
   // Effect hook to check if navigation is comming from apiDocs page button
   React.useEffect(() => {
@@ -886,7 +888,7 @@ export default function Profile(props) {
                         axios
                           .delete(
                             Config.Endpoints.API_KEYS_URL + "/" + row.id + "/"
-                          )
+                          ) // silme inaktif et
                           .then((response) => {
                             console.log(response.data);
                             setIsKeysUpdated(true);
@@ -931,6 +933,7 @@ export default function Profile(props) {
     } else if (activeButton === "API Keys") {
       return <ApiKeys />;
     }
+    //Bu string isimlerinde büyük harf ve boşluk kullanmamak daha iyi
   };
 
   // Changes string state to call the right sub-component (page)

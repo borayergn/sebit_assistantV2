@@ -48,7 +48,8 @@ class TokenSerializer(TokenObtainPairSerializer):
         token['email'] = user.email
 
         return token
-    
+
+# Create and validate methods are overwritten due to needs in login and register serializers
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         write_only=True, 

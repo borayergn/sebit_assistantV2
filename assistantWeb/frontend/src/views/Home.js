@@ -26,7 +26,8 @@ export default function Home() {
     const csrf = Cookies.get("csrftoken")
     const token = Cookies.get("access_token")
     console.log("Token:",token,"csrf:",csrf)
-    axios.post(Config.Authentication.CHECK_AUTH_URL,{'withCredentials': true }).then((response) => {
+    const cookies = Cookies.get()
+    axios.post(Config.Authentication.CHECK_AUTH_URL,cookies).then((response) => {
       console.log(response.data)
       Cookies.set("user-id",response.data["user-id"])
       console.log(Cookies.get())
@@ -36,7 +37,9 @@ export default function Home() {
       else{
         navigate('/chat')
       }
-    })
+    }).catch((error => {
+      console.log(error.response.data)
+    }))
   }
 
   const handleAPIButton = () => {

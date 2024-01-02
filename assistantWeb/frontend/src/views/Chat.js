@@ -61,13 +61,22 @@ function Chat(props) {
   
   //Effect hook to wait inference to set bot message
   React.useEffect(() => {
-    messages.map((message, i) => {
-
+    if(!inferenceWait){
+      messages.map((message, i) => {
+        
+        console.log("prediction state effect:",prediction)
         if (i === (messages.length - 1)){
+          console.log("message to be changed:",message)
           message.text = prediction
+          
+          console.log("message after change:",message)
         } 
-      }
-  )},[inferenceWait]);
+      },
+      console.log("messages after all:",messages),
+      setIsChatUpdated(true)
+      )
+    }
+    },[inferenceWait]);
 
   //Effect hook to set updated chat state to false again after update
   React.useEffect(() => {
@@ -138,8 +147,10 @@ function Chat(props) {
     
   }
 
-  const handlePrompt = (prompt_) => {
-    return axios.post(Config.Endpoints.LORA_INFERENCE_URL,{"prompt":prompt_})
+
+  // BU ÜÇ FONKSİYONU BİRLEŞTİR BACKENDDE HALLET
+  const handlePrompt = async (prompt_,chat_id,sort_order) => {
+    return axios.post(Config.Endpoints.LORA_INFERENCE_URL,{"prompt":prompt_,"chat_id":chat_id,"sort_order":sortOrder})
   }
 
 
@@ -150,40 +161,9 @@ function Chat(props) {
   // sender => Bot or User
   //-----------------------------------
 
-  //Requests to messages endpoint with the correct UI specified format 
-  const handleUserPost = () => {
-    return axios.post(Config.Endpoints.MESSAGES_URL+"/", {
-      "content": input,
-      "sort_order": sortOrder,
-      "chat": activeButton,
-      "sender": "user"
-    })
-    .then(response => ({
-      id: response.data["id"],
-      text: response.data["content"],
-      sender: response.data["sender"]
-    }));
-  };
-
-  const handleBotPost = (prompt_) => {
-
-    console.log(prompt_)
-    let data_p = handlePrompt(prompt_)
-    data_p.then((response) => {console.log(response.data["result"]);console.log("Response returned?");setInferenceWait(false); setPrediction(response.data["result"])})
-    return axios.post(Config.Endpoints.MESSAGES_URL+"/", {
-      "content": prediction,
-      "sort_order": sortOrder,
-      "chat": activeButton,
-      "sender": "bot"
-    })
-    .then(responseBot => ({
-      id: responseBot.data["id"],
-      text: responseBot.data["content"],
-      sender: responseBot.data["sender"]
-    }));
-  };
-
   //Updates the chat name after the first message of the chat is entered
+
+  //İSMİ PROMPT ÜZERİNDEN BOTA ÜRETTİREBİLİRSİN
   function patchChatName(name){
     
       axios.patch((Config.Endpoints.CHATS_URL+"/"+activeButton+"/"),{chat_name : name.text})
@@ -191,6 +171,8 @@ function Chat(props) {
       .catch(error => console.error(error.response.data));
 
   }
+
+  
   const getSessionData = () => {
     axios.post(Config.Authentication.CHECK_AUTH_URL).then((response)=>{
       console.log("Session data:",response.data)
@@ -205,24 +187,49 @@ function Chat(props) {
     })
   }
 
+  // COUNT TOKENS YİNE BACKEND İŞİ
+
 
   // A wrapper function which wraps user message and bot message request functions
   const handleSendMessage = async () => {
+    let user_message_breturn = {
+      "text": input,
+      "id": activeButton,
+      "sender": "user"
+    }
+    let bot_message_breturn = {
+      "text": prediction,
+      "id": activeButton,
+      "sender": "bot"
+    }
 
-      const userMessage = await handleUserPost();
-      setInferenceWait(true)
-      const botMessage = await handleBotPost(userMessage.text);
+    bot_message_breturn.text = <ThreeDots />
+    console.log("render?")
+
+    setMessages(prevMessages => [...prevMessages, user_message_breturn, bot_message_breturn]);
+
+    setInferenceWait(true)
+
+    const data_p = await handlePrompt(input,activeButton,sortOrder)
+    console.log("data_p",data_p)
+
+    setPrediction(data_p.data["answer"])
+    setInferenceWait(false)
+    console.log("response returned?")
+  
+      // const userMessage = await handleUserPost();
+      
+      // const botMessage = await handleBotPost(userMessage.text);
       console.log("Prediction State:",prediction)
-      console.log("botMessage.text",botMessage.text)
+      console.log("botMessage.text",bot_message_breturn.text)
       
 
       if (sortOrder===0)
-        patchChatName(userMessage)
+        patchChatName(user_message_breturn)
       
       // Update the messages state with both user and bot messages
-      botMessage.text = <ThreeDots />
-      console.log("render?")
-      setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
+      
+
 
       setSortOrder(sortOrder+1) //User and Bot message pairs will have the same sort order
       // countTokens(userMessage,botMessage)
@@ -233,14 +240,13 @@ function Chat(props) {
 
   // Utility function for sorting chats according to update time
   function compare (a,b){
-
     return b.update_time - a.update_time;
   }
+  //BUNU DA BACKENDDE YAPABİLİRSİN
 
   function getMessages(){
     const promise = axios.get(Config.Endpoints.MESSAGES_URL)
     const dataPromise = promise.then((response) => response.data)
- 
     return dataPromise
   }
 
@@ -269,31 +275,6 @@ function Chat(props) {
       </Box>
     );
   };
-
-  // const MessageLoad = ({ message }) => {
-  //   const isBot = message.sender === "bot";
-  
-  //   return (
-  //     <Box
-  //       sx={{
-  //         display: "flex",
-  //         justifyContent: isBot ? "flex-start" : "flex-end",
-  //         mb: 2,
-  //       }}
-  //     >
-  //       <Paper
-  //         variant="outlined"
-  //         sx={{
-  //           p: 2,
-  //           backgroundColor: isBot ? "primary.main" : "secondary.main",
-  //           borderRadius: isBot ? "20px 20px 20px 5px" : "20px 20px 5px 20px",
-  //         }}
-  //       >
-  //         <ThreeDots />
-  //       </Paper>
-  //     </Box>
-  //   );
-  // };
 
 
   // Left drawer for chats.

@@ -11,13 +11,16 @@ import requests
 from rest_framework import generics
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 import tiktoken
 import secrets
 from rest_framework.decorators import action
 import hashlib
 import base64
 from rest_framework.exceptions import APIException
+from django.contrib.sessions.models import Session
+from django.contrib.sessions.backends.db import SessionStore
+
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -37,7 +40,8 @@ def inferenceAPIQuery(payload):
 #     users_serialized = UserSerializer(users , many = True)
 #     return(Response(users_serialized.data))
 
-
+#ViewSets
+#----------------------------------------
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
@@ -74,6 +78,7 @@ class MessageViewSet(viewsets.ModelViewSet):
     queryset = Message.objects.all()
 
 
+# Create method is overwrited to encode the key and then save its encoded version to database
 class ApiKeyViewSet(viewsets.ModelViewSet):
     serializer_class = ApiKeySerializer
     queryset = ApiKey.objects.all()
@@ -81,7 +86,7 @@ class ApiKeyViewSet(viewsets.ModelViewSet):
     
     def create(self, request):
         
-        response = requests.get("http://127.0.0.1:8000/api/get_api_key")
+        response = requests.get("http://127.0.0.1:8000/api/get_api_key") # requests yerine redirect eşdeğeri (kendi içindeki endpoint için)
         content = response.json()
 
         print(content["Key"])
@@ -103,7 +108,8 @@ class ApiKeyViewSet(viewsets.ModelViewSet):
             return Response(return_json)
         else:
             return(Response(serializer.errors))
-            
+
+    # Just get the authenticated user's keys on request      
     def get_queryset(self):
         queryset = ApiKey.objects.all()
         user = self.request
@@ -132,6 +138,7 @@ class BlobViewSet(viewsets.ModelViewSet):
         else:
             return(Response(serializer.errors))
     
+    # Just get the authenticated user's Images on request   
     def get_queryset(self):
         queryset = BlobField.objects.all()
         user = self.request
@@ -187,8 +194,10 @@ def inference(request):
     return(Response(answer))
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
+
+# An endpoint to authenticate the user and logs the user in
 def authentiacte_user(request):
+    permission_classes = [AllowAny]
     username_form = request.data["username"]
     password_form = request.data["password"]
 
@@ -196,15 +205,28 @@ def authentiacte_user(request):
 
     if(user is None):
         return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form}))
+    
+    s = SessionStore()
+
+    
+
+    request.session.create()
 
     request.session["username"] = user.get_username()
-
+    
     user_data = User.objects.get(username = request.session["username"])
     user_serialized = UserSerializer(user_data , many=False)
 
+    
+
+    for key in user_serialized.data:
+        s[key] = user_serialized.data[key]
+    
+    # s.create()
+
     if(user is not None):
         login(request, user)
-        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated,"user_data":user_serialized.data}))
+        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated,"user_data":user_serialized.data,"s.items()":SessionStore(session_key=request.session.session_key).items()}))
 
    
     
@@ -213,16 +235,15 @@ def logout_user(request):
     logout(request)
     return(Response("User Logged Out "))
 
-#TODO: Şimdilik @login_required ve request.session kullanarak git. (veya request.session lengthe göre anla) request.user'da bug var, bi ara düzelt. (request.session datası güzel taşınıyo olmasına rağmen request.user AnonymousUser olarak dönüyo)
-
+# An endpoint to check if the current user is authenticated or not
 @api_view(['POST', 'GET'])
-@permission_classes([AllowAny])
 def check_auth(request):
         if(len(request.session.keys()) != 0):
             return Response({"Message": "User Authenticated","user-id":request.session["_auth_user_id"],"session-data":request.session})
         else:
             return Response({"Message": "Authentication failed","session-data":request.session})
-        
+
+# Main inference endpoint       
 @api_view(['POST','GET'])
 def invoke(request):
     send_query = "hızlıgo nedir"
@@ -231,17 +252,38 @@ def invoke(request):
         send_query = request.data["prompt"]
     
     test_data = {
-                "input": {
-                    "query": send_query
-                },
-                "config": {},
-                "kwargs": {}
-                }
-    response = requests.post('http://172.17.45.102:8001/invoke',json=test_data)
+        "input": send_query,
+        "config": {},
+        "kwargs": {}
+        }
+    print("test data:",test_data)
+    response = requests.post('http://sa-inference.sytes.net:8080/invoke',json=test_data)
     content = response.json()
-    print(content)
-    return Response(content["output"])
+    print("content:",content)
+    try:
+        prompt_answer_pair = {"prompt":send_query,"answer":content["output"]}
+    except:
+        prompt_answer_pair = {"error:","An error occured"}
+    user_message = {
+      "content": send_query,
+      "sort_order": request.data["sort_order"],
+      "chat": request.data["chat_id"],
+      "sender": "user"
+    }
+    bot_message = {
+      "content": content["output"],
+      "sort_order": request.data["sort_order"],
+      "chat": request.data["chat_id"],
+      "sender": "bot"
+    }
 
+    requests.post("http://127.0.0.1:8000/api/messages/",json=user_message)
+    requests.post("http://127.0.0.1:8000/api/messages/",json=bot_message)
+    return Response(prompt_answer_pair)
+
+# Chat history
+
+# An endpoint to count user tokens
 @api_view(['POST','GET'])
 def countToken(request):
     input = request.data["input"]
@@ -264,9 +306,10 @@ def countToken(request):
                "user_id":request.session["_auth_user_id"]
            }
     
-    requests.post("http://127.0.0.1:8000/api/user_usage/",json=data)
+    requests.post("http://127.0.0.1:8000/api/user_usage/",json=data)  # requests yerine farklı bir method kullanabilirsin kendi içindeki istekler için
     return Response({"input_token_count":num_input_tokens,"output_token_count":num_output_tokens,"input_tokens":token_input_bytes,"output_tokens":token_output_bytes})
 
+# An endpoint to generate unique API keys
 @api_view(['POST','GET'])
 def generateApiKey(request):
     prefix = secrets.token_urlsafe(5)
@@ -275,6 +318,7 @@ def generateApiKey(request):
 
     return(Response({"Key":total_api_key}))
 
+# An endpoint to authenticate the API key
 @api_view(['POST','GET'])
 def authenticate_key(request):
     # Get key in header
@@ -290,28 +334,23 @@ def authenticate_key(request):
         return(Response({"Authenticated":True,"User":key_data_json["user_id"]}))
     else:
         return(Response({"Authenticated":False}))
-    
+
+# An endpoint to inference with the model API and API key
 @api_view(['POST','GET'])
 def invoke_key(request):
     response = requests.post('http://172.17.45.102:8001/invoke',json=request.data)
     content = response.json()
     print(content)
     return Response(content["output"]["result"])
-    
 
-
-    
 # @api_view(['POST','GET'])
-# def session_test(request):
-#     request.session["a"] = "a"
-#     request.session["b"] = "b"
-#     request.session["c"] = "c"
+# def handle_prompt(request):
+#     prompt = request.data["prompt"]
 
-#     request.session.modified = True
-#     request.session.save()
+    
 
-#     return(Response(request.session))
-        
-# Create your views here.
+#--------------------------------------------------------
+# 1. api/auth/key'i farklı apilar olarak bölebilirsin
+    
 
 

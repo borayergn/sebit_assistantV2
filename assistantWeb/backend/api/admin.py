@@ -10,6 +10,7 @@ class BlobInline(admin.StackedInline):
     verbose_name_plural = "BlobField"
     fk_name = "user"
 
+# dökümandan alınan yerlerin urllerini comment olarak al
 class UserAdmin(BaseUserAdmin):
     inlines = [BlobInline]
 

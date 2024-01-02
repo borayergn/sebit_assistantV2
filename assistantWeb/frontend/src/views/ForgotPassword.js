@@ -56,7 +56,8 @@ export default function ForgotPassword() {
   const navigate = useNavigate()
 
   const checkMail = (mailToCheck) => {
-    axios.get("http://127.0.0.1:8000/api/users").then((response) => {
+    //backendde kontrol et
+    axios.get(Config.Endpoints.USERS_URL).then((response) => {
       let users = response.data
       for (let index = 0; index < users.length; index++) {
         const user = users[index];
@@ -77,11 +78,12 @@ export default function ForgotPassword() {
       console.log(error)
     })
   }
+  //logged in userın erişimini kısıtla
   const resetMail = (mail) => {
       setIsSnackBarActive(false)
       if(isEmailExists){
         console.log("attim")
-        axios.post("http://127.0.0.1:8000/auth/reset_password/",{"email":mail}).then((response) => {
+        axios.post(Config.Authentication.FORGOT_PASSWORD_URL,{"email":mail}).then((response) => {
           console.log(response.data)
         
           if (response.status === 200){  

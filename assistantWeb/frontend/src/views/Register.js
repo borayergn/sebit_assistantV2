@@ -53,7 +53,7 @@ export default function Register() {
   // Gets register information from form
   // Requests to the authentication backend
   // Checks for returning invalid password errors if any
-  // If there is no error => register user to the system and navigate user to login
+  // If there is no error => register user to the system and navigate user to login (kayıt olur olmaz girmesi daha modern bi sistem olur)
   // If there is errors => display them
   const handleSubmit = (event) => {
     setIsError(false)

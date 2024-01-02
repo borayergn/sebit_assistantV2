@@ -5,7 +5,7 @@ import warnings
 class Inference(Model):
 
     def __new__(cls,api_key, model = "LLama2-SA", tokenizer = "LLama2-SA"):
-        response = requests.get("http://127.0.0.1:8000/key/authenticate_key",headers={"Api-Key":api_key})
+        response = requests.get("http://127.0.0.1:8000/key/authenticate_key",headers={"Api-Key":api_key}) #API key environment variable olmalı (güvenlik için)
         content = response.json()
     
         if not content["Authenticated"]:

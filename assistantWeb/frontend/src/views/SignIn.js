@@ -25,6 +25,7 @@ import jwt from'jwt-decode'
 import Config from '../url_config.json'
 import Home from './Home';
 import { CookieSharp } from '@mui/icons-material';
+import { config } from 'react-transition-group';
 
 
 function Copyright(props) {
@@ -50,11 +51,20 @@ export default function SignIn() {
   const [isLoginFail,setIsLoginFail] = React.useState(false)
   const [isLoggedIn,setIsLoggedIn] = React.useState(false)
   const [sessionTokens,setSessionTokens] = React.useState({})
+  const [csrf,setCsrf] = React.useState("")
   const navigate = useNavigate()
 
   let loginFailMessage = "Invalid Username or Password"
   let loginSuccessMessage = "Login Succesfull."
 
+  React.useEffect(()=>{
+    
+    axios.get("http://127.0.0.1:8000/auth/get_csrf").then(response => {console.log(response)
+    const csrfcookie = Cookies.get('csrftoken')
+    setCsrf(csrfcookie)
+    }).
+    catch(error => console.log(error))
+  },[])
   React.useEffect(()=>{
     if(isLoggedIn){
       navigate('/')
@@ -79,6 +89,9 @@ export default function SignIn() {
     //Authenticate User
     axios.post(Config.Authentication.LOGIN_URL, infos, {
       'withCredentials': true,
+      headers:{
+        'X-CSRFToken': csrf,
+      }
       }).then((response)=>{
             console.log(response.data)
             if(response.data["Status"] === loginFailMessage){

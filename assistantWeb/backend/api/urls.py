@@ -15,6 +15,7 @@ router.register(r'messages',views.MessageViewSet,basename='messages')
 router.register(r'apiKeys',views.ApiKeyViewSet,basename='apiKeys')
 router.register(r'user_images',views.BlobViewSet,basename="images")
 router.register(r'user_usage',views.UsageViewSet,basename="usages")
+# router.register(r'csrf',views.getCSRFToken,basename="usages")
 
 
 urlpatterns = [
@@ -36,6 +37,7 @@ urlpatterns = [
     path('auth/reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name ='password_reset_complete'),
     path('api/get_api_key',views.generateApiKey),
     path('key/authenticate_key',views.authenticate_key),
-    path('key/invoke_key',views.invoke_key)
+    path('key/invoke_key',views.invoke_key),
+    path('auth/get_csrf',views.getCSRFToken.as_view())
     #path('auth/session_test',views.session_test)
 ]

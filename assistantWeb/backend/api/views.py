@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import viewsets
+from rest_framework.views import APIView
 from api.models import Chat,Message,ApiKey,BlobField,Usage
 from api.serializers import TokenSerializer,ChatSerializer,MessageSerializer,RegisterSerializer,UserSerializer,UsageSerializer,ApiKeySerializer,BlobSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
@@ -20,7 +21,9 @@ import base64
 from rest_framework.exceptions import APIException
 from django.contrib.sessions.models import Session
 from django.contrib.sessions.backends.db import SessionStore
-
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.utils.decorators import method_decorator
+from django.shortcuts import redirect
 
 API_URL = "https://api-inference.huggingface.co/models/Boray/LLama2SA_1500_V2_Tag"
 DUMMY_API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
@@ -202,32 +205,34 @@ def authentiacte_user(request):
     password_form = request.data["password"]
 
     user = authenticate(request,username = username_form , password = password_form)
-
+    
     if(user is None):
         return(Response({"Status":"Invalid Username or Password","username":username_form,"password":password_form}))
-    
-    s = SessionStore()
-
-    
-
-    request.session.create()
-
-    request.session["username"] = user.get_username()
-    
-    user_data = User.objects.get(username = request.session["username"])
-    user_serialized = UserSerializer(user_data , many=False)
-
-    
-
-    for key in user_serialized.data:
-        s[key] = user_serialized.data[key]
-    
-    # s.create()
-
-    if(user is not None):
+    else:
         login(request, user)
-        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated,"user_data":user_serialized.data,"s.items()":SessionStore(session_key=request.session.session_key).items()}))
+        return(Response({"Status":"Login Succesfull.","username":username_form,"password":password_form,"Authenticated":request.user.is_authenticated}))
 
+    
+    # s = SessionStore()
+
+    
+
+    # request.session.create()
+
+    # request.session["username"] = user.get_username()
+    
+    # user_data = User.objects.get(username = request.session["username"])
+    # user_serialized = UserSerializer(user_data , many=False)
+
+    
+
+    # for key in user_serialized.data:
+    #     s[key] = user_serialized.data[key]
+    
+    # # s.create()
+
+    # if(user is not None):
+   
    
     
 @api_view(['POST','GET'])
@@ -238,9 +243,11 @@ def logout_user(request):
 # An endpoint to check if the current user is authenticated or not
 @api_view(['POST', 'GET'])
 def check_auth(request):
-        if(len(request.session.keys()) != 0):
-            return Response({"Message": "User Authenticated","user-id":request.session["_auth_user_id"],"session-data":request.session})
-        else:
+        user = request.user
+        try:
+            id = request.session["_auth_user_id"]
+            return Response({"Message": "User Authenticated","user-id":id,"session-data":request.session})
+        except:
             return Response({"Message": "Authentication failed","session-data":request.session})
 
 # Main inference endpoint       
@@ -253,8 +260,8 @@ def invoke(request):
     
     test_data = {
         "input": send_query,
-        "config": {},
-        "kwargs": {}
+        "config": {"temperature" : 0.4,"do_sample":True,"repetition_penalty":1.1},
+        "kwargs": {"temperature" : 0.9,"do_sample":True,"repetition_penalty":1.}
         }
     print("test data:",test_data)
     response = requests.post('http://sa-inference.sytes.net:8080/invoke',json=test_data)
@@ -343,6 +350,11 @@ def invoke_key(request):
     print(content)
     return Response(content["output"]["result"])
 
+@method_decorator(ensure_csrf_cookie,name = "dispatch")
+class getCSRFToken(APIView):
+    def get(self,request,format = None):
+        return(Response({"Message":"CSRF Cookie set"}))
+
 # @api_view(['POST','GET'])
 # def handle_prompt(request):
 #     prompt = request.data["prompt"]
@@ -351,6 +363,6 @@ def invoke_key(request):
 
 #--------------------------------------------------------
 # 1. api/auth/key'i farklı apilar olarak bölebilirsin
-    
+         
 
 

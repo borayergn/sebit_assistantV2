@@ -16,6 +16,7 @@ axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'x-csrftoken'
 axios.defaults.headers.common['Authorization'] = `Bearer ${Cookies.get("access_token")}`;
 
+{console.log("İNDEXJS:",Cookies.get("access_token"))}
 const theme = createTheme(
   {
     components: {

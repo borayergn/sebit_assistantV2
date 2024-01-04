@@ -18,7 +18,8 @@
         "LOGIN_URL": "http://127.0.0.1:8000/auth/authenticate_user",
         "LOGOUT_URL": "http://127.0.0.1:8000/auth/logout",
         "CHECK_AUTH_URL": "http://127.0.0.1:8000/auth/check_auth",
-        "FORGOT_PASSWORD_URL": "http://127.0.0.1:8000/auth/reset_password/"
+        "FORGOT_PASSWORD_URL": "http://127.0.0.1:8000/auth/reset_password/",
+        "ENSURE_CSRF_URL": "http://127.0.0.1:8000/auth/get_csrf"
     },
     "KEY": {
         "INVOKE_URL": "http://127.0.0.1:8000/key/invoke_key",
